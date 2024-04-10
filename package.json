@@ -1,0 +1,50 @@
+{
+  "name": "memory-game",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "lint:ts": "pnpm exec eslint",
+    "lint:scss": "pnpm exec stylelint **/*.scss",
+    "lint": "pnpm run lint:scss && pnpm run lint:ts",
+    "test": "vitest",
+    "coverage": "vitest run --coverage",
+    "test:ui": "vitest --ui"
+  },
+  "dependencies": {
+    "@astrojs/svelte": "^5.3.0",
+    "astro": "^4.5.17",
+    "svelte": "^4.2.12"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.0.2",
+    "@eslint/js": "^9.0.0",
+    "@testing-library/jest-dom": "^6.4.2",
+    "@testing-library/svelte": "^4.1.0",
+    "@testing-library/user-event": "^14.5.2",
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "@vitest/ui": "^1.4.0",
+    "c8": "^9.1.0",
+    "eslint": "^8.57.0",
+    "eslint-config-love": "^47.0.0",
+    "eslint-plugin-astro": "^0.34.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-svelte": "^2.36.0",
+    "globals": "^15.0.0",
+    "jsdom": "^24.0.0",
+    "nanostores": "^0.10.3",
+    "sass": "^1.74.1",
+    "stylelint": "^16.3.1",
+    "stylelint-config-standard-scss": "^13.1.0",
+    "typescript": "^5.4.4",
+    "typescript-eslint": "^7.6.0",
+    "vitest": "^1.4.0"
+  }
+}

@@ -1,0 +1,8 @@
+*.js
+*.mjs
+*.json
+*.ts
+*.tsx
+*.jsx
+*.astro
+*.svelte
