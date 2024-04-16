@@ -12,6 +12,7 @@
         clickCard,
         focusData,
     } from "@stores/game";
+    import GameStatus from "./GameStatus.svelte";
 
     const startDraftGame = async () => {
         const TEST_URL = "/test.json";
@@ -31,6 +32,7 @@
     };
 </script>
 
+<GameStatus />
 <div class="draft">
     {#if $gameData.image > ""}
         <Image src={$gameData.image} alt="Alternative Text" />
@@ -56,7 +58,7 @@
         display: flex;
         flex-direction: column;
         gap: 2rem 0.5rem;
-        padding-bottom: var(--space-l);
+        padding-block:  var(--space-xs) var(--space-l);
         grid-column: full;
 
         @media (min-width: 768px) {
