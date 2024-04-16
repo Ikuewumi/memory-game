@@ -7,8 +7,9 @@ const __dirname = path.dirname(".")
 // https://astro.build/config
 export default defineConfig({
   integrations: [svelte()],
+  site: 'https://ikuewumi.github.io',
+  base: 'memory-game',
   vite: {
-    base: "/memory-game/",
     resolve: {
       alias: {
         '@': path.resolve(__dirname, './src'),
