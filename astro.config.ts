@@ -8,6 +8,7 @@ const __dirname = path.dirname(".")
 export default defineConfig({
   integrations: [svelte()],
   vite: {
+    base: "/memory-game/",
     resolve: {
       alias: {
         '@': path.resolve(__dirname, './src'),
