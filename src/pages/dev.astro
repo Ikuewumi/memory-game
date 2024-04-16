@@ -1,0 +1,16 @@
+---
+import Base from "@/layouts/Base.astro";
+import GameDraft from "@components/GameDraft.svelte";
+---
+
+<Base title="Dev Page" description="Page For Prototyping, Wireframing and all that...">
+	<h1>Dev</h1>		
+	<GameDraft client:load />
+	
+</Base>
+
+<style>
+h1 {
+	margin-bottom: 1rem;
+}
+</style>

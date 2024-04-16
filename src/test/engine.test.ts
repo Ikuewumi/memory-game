@@ -11,8 +11,8 @@ describe("Memory Game Logic", _ => {
     // Expected Card Data 
     let $10 = { text: "A", index: 0 },
         $11 = { text: "hyoid bone", index: 0 },
-        $20 = { text: "B", index: 1  },
-        $21 = {  text: "inra", index: 1 }
+        $20 = { text: "B", index: 1 },
+        $21 = {  text: "inra", index: 1}
 
     test("Get a bunch of cards from some questions", _ => {
         expect(getCardsData(tData)).toStrictEqual([ $10, $11, $20, $21 ])
