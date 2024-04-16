@@ -15,7 +15,7 @@
     import GameStatus from "./GameStatus.svelte";
 
     const startDraftGame = async () => {
-        const TEST_URL = "/test.json";
+        const TEST_URL = "/memory-game/test.json";
         const res: Data = await (await fetch(TEST_URL)).json();
 
         return res;
