@@ -1,6 +1,6 @@
-import { checkIndex, getCardsData, matchCards, shuffle, sleep } from "@/composables/engine";
-import type { CardData, FocusData, GameData, GameStatus, Question } from "@/types";
-import { computed, map } from "nanostores";
+import { getCardsData, getFormattedTimeNumber, matchCards, shuffle } from "@/composables/engine";
+import type { CardData, FocusData, FocusState, GameData, GameStatus, Question } from "@/types";
+import { computed, map, atom } from "nanostores";
 import { MODE } from "./modes";
 
 
@@ -23,17 +23,27 @@ const DEFAULT_FOCUS_DATA: FocusData = {
     cards: []
 }
 
+const DEFAULT_FULL_QUESTION_COUNT = 0
+const DEFAULT_CURRENT_STATUS: FocusState = "idle"
 
 
 
 export const gameData = map({ ...DEFAULT_GAME_DATA })
 export const gameStatus = map({ ...DEFAULT_GAME_STATUS })
 export const focusData = map({ ...DEFAULT_FOCUS_DATA })
+export const fullQuestionCount = atom(DEFAULT_FULL_QUESTION_COUNT)
+export const currentStatus = atom(DEFAULT_CURRENT_STATUS as FocusState)
 
 
+
+export const stringTime = computed(gameStatus, (gameStatus) => {
+    const timeArray = getFormattedTimeNumber(gameStatus.time)
+
+    return `${timeArray[0]}:${timeArray[1]}`
+})
 
 export const cardsList = computed(gameData, (gameData): CardData[] => {
-    //if (!(gameStatus.get().gameStarted)) return []
+    //if (!(gameStatus.get().gameStarted)) return [] // @TODO enable line for optimization
 
     const DEFAULT_QUESTION_NUMBER = 6
     const cards = shuffle(getCardsData(gameData.questions.slice(0, DEFAULT_QUESTION_NUMBER)))
@@ -41,11 +51,19 @@ export const cardsList = computed(gameData, (gameData): CardData[] => {
     return cards
 })
 
+export const percent = computed(gameData, (gameData): number => {
+    if (!(gameStatus.get().gameStarted)) return 0
+    const count = fullQuestionCount.get()
+    return Math.floor(( (count - gameData.questions.length)  / count) * 100)
+})
+
+
 
 export const enterData = (questions: Question[] = [], image = "", text = ""): void => {
     focusData.set({ ...DEFAULT_FOCUS_DATA })
     gameStatus.set({ ...DEFAULT_GAME_STATUS })
     gameData.set({ questions: shuffle(questions), image, text })
+    fullQuestionCount.set(questions.length)
 }
 
 
@@ -80,8 +98,8 @@ export const startGame = (): void => {
 }
 
 export const stopGame = () => {
-    console.log("done")
     gameStatus.setKey("gameStarted", false)
+    focusData.set( { ...DEFAULT_FOCUS_DATA })
     MODE.get()?.onEnd?.()
     MODE.get()?.gameComplete().off()
 }
@@ -124,14 +142,17 @@ const matchGameCards = (a: number, b: number) => {
     const questions = gameData.get().questions
 
     if (cardsMatch) {
+        currentStatus.set("success")
         focusData.setKey("state", "success")
-        const newQuestions = shuffle(questions.filter((_, index) => index !== cardIndex)) 
+        const newQuestions = shuffle(questions.filter((_, index) => index !== cardIndex))
         gameData.setKey("questions", newQuestions)
+        
 
-        if (newQuestions.length <= 0) { MODE.get()?.onComplete?.() } 
+        if (newQuestions.length <= 0) { MODE.get()?.onComplete?.() }
         else { MODE.get().onMatchRight?.() }
-    
+
     } else {
+        currentStatus.set("failure")
         focusData.setKey("state", "failure")
         MODE.get().onMatchWrong?.()
     }
