@@ -84,10 +84,8 @@ export const getFormattedTimeNumber = (seconds: number): [string, string] => {
 
 
 
-export const throwConfetti = async (timeInMs = 2000): Promise<void> => {
-  void confetti()
-
-  await sleep(timeInMs)
-
-  confetti.reset()
+export const throwConfetti = async (timeInMs = 2000) => {
+    confetti()
+    await sleep(timeInMs)
+    return confetti.reset()
 }
