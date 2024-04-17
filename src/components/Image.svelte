@@ -19,10 +19,12 @@
         top: 0;
         height: fit-content;
         width: fit-content;
+        margin-inline: auto;
 
         @media (min-width: 768px) {
             position: sticky;
             padding-inline: 0;
+            margin-inline: 0;
         }
     }
     img {
@@ -30,5 +32,7 @@
         --c-img-height: var(--img-height, min(300px, 50vh));
 
         max-height: var(--c-img-height);
+        border-radius: 0.4rem;
+        box-shadow: 0 1px 5px -4px hsl(var(--shadow-color) 40% / 70%);
     }
 </style>
