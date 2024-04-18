@@ -2,7 +2,7 @@
   "title": "The Larynx",
   "text": "",
   "imageUrl": "https://i.ibb.co/v1VMYYw/Larynx.jpg",
-  "image": "/memory-game/test.png",
+  "image": "/test.png",
   "questions": [
     { "question": "A", "answer": "hyoid bone" },
     { "question": "B", "answer": "lateral thyrohyoid ligament" },
