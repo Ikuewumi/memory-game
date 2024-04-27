@@ -1,10 +1,18 @@
 <script lang="ts">
-    import { gameStatus, percent, stringTime, currentStatus } from "@/stores/game";
+    import { gameStatus, percent, stringTime, currentStatus, resetGame } from "@/stores/game";
+    import { resetModals } from "@/stores/modals";
     import { MODE } from "@/stores/modes";
+
+
+    const closeGame = () => {
+        resetModals()
+        resetGame()
+    }
+
 </script>
 
 <div class="game-status" >
-    <button class="game-status-close" title="Close Game">
+    <button class="game-status-close" title="Close Game" on:click={closeGame}>
         <svg viewBox="0 0 24 24">
             <use href="#close"></use>
         </svg>
@@ -24,7 +32,15 @@
             </svg>
             <strong>{$stringTime}</strong>
         </span>
+     {:else if $MODE.name === "pratice"}
+        <span class="game-status-lives">
+            <svg class="infinite" viewBox="0 0 24 24">
+                <use href="#infinity"></use>
+            </svg>
+        </span>
+
     {/if}
+
 </div>
 
 <div
@@ -39,13 +55,19 @@
 ></div>
 
 <style lang="scss">
+    .game-status, [role=progressbar] {
+        grid-column: content;
+    }
+
+
+
     .game-status {
         display: flex;
         gap: 2rem;
         align-items: center;
         justify-content: space-between;
         margin-top: var(--space-2xs);
-        padding: var(--space-xs) var(--space-s);
+        padding: var(--space-xs) var(--space-m);
         background: var(--clr-white);
         box-shadow: 0 1px 5px -4px hsl(var(--shadow-color) 20% / 20%);
         border-radius: 0.5rem;
@@ -53,7 +75,7 @@
         margin-inline: var(--space-2xs);
         color: var(--clr-gray-800);
 
-        @media (min-width: 768px) {
+        @media (min-width: 800px) {
             grid-column: content;
             margin-inline: 0;
         }
@@ -63,6 +85,7 @@
             display: flex;
             place-content: center;
             background: none;
+            color: var(--clr-gray-800);
             border: none;
         }
 
@@ -74,8 +97,18 @@
             place-items: center;
 
             strong {
-                font-size: var(--step-1);
+                font-size: 29px;
                 font-weight: 600;
+            }
+
+            strong.text-gradient {
+                font-size: 35px;
+                line-height: 0.9;
+            }
+
+            svg.infinite {
+                --icon-size: 50px;
+                color: var(--text-gradient-fallback);
             }
 
         }
@@ -100,10 +133,12 @@
         margin: var(--space-s) auto var(--space-2xs);
         background: var(--clr-white);
         height: 25px;
-        position: relative;
         isolation: isolate;
         border-radius: var(--radius);
         box-shadow: 0 1px 5px -4px hsl(var(--shadow-color) 40% / 70%);
+        position: sticky;
+        z-index: var(--z-toast);
+        inset: calc(var(--offset) * 2) auto auto;
 
         &:before {
             content: "";
@@ -114,6 +149,15 @@
                 var(--offset) var(--offset);
             background: var(--clr);
             transition: 200ms ease-out;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            inset: -2px;
+            background: var(--clr);
+            opacity: 0.5;
+            border-radius: var(--radius);
         }
     }
 </style>

@@ -1,0 +1,41 @@
+---
+---
+
+<section class="hero">
+    <h1 class="hero-heading">
+        <span class="hero-span text-gradient">Match</span> your way to <span class="hero-span text-gradient">mastery</span>
+    </h1>
+</section>
+
+<style lang="scss">
+.hero {
+    grid-column: full;
+    display: grid;
+    place-content: center;
+    place-items: center;
+    min-height: min(400px, 50vh);
+    padding: var(--space-l);
+    isolation: isolate;
+    font-family: var(--font-heading);
+    background: var(--clr-gray-100);
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 5px -3px hsl(var(--shadow-color) 30% / 30%);
+
+    @media (min-width: 800px) {
+        grid-column: content;
+    }
+
+    &-heading {
+        max-width: 15ch;
+        text-align: center;
+        margin: 0 auto var(--space-m);
+        line-height: 1;
+    }
+
+
+    &-span {
+        filter: drop-shadow(0 0 5px);
+    }
+
+}
+</style>

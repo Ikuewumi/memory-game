@@ -1,0 +1,35 @@
+---
+import Base from "@/layouts/Base.astro";
+---
+
+<Base title="Archive Page | All Cuizzes" description="Explore our library of various card quizzes (cuizzes) to help you acheive mastery">
+
+	<h1 class="archive-heading">Archive Page</h1>
+	<blockquote class="archive-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, soluta perferendis ullam exercitationem vitae eligendi maxime, quia consectetur doloribus nobis quisquam commodi labore voluptatibus at velit praesentium id temporibus! Qui?</blockquote>	
+
+</Base>
+
+
+<style lang="scss">
+
+.archive {
+
+	&-heading {
+		font-size: var(--step-4);
+		font-weight: 500;
+		margin-top: 0.5rem;
+	}
+
+	&-description {
+		font-size: var(--step-0);
+		border-left: 2px solid var(--clr-gray-900);
+		padding: var(--space-2xs) var(--space-s) var(--space-xs);
+		margin-top: 1rem;
+		background: hsl(var(--shadow-color-dark) / 20%);
+		line-height: 1.5;
+	}
+
+
+}
+
+</style>

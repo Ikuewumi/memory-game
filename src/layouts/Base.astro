@@ -3,6 +3,7 @@ import "@scss/index.scss";
 import ImageBox from "@components/ImageBox.svelte";
 import Assets from "@/components/Assets.astro";
 import Toast from "@/components/Toast.svelte";
+import { ViewTransitions } from "astro:transitions";
 interface Props {
 	title: string;
 	description?: string;
@@ -14,21 +15,12 @@ const { title = "Home Page", description = "" } = Astro.props;
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/memory-game/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<meta name="description" content={description} />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link
-			rel="preconnect"
-			href="https://fonts.gstatic.com"
-			crossorigin
-		/>
-		<link
-			href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
-			rel="stylesheet"
-		/>
 		<title>{title}</title>
+		<ViewTransitions />
 	</head>
 	<body data-grid>
 		<main>

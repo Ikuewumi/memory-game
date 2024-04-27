@@ -20,7 +20,7 @@
         padding-top: 2rem;
         position: fixed;
         inset: 0;
-        background: hsl(var(--shadow-color) 10% / 95%);
+        background: hsl(var(--shadow-color-dark) / 95%);
         backdrop-filter: blur(var(--space-2xs));
         color: var(--clr-white);
         z-index: var(--z-dialog);

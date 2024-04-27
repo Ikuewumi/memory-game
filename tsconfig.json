@@ -1,16 +1,34 @@
 {
   "extends": "astro/tsconfigs/base",
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": "/home/minato/projects/memory-game",
     "paths": {
-      "@/*": ["src/*"], 
-      "@components/*": ["src/components/*"],
-      "@composables/*": ["src/composables/*"],
-      "@pages/*": ["src/pages/*"],
-      "@assets/*": ["src/assets/*"],
-      "@scss/*": ["src/scss/*"],
-      "@stores/*": ["src/stores/*"],
-      "@types/*": ["src/types/*"]
-    }
+      "@/*": [
+        "src/*"
+      ],
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@composables/*": [
+        "src/composables/*"
+      ],
+      "@pages/*": [
+        "src/pages/*"
+      ],
+      "@assets/*": [
+        "src/assets/*"
+      ],
+      "@scss/*": [
+        "src/scss/*"
+      ],
+      "@stores/*": [
+        "src/stores/*"
+      ],
+      "@types/*": [
+        "src/types/*"
+      ]
+    },
+    "jsx": "preserve",
+    "jsxImportSource": "solid-js"
   }
 }

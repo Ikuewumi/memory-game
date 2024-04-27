@@ -2,6 +2,7 @@ import { getCardsData, getFormattedTimeNumber, matchCards, shuffle } from "@/com
 import type { CardData, FocusData, FocusState, GameData, GameStatus, Question } from "@/types";
 import { computed, map, atom } from "nanostores";
 import { MODE } from "./modes";
+import { writeMessage } from "./toast";
 
 
 let TIME_ID = 0
@@ -100,8 +101,25 @@ export const startGame = (): void => {
 export const stopGame = () => {
     gameStatus.setKey("gameStarted", false)
     focusData.set( { ...DEFAULT_FOCUS_DATA })
-    MODE.get()?.onEnd?.()
     MODE.get()?.gameComplete().off()
+    MODE.get()?.onEnd?.()
+    gameStatus.set({ ...DEFAULT_GAME_STATUS })
+}
+
+export const resetGame = () => {
+
+
+    focusData.set({ ...DEFAULT_FOCUS_DATA })
+    gameStatus.set({ ...DEFAULT_GAME_STATUS })
+    gameData.set({ ...DEFAULT_GAME_DATA })
+    currentStatus.set(DEFAULT_CURRENT_STATUS)
+
+    MODE.get()?.gameComplete().off()
+    focusData.off()
+    gameStatus.off()
+    gameData.off()
+
+    writeMessage("")  
 }
 
 

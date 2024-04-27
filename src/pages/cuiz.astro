@@ -1,11 +1,19 @@
-{
+---
+import CuizMetadata from "@/components/CuizMetadata.astro";
+import CuizWalkthrough from "@/components/CuizWalkthrough.svelte";
+import Base from "@/layouts/Base.astro";
+import type { Cuiz } from "@/types";
+
+// @TODO remove before production
+const startDraftGame = async () => {
+        const TEST_URL = "http://localhost:4321/test.json";
+        const res = {
   "title": "The Larynx",
   "course": "anatomy",
-  "date": 1714092030286,
   "description": "Learn the parts of the Larynx (anteriolateral view)",
-  "difficulty": "easy",
+  "difficulty": "Easy",
   "text": "",
-  "imageUrl": "https://i.ibb.co/v1VMYYw/Larynx.jpg",
+  //"imageUrl": "https://i.ibb.co/v1VMYYw/Larynx.jpg",
   "image": "/test.png",
   "questions": [
     { "question": "A", "answer": "hyoid bone" },
@@ -24,4 +32,20 @@
     { "question": "N", "answer": "cricoid cartilage" }, 
     { "question": "P", "answer": "trachea" } 
   ]
-}
+} as unknown as Cuiz;
+
+        return res;
+};
+
+
+const data = await startDraftGame()
+
+---
+
+<Base title="Cuiz | A Sample Page">
+
+
+	<CuizMetadata data={data} />
+        <CuizWalkthrough client:load data={data} />
+
+</Base>

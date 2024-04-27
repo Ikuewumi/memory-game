@@ -1,55 +1,46 @@
 <script lang="ts">
-    import type { Data } from "@/types";
     import Card from "./Card.svelte";
     import Image from "./Image.svelte";
-    import { onMount } from "svelte";
+    import { onDestroy } from "svelte";
+    import { modals } from "@stores/modals";
     import {
         gameData,
         gameStatus,
-        enterData,
         cardsList,
-        startGame,
         clickCard,
         focusData,
+        resetGame,
     } from "@stores/game";
     import GameStatus from "./GameStatus.svelte";
 
-    const startDraftGame = async () => {
-        const TEST_URL = "/test.json";
-        const res: Data = await (await fetch(TEST_URL)).json();
-
-        return res;
-    };
-
-    onMount(async () => {
-        const { questions, image, text } = await startDraftGame();
-        enterData(questions, image, text);
-        startGame();
-    });
+    onDestroy(resetGame);
 
     const click = (index: number) => {
         return () => clickCard(index);
     };
+
 </script>
 
-<GameStatus />
-<div class="draft">
-    {#if $gameData.image > ""}
-        <Image src={$gameData.image} alt="Alternative Text" />
-    {/if}
-    <div class="draft-main" data-focus={$focusData.state} >
-        <ul class="card-list">
-            {#each $cardsList as card, i (i)}
-                <li class="card-li">
-                    <Card
-                        text={card.text}
-                        on:click={click(i)}
-                        chosen={$focusData.cards.includes(i)}
-                        disabled={!$gameStatus.gameStarted}
-                    />
-                </li>
-            {/each}
-        </ul>
+<div class="draft-wrapper" data-grid role="presentation" data-open={$modals.game}>
+    <GameStatus />
+    <div class="draft">
+        {#if $gameData.image > ""}
+            <Image src={$gameData.image} alt="Alternative Text" />
+        {/if}
+        <div class="draft-main" data-focus={$focusData.state}>
+            <ul class="card-list">
+                {#each $cardsList as card, i (i)}
+                    <li class="card-li">
+                        <Card
+                            text={card.text}
+                            on:click={click(i)}
+                            chosen={$focusData.cards.includes(i)}
+                            disabled={!$gameStatus.gameStarted}
+                        />
+                    </li>
+                {/each}
+            </ul>
+        </div>
     </div>
 </div>
 
@@ -57,15 +48,32 @@
     .draft {
         display: flex;
         flex-direction: column;
-        gap: 2rem 0.5rem;
+        gap: 1.75rem 1rem;
         padding-block: var(--space-xs) var(--space-l);
         grid-column: full;
+        font-family: var(--font-heading);
 
-        @media (min-width: 768px) {
+        @media (min-width: 800px) {
             flex-direction: row;
             grid-column: content;
         }
+        &-wrapper {
+            position: fixed;
+            z-index: var(--z-dialog);
+            inset: 0;
+            background: var(--clr-gray-200);
+            display: grid;
+            transform: translateX(-100vw);
+            place-content: start center;
+            pointer-events: none;
+            transition: 400ms transform ease-out, 0ms opacity;
+            &[data-open=true] {
+                pointer-events: auto;
+                transform: translateX(0vmax);
+            }
+        }
     }
+
     .draft-main {
         width: 100%;
         --bg: var(--clr-white);
@@ -94,7 +102,7 @@
         font-size: var(--step-0);
         padding-inline: var(--space-2xs);
 
-        @media (min-width: 768px) {
+        @media (min-width: 800px) {
             flex-direction: column;
             padding-inline: 0;
             font-size: var(--step-n1);

@@ -1,0 +1,102 @@
+---
+import type { Cuiz } from "@/types";
+import FeaturedCuiz from "./FeaturedCuiz.astro";
+
+type CardProps = Cuiz;
+
+const cards: CardProps[] = [
+    {
+        title: "Larynx",
+        description:
+            "You can also define your props with TypeScript with a Props type interface",
+        image: "/test.png",
+        course: "anatomy",
+        author: "Ayobami Ikuewumi",
+        difficulty: "Medium",
+        questions: [],
+    },
+
+    {
+        title: "Laryngeal Incisure",
+        description:
+            "You can also define your props with TypeScript with a Props type interface",
+        image: "/test.png",
+        course: "anatomy",
+        author: "Ayobami Ikuewumi",
+        difficulty: "Medium",
+        questions: [{ question: "a", answer: "" }],
+    },
+
+    {
+        title: "Blood components",
+        description:
+            "You can also define your props with TypeScript with a Props type interface",
+        image: "/test.png",
+        course: "anatomy",
+        author: "Ayobami Ikuewumi",
+        difficulty: "Medium",
+        questions: [],
+    },
+
+];
+---
+
+<section class="featured">
+    <h2 class="featured-heading">
+        Featured <span class="featured-heading-span text-gradient">Cuizzes</span>
+    </h2>
+
+    <ul class="featured-list">
+        {
+            cards.map((card) => (
+                <li class="featured-li">
+                    <FeaturedCuiz card={card} />
+                </li>
+            ))
+        }
+    </ul>
+
+    <a class="featured-link text-gradient" href="/dev">See all cuizzes here</a>
+</section>
+
+<style lang="scss">
+    .featured {
+        margin-top: var(--space-l);
+        display: grid;
+        gap: var(--space-s);
+
+        &-heading {
+            font-size: var(--step-4);
+            font-weight: 600;
+        }
+
+
+        &-list {
+            list-style: none;
+            display: grid;
+            gap: var(--space-s);
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            align-items: start;
+        }
+
+        &-li {
+            display: contents;
+        }
+
+        &-link {
+            font-family: var(--font-heading);
+            font-size: var(--step-1);
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            justify-self: end;
+            margin-block: var(--space-s);
+
+            &:hover,
+            &:focus {
+                text-decoration: 2px underline var(--clr-gray-900);
+                text-underline-offset: 4px;
+            }
+        }
+    }
+</style>

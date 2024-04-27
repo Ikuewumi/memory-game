@@ -1,14 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Epilogue:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Share+Tech+Mono&family=Space+Grotesk:wght@300..700&display=swap");
+
+
+@mixin mq {
+    /* stylelint-disable-next-line media-feature-range-notation */
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+
+
 :root {
     // Type
     --step-n2: clamp(0.6076rem, 0.5407rem + 0.3345vw, 0.8rem);
     --step-n1: clamp(0.7292rem, 0.635rem + 0.471vw, 1rem);
-    --step-0: clamp(0.875rem, 0.7446rem + 0.6522vw, 1.25rem);
-    --step-1: clamp(1.05rem, 0.8717rem + 0.8913vw, 1.5625rem);
-    --step-2: clamp(1.26rem, 1.0189rem + 1.2054vw, 1.9531rem);
-    --step-3: clamp(1.512rem, 1.1887rem + 1.6164vw, 2.4414rem);
-    --step-4: clamp(1.8144rem, 1.384rem + 2.1519vw, 3.0518rem);
-    --step-5: clamp(2.1773rem, 1.6077rem + 2.8477vw, 3.8147rem);
-
+    --step-0: clamp(0.875rem, 0.6rem + 0.7vw, 1.15rem);
+    --step-n0: clamp(0.9rem, 0.7rem + 0.8vw, 1.1rem);
+    --step-1: clamp(1.0rem, 0.7rem + 0.77vw, 1.3rem);
+    --step-2: clamp(1.2rem, 1rem + 1vw, 1.7rem);
+    --step-3: clamp(1.45rem, 1.05rem + 1.3vw, 2.1rem);
+    --step-4: clamp(1.7rem, 1.1rem + 1.7vw, 2.8rem);
+    --step-5: clamp(2.75rem, 2.5rem + 2.6vw, 4.7147rem);
+    --step-card: clamp(0.775rem, 0.7rem + 0.4vw, 0.9rem);
+    
+    
     // Spacing
     --space-3xs: clamp(0.25rem, 0.2283rem + 0.1087vw, 0.3125rem);
     --space-2xs: clamp(0.4375rem, 0.3723rem + 0.3261vw, 0.625rem);
@@ -21,7 +36,14 @@
     --space-3xl: clamp(5.25rem, 4.4674rem + 3.913vw, 7.5rem);
 
     // Fonts
-    --font-sans: 'Rubik', system-ui, -apple-system, blinkmacsystemfont, 'Segoe UI', roboto, oxygen, ubuntu, cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --font-sans: 'Outfit', system-ui, -apple-system, blinkmacsystemfont, 'Segoe UI', roboto, oxygen, ubuntu, cantarell, 'Open Sans', sans-serif;
+    --font-heading: 'Space Grotesk', var(--font-sans);
+    --font-monospace: 'Share Tech Mono', monospace;
+
+    // Shadow (h,s)
+    --shadow-color: 210deg 11%;
+    --shadow-color-light: 210deg 11% 90%;
+    --shadow-color-dark: 210deg 11% 10%;
 
     // Colors
     --clr-gray-100: hsl(210deg 17% 98%);
@@ -32,12 +54,32 @@
     --clr-gray-600: hsl(208deg 7% 46%);
     --clr-gray-700: hsl(210deg 9% 31%);
     --clr-gray-800: hsl(210deg 10% 23%);
-    --clr-gray-900: hsl(210deg 11% 15%);
-    --clr-white: hsl(0deg 0% 99%);
-    --clr-black: hsl(0deg 0% 7%);
+    --clr-gray-900: hsl(210deg 11% 21%);
+    --clr-white: hsl(210deg 30% 99%);
+    --clr-black: hsl(210deg 60% 7%);
+    --clr-all-white: hsl(210deg 30% 99%);
+    --clr-easy: hsl(165deg 51% 35%);
+    --clr-medium: hsl(60deg 65% 28%);
+    --clr-hard: hsl(352deg 69% 42%);
 
-    // Shadow (h,s)
-    --shadow-color: 210deg 11%;
+    /* control the size */
+    --s: 82px;
+    --c1: hsl(var(--shadow-color) 87% / 16%);
+    --c2: hsl(var(--shadow-color) 97% / 15%);
+    --c3: hsl(var(--shadow-color) 83% / 14%);
+    --g: var(--c3) 0 120deg, #0000 0;
+    --body-bg:
+        conic-gradient(from -60deg at 50% calc(100% / 3), var(--g)),
+        conic-gradient(from 120deg at 50% calc(200% / 3), var(--g)),
+        conic-gradient(from 60deg at calc(200% / 3), var(--c3) 60deg, var(--c2) 0 120deg, #0000 0),
+        conic-gradient(from 180deg at calc(100% / 3), var(--c1) 60deg, var(--g)),
+        linear-gradient(90deg, var(--c1) calc(100% / 6), var(--c2) 0 50%,
+            var(--c1) 0 calc(500% / 6), var(--c2) 0);
+    --body-bg-size: calc(1.732 * var(--s)) var(--s);
+    --text-gradient: linear-gradient(217deg, hsla(208deg 80% 35% / 88%), hsla(208deg 80% 40% / 20%) 70.71%),
+            linear-gradient(127deg, hsla(140deg 54% 53% / 98%), hsla(272deg 75% 50% / 20%) 70.71%);
+    --text-gradient-fallback: hsla(140deg 54% 53% / 88%);
+
 
     // Z-levels
     --z-base: 1;
@@ -47,11 +89,32 @@
     // Grid Properties
     --grid-offset: 1.5rem;
     --breakout-offset: 1rem;
-    --grid-width: 105ch;
+    --grid-width: 55rem;
 
     font-family: var(--font-sans);
-    font-size: 15px;
+    color: var(--clr-gray-900);
+    font-size: 17px;
     color-scheme: light;
+
+
+
+    @media (prefers-color-scheme: dark) {
+    --clr-gray-100: hsl(210deg 17% 2%);
+    --clr-gray-200: hsl(210deg 16% 7%);
+    --clr-gray-300: hsl(210deg 14% 11%);
+    --clr-gray-400: hsl(210deg 14% 17%);
+    --clr-gray-500: hsl(210deg 11% 29%);
+    --clr-gray-600: hsl(208deg 7% 54%);
+    --clr-gray-700: hsl(210deg 9% 69%);
+    --clr-gray-800: hsl(210deg 10% 77%);
+    --clr-gray-900: hsl(210deg 11% 79%);
+    --clr-white: hsl(210deg 30% 1%);
+    --clr-black: hsl(210deg 60% 93%);
+    --text-gradient: linear-gradient(217deg, hsla(208deg 80% 75% / 88%), hsla(208deg 80% 60% / 20%) 70.71%),
+            linear-gradient(127deg, hsla(140deg 54% 73% / 98%), hsla(272deg 75% 80% / 20%) 70.71%);
+    --shadow-color-light: 210deg 11% 10%;
+    --shadow-color-dark: 210deg 11% 60%;
+    }
 }
 
 
@@ -67,17 +130,30 @@
 
 
 body {
-    background: var(--clr-gray-200);
+    // background-image: var(--body-bg);
+
+    background-color: var(--clr-gray-200);
+    background-size: var(--body-bg-size);
     color: var(--clr-grey-900);
     accent-color: var(--clr-gray-300);
+    min-height: 100vh;
+    align-content: start;
+    padding-block: 0 var(--space-m);
 }
 
-main, astro-island, astro-slot, astro-static-slot {
+main,
+astro-island,
+astro-slot,
+astro-static-slot {
     display: contents;
 
-    & > * {
+    &>* {
         grid-column: content;
     }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
 }
 
 button:focus {
@@ -85,14 +161,21 @@ button:focus {
     outline: 2px solid;
 }
 
-svg, picture, img, video {
+svg,
+picture,
+img,
+video {
     max-width: 100%;
+    vertical-align: middle;
+    font-style: italic;
 }
 
 svg {
     --c-icon-size: var(--icon-size, 30px);
-    
+    --c-aspect-ratio: var(--aspect-ratio, 1);
+
     width: var(--c-icon-size);
+    aspect-ratio: var(--c-aspect-ratio);
 }
 
 
@@ -101,11 +184,8 @@ svg {
     --c-grid-width: var(--grid-width, 105ch);
 
     display: grid;
-    grid-template-columns: 
-        [full-start left-start] minmax(var(--c-grid-offset), 1fr) 
-        [right-start content-start] minmax(auto, var(--c-grid-width)) 
-        [content-end left-end] minmax(var(--c-grid-offset), 1fr) 
-        [right-end full-end];
+    grid-template-columns:
+        [full-start left-start] minmax(var(--c-grid-offset), 1fr) [right-start content-start] minmax(auto, var(--c-grid-width)) [content-end left-end] minmax(var(--c-grid-offset), 1fr) [right-end full-end];
 
     /* stylelint-disable-next-line no-descending-specificity */
     &>* {
@@ -118,6 +198,35 @@ h1 {
     font-size: var(--step-5);
     font-weight: bold;
 }
+
+code {
+    font-family: var(--font-monospace);
+}
+
+.text-gradient {
+    --c-gradient: var(--gradient, var(--text-gradient));
+    --c-fallback: var(--fallback,  hsla(208deg 80% 35% / 88%));
+
+    color: transparent;
+    background: var(--c-gradient);
+    background-clip: text;
+
+    @supports not (background-clip: text) {
+        background: none;
+        background-clip: inital;
+        color: var(--c-fallback);
+    }
+
+
+}
+
+
+.button {
+    --c-padding: var(--padding, 0.1rem 0.5rem);
+
+    padding: var(--c-padding);
+}
+
 
 .sr-only {
     border: 0 !important;

@@ -1,0 +1,171 @@
+---
+import type { GameData, Metadata } from "@/types";
+import { Show } from "solid-js";
+interface Props {
+    data: Metadata & GameData;
+}
+
+const { data } = Astro.props;
+---
+
+<>
+    <Show when={data?.image}>
+        <figure class="cuiz-metadata-figure">
+            <img
+                class="cuiz-metadata-image"
+                src={data.image}
+                alt={data.title}
+            />
+            <figcaption class="sr-only">{data.title}</figcaption>
+        </figure>
+    </Show>
+
+    <span class="cuiz-metadata-course text-gradient">{data.course}</span>
+
+    <h1 class="cuiz-metadata-heading">{data.title}</h1>
+
+    <div class="cuiz-metadata-author">
+        <img
+            src="https://i.ibb.co/CWL13C2/image-3.jpg"
+            alt="Ayobami Ikuewumi"
+            class="cuiz-metadata-author-image"
+        />
+        <strong class="cuiz-metadata-author-name">By Ayobami Ikuewumi</strong>
+    </div>
+
+    <div class="cuiz-metadata-extras">
+        <span class="cuiz-metadata-difficulty" data-difficulty="easy" title="Difficulty">{data.difficulty}</span
+        >
+        <span class="cuiz-metadata-count">{data.questions.length} terms</span>
+    </div>
+
+    <p class="cuiz-metadata-description">
+        {data.description}
+    </p>
+</>
+
+<style lang="scss">
+    .cuiz-metadata {
+        &-figure {
+            display: contents;
+        }
+
+        &-image, &-extras {
+            grid-row: 1 / 2;
+        }
+
+        &-image {
+            width: 100%;
+            height: min(275px, 35vh);
+            object-fit: cover;
+            box-shadow: 0 2px 7px -3px hsl(var(--shadow-color-dark) / 50%);
+            border-radius: 0;
+            grid-column: full;
+
+            @media (min-width: 800px) {
+                border-radius: 0.5rem;
+                grid-column: content;
+                object-position: top center;
+            }
+        }
+
+        &-course {
+            text-transform: uppercase;
+            font-size: var(--step-0);
+            font-weight: 700;
+            font-family: var(--font-family);
+            letter-spacing: 0.5px;
+            filter: drop-shadow(0 0 5px var(--shadow-color-dark));
+            justify-self: start;
+            margin-top: var(--space-xs);
+        }
+
+        &-heading {
+            font-size: calc(1.25 * var(--step-4));
+        }
+
+        &-author {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: var(--space-2xs);
+            font-size: var(--step-1);
+            font-weight: 500;
+            color: var(--clr-gray-600);
+            margin-top: 0.5rem;
+        }
+
+        &-author-image {
+            width: 30px;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            object-fit: cover;
+            cursor: pointer;
+            box-shadow: 0 0 0px 2px var(--clr-gray-500);
+            transition: transform 100ms ease-out;
+
+            &:hover {
+                transform: scale(2);
+            }
+
+        }
+
+        &-extras {
+            justify-self: start;
+            display: flex;
+            // gap: var(--space-3xs);
+            align-items: center;
+            border-radius: 5vmax;
+            padding: 0.25rem 0.35rem 0.275rem;
+            align-self: start;
+            gap: 0.2rem;
+            flex-wrap: wrap;
+            font-size: var(--step-n1);
+            background: hsl(210deg 60% 1%);
+            color: hsl(210deg 60% 93%);
+            background: var(--clr-white);
+            color: var(--clr-black);
+            box-shadow: 0 0px 1px 2px hsl(var(--shadow-color-dark) / 60%);
+            margin-top: var(--space-2xs);
+            margin-left: 0;
+
+            @media (min-width: 800px) {
+                margin-left: var(--space-xs);
+            }
+        }
+
+        &-difficulty {
+            --clr: hsl(210deg 30% 96%);
+
+            &[data-difficulty="easy"] {
+                --bg: var(--clr-easy);
+            }
+            &[data-difficulty="medium"] {
+                --bg: var(--clr-medium);
+            }
+            &[data-difficulty="hard"] {
+                --bg: var(--clr-hard);
+            }
+
+            background: var(--bg);
+            color: var(--clr);
+            padding: 0 0.35rem;
+            border-radius: 5vmax;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 0.25px;
+        }
+
+        &-count {
+            font-weight: 600;
+            font-size: var(--step-n1);
+        }
+
+
+        &-description {
+            font-size: var(--step-1);
+            margin-top: 1rem;
+            line-height: 1.6;
+        }
+    }
+</style>

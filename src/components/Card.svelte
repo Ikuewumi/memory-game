@@ -16,17 +16,22 @@
         padding: 0.5rem;
         display: grid;
         place-content: center;
+        line-height: 1.2;
         //height: fit-content;
         text-align: center;
         background: var(--clr-white);
+        color: var(--clr-gray-900);
         border-radius: var(--space-3xs);
         border: none;
-        box-shadow: 0 1px 5px -4px hsl(var(--shadow-color) 20% / 80%);
-        padding: 1rem 0.25rem;
+        box-shadow: 0 0.5px 5px -4px hsl(var(--shadow-color-dark) / 80%);
+        padding: 1rem 0.25rem 1.1rem;
+        font-size: var(--step-card);
+        font-weight: 500;
         cursor: pointer;
         transition:
             background 50ms ease-in,
             color 100ms ease-in-out;
+
 
         &[aria-selected="true"] {
             background: var(--bg);

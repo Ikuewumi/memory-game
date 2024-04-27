@@ -1,4 +1,4 @@
-import type { Question, CardData } from "@/types"
+import type { Question, CardData, Data } from "@/types"
 import confetti from "canvas-confetti"
 
 
@@ -89,3 +89,5 @@ export const throwConfetti = async (timeInMs = 2000) => {
     await sleep(timeInMs)
     return confetti.reset()
 }
+
+

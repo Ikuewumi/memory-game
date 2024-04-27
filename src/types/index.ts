@@ -18,9 +18,13 @@ export interface CardData {
 }
 
 export interface Metadata {
-  author: string
   title: string
-  date: Date
+  image?: string
+  description: string
+  author: string
+  course: string
+  difficulty: "Easy" | "Medium" | "Hard"
+  updatedAt: Date
 }
 
 export interface Data {
@@ -33,6 +37,8 @@ export interface Data {
 export interface GameData extends Data {
 }
 
+export type Cuiz = GameData & Metadata
+
 export interface GameStatus {
   time: number
   lives: number
@@ -43,6 +49,7 @@ type ModeCallback<T=void> = () => T
 
 export interface Mode {
   name: string
+  description: string
   gameComplete: ModeCallback<ReadableAtom<boolean>>
   onSetup?: ModeCallback
   onEnd?: ModeCallback

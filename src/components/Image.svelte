@@ -21,7 +21,7 @@
         width: fit-content;
         margin-inline: auto;
 
-        @media (min-width: 768px) {
+        @media (min-width: 800px) {
             position: sticky;
             padding-inline: 0;
             margin-inline: 0;
@@ -29,7 +29,12 @@
     }
     img {
         --c-img-width: var(--img-width, 100px);
-        --c-img-height: var(--img-height, min(300px, 50vh));
+        --c-img-height: var(--img-height, min(275px, 50vh));
+
+        @media (min-width: 768px) {
+            
+            --c-img-height: var(--img-height, min(310px, 50vh));
+        }
 
         max-height: var(--c-img-height);
         border-radius: 0.4rem;
