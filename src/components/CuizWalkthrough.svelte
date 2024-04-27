@@ -4,8 +4,8 @@
     import GameDraft from "./GameDraft.svelte";
     import { sleep } from "@/composables/engine";
     import type { GameData, Metadata } from "@/types";
-    import { enterData, startGame } from "@/stores/game";
-    import { selectedMode } from "@/stores/modes";
+    import { enterData, resetGame, startGame } from "@/stores/game";
+    import { blitzSecondsIndex, selectedMode } from "@/stores/modes";
     
 
     export let data: Metadata & GameData;
@@ -13,6 +13,7 @@
 
     const showOptions = () => modals.setKey("options", true);
     const start = async () => {
+        resetGame()
         enterData(data.questions, data.image, data.text);
         modals.set({ ...DEFAULT_MODAL_STATES, game: true })
         await sleep(400)
@@ -21,6 +22,7 @@
 
     const startWithOptions = (e: CustomEvent<{ modeIndex: number, timeIndex: number}>) => {
         selectedMode.set(e.detail.modeIndex)
+        blitzSecondsIndex.set(e.detail.timeIndex)
         start()
     }
 

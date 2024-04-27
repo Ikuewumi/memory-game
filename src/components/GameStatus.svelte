@@ -18,14 +18,14 @@
         </svg>
     </button>
 
-    {#if $MODE.name === "classic"}
+    {#if $MODE.name === "challenge"}
         <span class="game-status-lives">
             <svg viewBox="0 0 24 24">
                 <use href="#heart"></use>
             </svg>
             <strong>{$gameStatus.lives}</strong>
         </span>
-    {:else if $MODE.name === "survival"}
+    {:else if $MODE.name === "blitz"}
         <span class="game-status-lives">
             <svg viewBox="0 0 24 24">
                 <use href="#timer"></use>
@@ -87,6 +87,7 @@
             background: none;
             color: var(--clr-gray-800);
             border: none;
+            cursor: pointer;
         }
 
         &-lives {
@@ -97,17 +98,13 @@
             place-items: center;
 
             strong {
-                font-size: 29px;
+                font-size: 35px;
                 font-weight: 600;
             }
 
-            strong.text-gradient {
-                font-size: 35px;
-                line-height: 0.9;
-            }
 
             svg.infinite {
-                --icon-size: 50px;
+                --icon-size: 40px;
                 color: var(--text-gradient-fallback);
             }
 
@@ -137,7 +134,7 @@
         border-radius: var(--radius);
         box-shadow: 0 1px 5px -4px hsl(var(--shadow-color) 40% / 70%);
         position: sticky;
-        z-index: var(--z-toast);
+        z-index: var(--z-home);
         inset: calc(var(--offset) * 2) auto auto;
 
         &:before {

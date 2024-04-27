@@ -67,6 +67,7 @@
             place-content: start center;
             pointer-events: none;
             transition: 400ms transform ease-out, 0ms opacity;
+            overflow-y: auto;
             &[data-open=true] {
                 pointer-events: auto;
                 transform: translateX(0vmax);

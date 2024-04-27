@@ -1,6 +1,6 @@
 <script lang="ts">
     import { modals, resetModals } from "@stores/modals";
-    import { MODE, modes } from "@stores/modes"
+    import { modes, BLITZ_SECONDS } from "@stores/modes"
     import { createEventDispatcher } from "svelte";
 
 
@@ -65,16 +65,10 @@
                     </svg>
                 </label>
                 <div class="cuiz-options-select-wrapper" role="presentation">
-                    <select name="" class="cuiz-options-select">
-                        <option value="pratice" class="cuiz-options-option"
-                            >10 seconds</option
-                        >
-                        <option value="pratice" class="cuiz-options-option"
-                            >15 seconds</option
-                        >
-                        <option value="blitz" class="cuiz-options-option"
-                            >20 seconds</option
-                        >
+                    <select name="" class="cuiz-options-select" bind:value={timeIndex}>
+                        {#each BLITZ_SECONDS as timeInSeconds, i (i) }
+                                <option value={i}>{ timeInSeconds / 60 } { timeInSeconds / 60 > 1 ? `mins` : `min` }</option> 
+                        {/each}     
                     </select>
 
                     <svg
