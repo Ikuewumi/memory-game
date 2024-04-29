@@ -3,6 +3,9 @@ import type { CardData, FocusData, FocusState, GameData, GameStatus, Question } 
 import { computed, map, atom } from "nanostores";
 import { MODE } from "./modes";
 import { writeMessage } from "./toast";
+import { startListening, stopListening } from "./keymaps";
+import { metrics } from "./metrics";
+import { modals } from "./modals";
 
 
 let TIME_ID = 0
@@ -90,34 +93,47 @@ export const startGame = (): void => {
     MODE.get().onSetup?.()
     gameStatus.setKey("gameStarted", true)
     MODE.get()?.onStart?.()
+    startListening()
+    metrics.onStart()
 
     const gameContinues = MODE.get()?.gameComplete()
     gameContinues.subscribe(continues => {
         if (continues) return
+        if (!gameStatus.get().gameStarted) return
         stopGame()
     })
 }
 
 export const stopGame = () => {
+
     gameStatus.setKey("gameStarted", false)
     focusData.set( { ...DEFAULT_FOCUS_DATA })
     MODE.get()?.gameComplete().off()
     MODE.get()?.onEnd?.()
+    metrics.onEnd()
     gameStatus.set({ ...DEFAULT_GAME_STATUS })
+    stopClock()
+    stopListening()
+
 }
 
 export const resetGame = () => {
 
 
+
+    stopClock()
     focusData.set({ ...DEFAULT_FOCUS_DATA })
     gameStatus.set({ ...DEFAULT_GAME_STATUS })
     gameData.set({ ...DEFAULT_GAME_DATA })
     currentStatus.set(DEFAULT_CURRENT_STATUS)
+    metrics.reset()
 
     MODE.get()?.gameComplete().off()
     focusData.off()
     gameStatus.off()
     gameData.off()
+    stopListening()
+
 
     writeMessage("")  
 }
@@ -154,6 +170,7 @@ export const clickCard = (index: number): void => {
 const matchGameCards = (a: number, b: number) => {
     focusData.set({ state: "focus", cards: [a, b] })
 
+    metrics.onAttempt()
     const cards = cardsList.get()
     const cardIndex = cards[a].index
     const cardsMatch = matchCards(cards, cards[a], cards[b])
@@ -165,14 +182,19 @@ const matchGameCards = (a: number, b: number) => {
         const newQuestions = shuffle(questions.filter((_, index) => index !== cardIndex))
         gameData.setKey("questions", newQuestions)
         
+        metrics.onCorrect()
 
-        if (newQuestions.length <= 0) { MODE.get()?.onComplete?.() }
+        if (newQuestions.length <= 0) { 
+            MODE.get()?.onComplete?.() 
+            metrics.onEnd()
+        }
         else { MODE.get().onMatchRight?.() }
 
     } else {
         currentStatus.set("failure")
         focusData.setKey("state", "failure")
         MODE.get().onMatchWrong?.()
+        metrics.onWrong(questions[cards[a].index])
     }
 
 

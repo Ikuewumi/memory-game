@@ -6,10 +6,10 @@
     import type { GameData, Metadata } from "@/types";
     import { enterData, resetGame, startGame } from "@/stores/game";
     import { blitzSecondsIndex, selectedMode } from "@/stores/modes";
+    import CuizMetrics from "./CuizMetrics.svelte";
     
 
     export let data: Metadata & GameData;
-
 
     const showOptions = () => modals.setKey("options", true);
     const start = async () => {
@@ -28,6 +28,7 @@
 
 
 
+
     
 </script>
 
@@ -40,7 +41,7 @@
 
 <CuizOptions on:start-game={startWithOptions} />
 <GameDraft />
-
+<CuizMetrics />
 
 
 

@@ -1,8 +1,7 @@
 import { checkIndex, throwConfetti } from "@/composables/engine";
 import type { Mode } from "@/types";
 import { atom, computed } from "nanostores";
-import { fullQuestionCount, gameStatus, percent, startClock, stopClock } from "./game";
-import { showMessage } from "./toast";
+import { gameData, gameStatus, startClock, stopClock } from "./game";
 
 const DEFAULT_MODE = 0
 
@@ -17,25 +16,27 @@ export const blitzSecondsIndex = atom(0)
 // Using a Function to Wrap the Computed vale
 const modeClassicComplete = () => computed(gameStatus, gameStatus => gameStatus.lives > 0)
 const modeSurvivalComplete = () => computed(gameStatus, gameStatus => gameStatus.time > 0)
-const modePracticeComplete = () => computed(gameStatus, _ => true)
+const modePracticeComplete = () => computed(gameData, gameData => gameData.questions.length > 0)
 
 
 export const modes: Mode[] = [
     {
         name: "pratice",
-        description: "Take your time to answer each question at your own pace, perfecting your understanding of the material without any time pressure. Ideal for learning new concepts.",
+        description: `
+            Click on a card to select it, then match it with an appropriate card
+        `,
         gameComplete: modePracticeComplete,
         onComplete: () => {
-            const questionCount = fullQuestionCount.get()
             throwConfetti(DEFAULT_CONFETTI_TIME_MS)
-            showMessage(`✅ Finished all ${questionCount} questions. Yay!`)
         },
     },
 
 
     {
         name: "challenge",
-        description: "With a limited supply of lives, each decision carries weight. Navigate through the trials and tribulations, knowing that every life lost brings you one step closer to defeat.",
+        description: `
+            Click on a card to select it, then match it with an appropriate card. Be careful though, if you're wrong, the number of lives decrease. The game is over once all the lives are gone
+        `,
         onSetup: () => { gameStatus.setKey("lives", DEFAULT_LIVES) },
         gameComplete: modeClassicComplete,
         onMatchWrong: () => {
@@ -43,18 +44,15 @@ export const modes: Mode[] = [
             gameStatus.setKey("lives", lives - 1)
         },
         onComplete: () => {
-            const questionCount = fullQuestionCount.get()
             throwConfetti(DEFAULT_CONFETTI_TIME_MS)
-            showMessage(`✅ Finished all ${questionCount} questions. Yay!`)
         },
-        onEnd: () => {
-            showMessage(`❌ ${percent.get()}% done. Could not finish all questions`)
-        }
     },
 
     {
         name: "blitz",
-        description: "Race against the clock to answer as many questions as possible within a limited time frame, providing an exhilarating challenge for those who thrive under pressure.",
+        description: `
+            Race against the clock to click and match cards. Don't be too hasty though as wrong answers reduce your time. 
+        `,
         onStart: () => { startClock(BLITZ_SECONDS[blitzSecondsIndex.get()], DEFAULT_INTERVAL_MS) },
         gameComplete: modeSurvivalComplete,
         onMatchWrong: () => {
@@ -63,17 +61,9 @@ export const modes: Mode[] = [
             else startClock(time - 5, DEFAULT_INTERVAL_MS)
         },
         onComplete: () => {
-            const time = gameStatus.get().time
-            const quizDuration = BLITZ_SECONDS[blitzSecondsIndex.get()] - time
-            const questionCount = fullQuestionCount.get()
             stopClock()
             throwConfetti(DEFAULT_CONFETTI_TIME_MS)
-            showMessage(`✅ Finished all ${questionCount} questions in ${quizDuration} seconds. Yay!`)
         },
-        onEnd: () => {
-
-            showMessage(`❌ ${percent.get()}% done. Could not finish all questions`)
-        }
 
     }
 ]

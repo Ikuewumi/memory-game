@@ -6,7 +6,7 @@ import type { Cuiz } from "@/types";
 
 // @TODO remove before production
 const startDraftGame = async () => {
-        const TEST_URL = "http://localhost:4321/test.json";
+        //const TEST_URL = "http://localhost:4321/test.json";
         const res = {
   "title": "The Larynx",
   "course": "anatomy",
@@ -46,6 +46,6 @@ const data = await startDraftGame()
 
 
 	<CuizMetadata data={data} />
-        <CuizWalkthrough client:load data={data} />
+        <CuizWalkthrough client:only="svelte" data={data} />
 
 </Base>

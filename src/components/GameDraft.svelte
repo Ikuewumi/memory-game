@@ -3,6 +3,7 @@
     import Image from "./Image.svelte";
     import { onDestroy } from "svelte";
     import { modals } from "@stores/modals";
+    import { gameKeys } from "@stores/keymaps"
     import {
         gameData,
         gameStatus,
@@ -15,13 +16,16 @@
 
     onDestroy(resetGame);
 
+
     const click = (index: number) => {
         return () => clickCard(index);
     };
 
 </script>
 
-<div class="draft-wrapper" data-grid role="presentation" data-open={$modals.game}>
+<div class="draft-wrapper" data-grid role="presentation" data-open={$modals.game}
+    inert={!$modals.game}
+    aria-hidden={!$modals.game}>
     <GameStatus />
     <div class="draft">
         {#if $gameData.image > ""}
@@ -36,6 +40,7 @@
                             on:click={click(i)}
                             chosen={$focusData.cards.includes(i)}
                             disabled={!$gameStatus.gameStarted}
+                            badge={gameKeys[i]}
                         />
                     </li>
                 {/each}

@@ -42,7 +42,7 @@ export type Cuiz = GameData & Metadata
 export interface GameStatus {
   time: number
   lives: number
-  gameStarted: boolean // @TODO - boolean returning computed here
+  gameStarted: boolean
 }
 
 type ModeCallback<T=void> = () => T
@@ -57,4 +57,27 @@ export interface Mode {
   onComplete?: ModeCallback
   onMatchRight?: ModeCallback
   onMatchWrong?: ModeCallback
+}
+
+
+export interface MetricsData {
+  questionCount: number
+  wrong: Question[]
+  correctCount: number
+  startingTime: number
+  endingTime: number
+  attemptsCount: number
+
+}
+
+export interface Metrics {
+  numberOfQuestions: number
+  numberOfAnsweredQuestions: number
+  numberOfUnansweredQuestions: number
+  numberOfWrongQuestions: number
+  numberOfCorrectQuestions: number
+  acuracy: number
+  wrongQuestions: Question[]
+  timeTaken: number
+  numberOfAttempts: number
 }

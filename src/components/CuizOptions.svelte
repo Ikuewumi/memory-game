@@ -81,7 +81,7 @@
 
             {/if}
             <blockquote class="cuiz-options-blockquote">
-                <h3 class="cuiz-options-blockquote-heading">{modes[modeIndex].name} mode</h3>
+                <h3 class="cuiz-options-blockquote-heading">How To Play</h3>
                 <p class="cuiz-options-blockquote-description">
                     {modes[modeIndex].description}
                 </p>
@@ -109,6 +109,7 @@
             place-content: start center;
             padding-top: var(--step-2);
             backdrop-filter: blur(6px);
+            overflow-y: auto;
             pointer-events: hidden;
             transition: 400ms transform ease-out;
 

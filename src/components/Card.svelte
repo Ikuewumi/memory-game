@@ -1,13 +1,14 @@
 <script lang="ts">
     export let text = "Default Text";
     export let chosen = false;
+    export let badge = "1";
     export let disabled = true;
 </script>
 
 <!-- svelte-ignore a11y-role-supports-aria-props -->
 <button {disabled} aria-selected={chosen} class="card" on:click>
     {text}
-    <span class="card-badge sr-wonly" hidden={true}>1</span>
+    <span class="card-badge" >{badge}</span>
 </button>
 
 <style lang="scss">
@@ -22,7 +23,7 @@
         background: var(--clr-white);
         color: var(--clr-gray-900);
         border-radius: var(--space-3xs);
-        border: none;
+        border: 1px solid hsl(var(--shadow-color-dark) / 20%);
         box-shadow: 0 0.5px 5px -4px hsl(var(--shadow-color-dark) / 80%);
         padding: 1rem 0.25rem 1.1rem;
         font-size: var(--step-card);
@@ -51,6 +52,7 @@
 
         &:disabled {
             cursor: not-allowed;
+            opacity: 0.4;
         }
 
         &-badge {
@@ -62,6 +64,13 @@
             padding: 0.15rem 0.25rem;
             aspect-ratio: 1;
             font-size: var(--step-n2);
+            z-index: var(--z-home);
+            display: none;
+            pointer-events: none;
+
+            @media (min-width: 768px) {
+            //display: block;
+            }
         }
     }
 </style>

@@ -11,6 +11,10 @@
 
 </script>
 
+
+<div class="game-status-wrapper" data-grid>
+
+
 <div class="game-status" >
     <button class="game-status-close" title="Close Game" on:click={closeGame}>
         <svg viewBox="0 0 24 24">
@@ -54,6 +58,7 @@
     title={`${$percent}% of cards matched!`}
 ></div>
 
+</div>
 <style lang="scss">
     .game-status, [role=progressbar] {
         grid-column: content;
@@ -78,6 +83,13 @@
         @media (min-width: 800px) {
             grid-column: content;
             margin-inline: 0;
+        }
+
+        &-wrapper {
+            position: sticky;
+            inset: 0 auto auto;
+            grid-column: full;
+            //display: contents;
         }
 
         &-close {
@@ -134,8 +146,8 @@
         border-radius: var(--radius);
         box-shadow: 0 1px 5px -4px hsl(var(--shadow-color) 40% / 70%);
         position: sticky;
-        z-index: var(--z-home);
         inset: calc(var(--offset) * 2) auto auto;
+        z-index: var(--z-toast);
 
         &:before {
             content: "";
