@@ -1,0 +1,33 @@
+---
+import Base from "@/layouts/Base.astro";
+
+---
+
+
+<Base title="anatomy" description="Lorem ipsum dolor">
+
+	
+	<h1 class="course-page-title">Anatomy</h1>
+	<p class="course-page-description">
+		Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus minus 
+	</p>
+
+</Base>
+
+
+<style lang="scss">
+.course-page {
+	&-title {
+		font-size: calc(1.25 * var(--step-4));
+		font-weight: 600;
+		color: var(--clr-gray-700);
+	}
+
+	&-description {
+		font-size: var(--step-0);
+
+	}
+
+}
+</style>
+

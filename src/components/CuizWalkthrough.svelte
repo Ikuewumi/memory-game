@@ -75,7 +75,7 @@
             &::before, &::after {
                 content: "";
                 position: absolute;
-                inset: -0.2rem -0.23rem -0.225rem;
+                inset: -0.25rem -0.23rem;
                 background: var(--text-gradient);
                 border-radius: calc(1.2 * 0.5rem);
                 z-index: -1;

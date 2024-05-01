@@ -26,7 +26,7 @@ const { data } = Astro.props;
 
     <div class="cuiz-metadata-author">
         <img
-            src="https://i.ibb.co/CWL13C2/image-3.jpg"
+            src="/test.png"
             alt="Ayobami Ikuewumi"
             class="cuiz-metadata-author-image"
         />
@@ -46,12 +46,13 @@ const { data } = Astro.props;
 
 <style lang="scss">
     .cuiz-metadata {
+
         &-figure {
             display: contents;
         }
 
         &-image, &-extras {
-            grid-row: 1 / 2;
+            grid-row: 2 / 3;
         }
 
         &-image {
@@ -61,6 +62,7 @@ const { data } = Astro.props;
             box-shadow: 0 2px 7px -3px hsl(var(--shadow-color-dark) / 50%);
             border-radius: 0;
             grid-column: full;
+            margin-top: 0.75rem;
 
             @media (min-width: 800px) {
                 border-radius: 0.5rem;
@@ -82,6 +84,7 @@ const { data } = Astro.props;
 
         &-heading {
             font-size: calc(1.25 * var(--step-4));
+            color: var(--clr-gray-700); 
         }
 
         &-author {
@@ -126,7 +129,7 @@ const { data } = Astro.props;
             background: var(--clr-white);
             color: var(--clr-black);
             box-shadow: 0 0px 1px 2px hsl(var(--shadow-color-dark) / 60%);
-            margin-top: var(--space-2xs);
+            margin-top: calc(0.75rem + var(--space-2xs));
             margin-left: 0;
 
             @media (min-width: 800px) {

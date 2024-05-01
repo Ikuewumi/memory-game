@@ -1,11 +1,20 @@
 <script lang="ts">
     import CuizMetricsCard from "./CuizMetricsCard.svelte";
     import { DEFAULT_MODAL_STATES, modals, resetModals } from "@/stores/modals";
-    import { metrics, metricsData } from "@/stores/metrics";
+    import { metrics, metricsData, DEFAULT_USER_METRICS } from "@/stores/metrics";
     import { gameData } from "@/stores/game";
     import Image from "./Image.svelte";
+    import type { Metrics } from "@/types";
+
+
     // import type { Metrics, MetricsData, Question } from "@/types"
-    $: data = metrics.getUserMetrics($metricsData) 
+    let data:Metrics
+
+    $: {
+        if ($modals.metrics) data = metrics.getUserMetrics($metricsData)
+        else data = DEFAULT_USER_METRICS
+    }
+
 
 
     const playAgain = () => {
@@ -24,7 +33,7 @@
     inert={!$modals.metrics}
     aria-hidden={!$modals.metrics}>
     
-
+    {#if $modals.metrics}
     <h2 class="cuiz-metrics-message">📈 Quiz Statistics</h2>
 
     <ul class="cuiz-metrics-list">
@@ -62,6 +71,8 @@
         <button class="cuiz-metrics-button" on:click={continueGame}>Continue</button>
         <button class="cuiz-metrics-button" on:click={playAgain}>Play Again</button>
     </div>
+
+{/if}
 
 </div>
 
@@ -122,7 +133,7 @@
             grid-column: content;
             margin-inline: auto;
             position: sticky;
-            inset: auto auto 0 auto;
+            inset: auto auto 0.5rem auto;
         }
 
         &-button {
@@ -178,7 +189,8 @@
         }
 
         &-item {
-            background: var(--clr-gray-100);
+            background: var(--clr-white);
+            border: 1px solid hsl(var(--shadow-color-dark) / 12.5%);
             padding: 0.75rem 1rem 0.85rem;
             border-radius: 0.5rem;
             display: grid;

@@ -1,0 +1,91 @@
+<footer class="footer">
+    <p class="footer-message">
+        built with 💙 by <a class="footer-message-link" target="_blank" href="https://github.com/Ikuewumi/">iKAY</a>. <a class="footer-message-link" target="_blank" href="https://github.com/Ikuewumi/memory-game">Source Code</a> 
+    </p>
+
+    
+    <nav class="footer-nav">
+        <ul class="footer-list">
+            <li class="footer-li"><a href="/" class="footer-link">About</a></li>
+            <li class="footer-li"><a href="/" class="footer-link">Home</a></li>
+            <li class="footer-li"><a href="/" class="footer-link">Courses</a></li>
+            <li class="footer-li"><a href="/" class="footer-link">Archive</a></li>
+            <li class="footer-li"><a href="/" class="footer-link">You</a></li>
+        </ul>
+    </nav>
+</footer>
+
+<style lang="scss">
+.footer {
+    display: grid;
+    place-items: center;
+    gap: 1rem;
+    margin-block: 2.5rem 0.5rem;
+    align-self: end;
+    padding: 1.5rem 0.75rem 1.5rem;
+    background: var(--clr-white);
+    border: var(--border);
+    border-radius: 0.5rem;
+
+    grid-column: full;
+    margin-inline: var(--space-2xs);
+
+
+    @media (min-width: 800px) {
+        grid-column: content;
+        margin-inline: 0;
+    }
+
+
+
+    &-message {
+        font-size: var(--step-0);
+    }
+
+    &-message-link {
+        color: var(--clr-gray-700);
+        text-decoration: underline;
+        background: hsl(var(--shadow-color-dark) / 10%);
+        padding: 0.1rem 0.45rem;
+        font-family: var(--font-heading);
+        font-weight: 800;
+        border-radius: 0.5rem;
+        text-decoration: none;
+        outline-offset: -7px;
+        outline-width: 2px;
+
+        &:hover, &:focus {
+            text-decoration: 1px underline;
+        }
+    }
+
+
+    &-nav {
+        display: flex;
+        align-items: center;
+        place-content: center;
+        flex-wrap: wrap;
+        gap: 0.5rem 1rem;
+    }
+
+    &-list, &-li {
+        display: contents;   
+    }
+
+    &-link {
+        text-transform: uppercase;
+        font-size: calc(1.05 * var(--step-0));
+        font-family: var(--font-heading);
+        font-weight: 700;
+        color: var(--clr-gray-600);
+        text-decoration: none;
+        transition: color 50ms ease-in;
+
+        &:hover, &:focus {
+            color: var(--clr-gray-900);
+            text-decoration: 2px underline;
+        }
+    }
+}
+
+</style>

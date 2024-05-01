@@ -11,6 +11,17 @@ const DEFAULT_METRICS: MetricsData = {
     wrong: [],
     attemptsCount: 0
 }
+export const DEFAULT_USER_METRICS: Metrics = {
+    "acuracy": 0,
+    "timeTaken": 0,
+    "wrongQuestions": [],
+    "numberOfAttempts": 0,
+    "numberOfQuestions": 0,
+    "numberOfWrongQuestions": 0,
+    "numberOfCorrectQuestions": 0,
+    "numberOfAnsweredQuestions": 0,
+    "numberOfUnansweredQuestions": 0
+}
 
 export const metricsData = map({ ...DEFAULT_METRICS })
 

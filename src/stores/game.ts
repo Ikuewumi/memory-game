@@ -93,7 +93,7 @@ export const startGame = (): void => {
     MODE.get().onSetup?.()
     gameStatus.setKey("gameStarted", true)
     MODE.get()?.onStart?.()
-    startListening()
+    //startListening()
     metrics.onStart()
 
     const gameContinues = MODE.get()?.gameComplete()
@@ -113,7 +113,7 @@ export const stopGame = () => {
     metrics.onEnd()
     gameStatus.set({ ...DEFAULT_GAME_STATUS })
     stopClock()
-    stopListening()
+    //stopListening()
 
 }
 

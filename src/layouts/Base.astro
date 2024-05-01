@@ -3,7 +3,9 @@ import "@scss/index.scss";
 import ImageBox from "@components/ImageBox.svelte";
 import Assets from "@/components/Assets.astro";
 import Toast from "@/components/Toast.svelte";
+import Header from "@/components/Header.astro";
 import { ViewTransitions } from "astro:transitions";
+import Footer from "@/components/Footer.astro";
 interface Props {
 	title: string;
 	description?: string;
@@ -23,6 +25,7 @@ const { title = "Home Page", description = "" } = Astro.props;
 		<ViewTransitions />
 	</head>
 	<body data-grid>
+		<Header />
 		<main>
 			<slot />
 
@@ -30,5 +33,6 @@ const { title = "Home Page", description = "" } = Astro.props;
 			<ImageBox client:load />
 			<Assets />
 		</main>
+		<Footer />
 	</body>
 </html>

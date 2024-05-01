@@ -50,6 +50,11 @@
             }
         }
 
+        &:focus-visible:focus-visible{
+            outline-width: 2px;
+            
+        }
+
         &:disabled {
             cursor: not-allowed;
             opacity: 0.4;

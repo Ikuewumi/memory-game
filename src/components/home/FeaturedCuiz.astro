@@ -30,8 +30,10 @@ const { card } = Astro.props;
     padding: var(--border-radius);
     //width: min(350px, 100%);
     background: var(--clr-white);
+    border: 1px solid hsl(var(--shadow-color-dark) / 20%);
     border-radius: calc(1.5 * var(--border-radius));
     box-shadow: 0 2px 5px -3px hsl(var(--shadow-color-light) / 20%);
+    overflow: hidden;
     position: relative;
 
 
@@ -49,7 +51,7 @@ const { card } = Astro.props;
     &-image {
         height: min(150px, 60vh);
         width: 100%;
-        outline: 2px solid hsl(var(--shadow-color-light) / 20%);
+        border: 1px solid hsl(var(--shadow-color-dark) / 20%);
         object-fit: cover;
         border-radius: var(--border-radius);
         filter: grayscale(0.75);
@@ -115,7 +117,8 @@ const { card } = Astro.props;
         background: var(--clr-white);
         padding: 0.5rem 0.65rem;
         border-radius: 0 var(--border-radius) 0;
-        box-shadow: 0 0 5px -2px hsl(var(--shadow-color-dark) / 30%);
+        border: 1px solid hsl(var(--shadow-color-dark) / 10%);
+        border-width: 0 0 1px 1px;
         font-weight: 700;
         font-size: var(--step-n1);
     }

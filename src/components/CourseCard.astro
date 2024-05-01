@@ -1,0 +1,69 @@
+---
+
+---
+
+
+<div class="course-card">
+    
+    <svg class="course-card-icon" viewBox="0 0 512 512">
+        <use href="#anatomy"></use>
+    </svg>
+
+    <div class="course-card-content">
+        <h2 class="course-card-title text-gradient">Anatomy</h2>
+        <p class="course-card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos illum.</p>
+    </div>
+
+
+
+
+</div>
+
+
+
+<style lang="scss">
+
+.course-card {
+
+    display: grid;
+    gap: 0.2rem;
+    justify-content: start;
+    place-items: center;
+    background: var(--clr-white);
+    padding: 0.5rem 1rem 0.85rem;
+    border: var(--border);
+    border-radius: 0.5rem;
+    position: relative;
+    height: fit-content;
+    overflow: hidden;
+
+
+
+    &-icon {
+        --icon-size: 100px;
+        color: var(--text-gradient-fallback);
+        filter: opacity(0.15);
+        position: absolute;
+        inset: 0 0 auto auto;
+        pointer-events: none;
+    }
+
+
+    &-title {
+        font-size: var(--step-3);
+        font-weight: 600;
+        filter: drop-shadow(2px 1px 0.5px hsl(var(--shadow-color-dark) / 15%));
+        line-height: 1.1;
+    }
+
+    &-description {
+        font-size: var(--step-0);
+        line-height: 1.3;
+    }
+
+
+}
+
+
+
+</style>
