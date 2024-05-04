@@ -24,6 +24,7 @@
         backdrop-filter: blur(var(--space-2xs));
         color: var(--clr-white);
         z-index: var(--z-dialog);
+        overflow-y: auto;
         
         &[aria-hidden="false"] {
             display: grid;
@@ -63,6 +64,7 @@
     }
 
     img {
-        max-height: min(400px, 70vh); 
+        // max-height: min(400px, 70vh); 
+        max-width: min(800px, 90vw);
     }
 </style>

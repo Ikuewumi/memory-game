@@ -88,7 +88,7 @@
     --z-home: 2;
 
     // Grid Properties
-    --grid-offset: 1.5rem;
+    --grid-offset: 1rem;
     --breakout-offset: 1rem;
     --grid-width: 55rem;
     --border: 1px solid hsl(var(--shadow-color-dark) / 20%);
@@ -142,6 +142,7 @@ body {
     min-height: 100vh;
     align-content: start;
     padding-block: 0;
+    grid-template-rows: auto 1fr auto;
 
 
     &.modal-open {
@@ -149,7 +150,13 @@ body {
     }
 }
 
-main,
+main[data-grid] {
+   display: grid;
+    grid-column: full;
+    margin-bottom: auto;
+}
+
+
 astro-island,
 astro-slot,
 astro-static-slot {
@@ -211,6 +218,61 @@ code {
     font-family: var(--font-monospace);
 }
 
+// CSS Filter from https://una.github.io/CSSgram/
+
+.willow {
+    position: relative;
+    -webkit-filter: grayscale(.5) contrast(.95) brightness(.9);
+    filter: grayscale(.5) contrast(.95) brightness(.9)
+}
+
+.willow:after,
+.willow:before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    pointer-events: none;
+}
+.walden {
+    position: relative;
+    -webkit-filter: brightness(1.1) hue-rotate(-10deg) sepia(.3) saturate(1.6);
+    filter: brightness(1.1) hue-rotate(-10deg) sepia(.3) saturate(1.6)
+}
+
+.walden:after,
+.walden:before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    pointer-events: none
+}
+
+.walden img {
+    width: 100%;
+    z-index: 1
+}
+
+.walden:before {
+    z-index: 2
+}
+
+.walden:after {
+    z-index: 3
+}
+
+.walden::after {
+    background: #04c;
+    mix-blend-mode: screen;
+    opacity: .3
+}
 .text-gradient {
     --c-gradient: var(--gradient, var(--text-gradient));
     --c-fallback: var(--fallback,  hsla(208deg 80% 35% / 88%));

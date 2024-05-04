@@ -4,7 +4,6 @@ import ImageBox from "@components/ImageBox.svelte";
 import Assets from "@/components/Assets.astro";
 import Toast from "@/components/Toast.svelte";
 import Header from "@/components/Header.astro";
-import { ViewTransitions } from "astro:transitions";
 import Footer from "@/components/Footer.astro";
 interface Props {
 	title: string;
@@ -22,17 +21,16 @@ const { title = "Home Page", description = "" } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<meta name="description" content={description} />
 		<title>{title}</title>
-		<ViewTransitions />
 	</head>
 	<body data-grid>
 		<Header />
-		<main>
+		<main data-grid>
 			<slot />
-
 			<Toast client:load />
 			<ImageBox client:load />
 			<Assets />
 		</main>
 		<Footer />
+		<slot name="script" />
 	</body>
 </html>

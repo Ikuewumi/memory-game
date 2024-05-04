@@ -1,4 +1,5 @@
 ---
+import "@scss/css-gram.scss";
 import type { GameData, Metadata } from "@/types";
 import { Show } from "solid-js";
 interface Props {
@@ -12,7 +13,7 @@ const { data } = Astro.props;
     <Show when={data?.image}>
         <figure class="cuiz-metadata-figure">
             <img
-                class="cuiz-metadata-image"
+                class="cuiz-metadata-image perpetua"
                 src={data.image}
                 alt={data.title}
             />
@@ -52,23 +53,18 @@ const { data } = Astro.props;
         }
 
         &-image, &-extras {
-            grid-row: 2 / 3;
+            grid-row: 1 / 2;
         }
 
         &-image {
             width: 100%;
-            height: min(275px, 35vh);
+            height: min(325px, 40vh);
             object-fit: cover;
-            box-shadow: 0 2px 7px -3px hsl(var(--shadow-color-dark) / 50%);
-            border-radius: 0;
-            grid-column: full;
+            box-shadow: 0 2px 7px -5px hsl(var(--shadow-color-dark) / 50%);
+            border-radius: 0.4rem;
+            border: var(--border);
             margin-top: 0.75rem;
-
-            @media (min-width: 800px) {
-                border-radius: 0.5rem;
-                grid-column: content;
-                object-position: top center;
-            }
+            grid-column: content;
         }
 
         &-course {
@@ -84,7 +80,9 @@ const { data } = Astro.props;
 
         &-heading {
             font-size: calc(1.25 * var(--step-4));
+            line-height: 0.95;
             color: var(--clr-gray-700); 
+            margin-top: 0.15rem;
         }
 
         &-author {
@@ -116,6 +114,7 @@ const { data } = Astro.props;
         &-extras {
             justify-self: start;
             display: flex;
+            z-index: var(--z-dialog);
             // gap: var(--space-3xs);
             align-items: center;
             border-radius: 5vmax;
@@ -128,12 +127,11 @@ const { data } = Astro.props;
             color: hsl(210deg 60% 93%);
             background: var(--clr-white);
             color: var(--clr-black);
-            box-shadow: 0 0px 1px 2px hsl(var(--shadow-color-dark) / 60%);
+            border: var(--border);
             margin-top: calc(0.75rem + var(--space-2xs));
-            margin-left: 0;
+            margin-left: var(--space-xs);
 
             @media (min-width: 800px) {
-                margin-left: var(--space-xs);
             }
         }
 
@@ -167,7 +165,7 @@ const { data } = Astro.props;
 
         &-description {
             font-size: var(--step-1);
-            margin-top: 1rem;
+            margin-top: 0.75rem;
             line-height: 1.6;
         }
     }

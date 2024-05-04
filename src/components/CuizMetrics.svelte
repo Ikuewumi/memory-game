@@ -33,7 +33,6 @@
     inert={!$modals.metrics}
     aria-hidden={!$modals.metrics}>
     
-    {#if $modals.metrics}
     <h2 class="cuiz-metrics-message">📈 Quiz Statistics</h2>
 
     <ul class="cuiz-metrics-list">
@@ -72,7 +71,6 @@
         <button class="cuiz-metrics-button" on:click={playAgain}>Play Again</button>
     </div>
 
-{/if}
 
 </div>
 

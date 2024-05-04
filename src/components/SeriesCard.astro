@@ -1,0 +1,76 @@
+---
+
+---
+
+
+
+<div class="series-card">
+    
+    <span class="series-card-course text-gradient">anatomy</span>
+    <h3 class="series-card-title">The Larynx</h3>
+    <p class="description">Learn the parts of the Larynx (anteriolateral view)</p>
+    <p class="series-card-count">
+        <svg viewBox="0 0 24 24"><use href="#list"></use></svg>
+        10 quizzes
+    </p>
+
+</div>
+
+
+<style lang="scss">
+.series-card {
+    display: grid;
+    gap: 0.25rem;
+    justify-items: start;
+    border: var(--border);
+    background: var(--clr-white);
+    border-radius: 0.4rem;
+    padding: 0.5rem 0.75rem 1rem;
+    box-shadow: 0 1px 4px -3px hsl(var(--shadow-color-dark) / 10%);
+
+
+    &-course {
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: var(--step-n1);
+        letter-spacing: 0.75px;
+        
+    }
+
+
+    &-title {
+        font-size: var(--step-3);
+        font-weight: 600;
+        line-height: 0.95;
+        color: var(--clr-gray-800);
+        margin-top: 0rem;
+    }
+
+
+    &-description {
+        line-height: 1.4;
+        margin-top: 0.5rem;
+    }
+
+
+    &-count {
+        --icon-size: 20px;
+        justify-self: end;
+        border: var(--border);
+        border-radius: 50vmax;
+        display: flex;
+        align-items: center;
+        place-content: center;
+        gap: 0.25rem;
+        padding: 0.25rem 0.75rem 0.4rem;
+        font-family: var(--font-heading);
+        font-weight: 600;
+        margin-top: 0.75rem;
+        
+    }
+    
+
+}
+
+
+</style>

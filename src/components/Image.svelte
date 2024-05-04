@@ -29,14 +29,18 @@
     }
     img {
         --c-img-width: var(--img-width, 100px);
-        --c-img-height: var(--img-height, min(275px, 50vh));
+        --c-img-height: var(--img-height, min(400px, 80vw));
+
 
         @media (min-width: 768px) {
             
-            --c-img-height: var(--img-height, min(310px, 50vh));
+            --c-img-height: var(--img-height, min(350px, 100vw));
+
         }
 
-        max-height: var(--c-img-height);
+        max-width: var(--c-img-height);
+        max-height: min(400px, 50vh);
+        object-fit: contain;
         border-radius: 0.4rem;
         box-shadow: 0 1px 5px -4px hsl(var(--shadow-color) 40% / 70%);
     }

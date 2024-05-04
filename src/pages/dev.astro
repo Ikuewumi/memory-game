@@ -1,13 +1,124 @@
 ---
+import SeriesCard from "@/components/SeriesCard.astro";
+import Tabs from "@/components/Tabs.astro";
 import Base from "@/layouts/Base.astro";
 ---
-
 <Base title="Dev Page" description="Page For Prototyping, Wireframing and all that...">
-	<h1>Dev Page</h1>
+	<Tabs id="some-tabs" label="Some Demo of Tabs">
+		<Fragment slot="tab-list">
+			<li class="dev-tabli"><a class="dev-tab" id="tab-dev-advert" href="#dev-advert">Advertising</a></li>
+			<li class="dev-tabli"><a class="dev-tab" id="tab-dev-play" href="#dev-play">Play</a></li>
+			<li class="dev-tabli"><a class="dev-tab" id="tab-dev-execute" href="#dev-execute">Execute</a></li>
+		</Fragment>
+
+		<Fragment slot="tab-panels">
+			<div class="dev-tabpanel" id="dev-advert" aria-labelledby="tab-dev-advert">
+				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci, dolorem?</p>	
+			</div>
+			<div class="dev-tabpanel" id="dev-play" aria-labelledby="tab-dev-play">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam vitae quaerat minus sapiente consequatur optio? Temporibus dolorem voluptatum est aut?</p>
+			</div>
+			<div class="dev-tabpanel" id="dev-execute" aria-labelledby="tab-dev-execute">
+				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit magni nesciunt blanditiis odit, quas excepturi quam exercitationem. Undlaborum, libero adipisci vel reiciendis quidem dicta facere praesentium. Ipsam quod temporibus nulla commodi nisi magnam, voluptate nihil placemodi, omnis adipisci!</p>
+			</div>		
+		</Fragment>
+	</Tabs>
+
+
+	<ul class="devseries-list">
+		<li class="devseries-li"><SeriesCard /></li>
+		<li class="devseries-li"><SeriesCard /></li>
+		<li class="devseries-li"><SeriesCard /></li>
+		<li class="devseries-li"><SeriesCard /></li>
+		<li class="devseries-li"><SeriesCard /></li>
+	</ul>
+	<script>
+		import { setupTabs } from "@/composables/tabs"
+
+		document.addEventListener('DOMContentLoaded', () => {
+			setupTabs('some-tabs')
+		})
+	</script>
+
 </Base>
 
-<style>
+
+<style lang="scss">
 h1 {
-	margin-bottom: 1rem;
+	font-size: var(--step-4);
+	margin-bottom: 0.5rem;
 }
+
+
+.devseries {	
+	&-list {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+		gap: 0.75rem;
+		align-items: start;
+		margin-block: 1rem 1.5rem;
+	}
+
+	&-li {
+		list-style: none;
+	}
+}
+
+</style>
+
+
+<style is:global lang="scss">
+#some-tabs {
+	grid-column: full;
+
+
+	@media (min-width: 800px) {
+		grid-column: content;
+	}
+}
+
+
+.dev {
+	&-tabli {
+		display: contents;
+	}
+	&-tab {
+		text-decoration: none;
+		font-family: var(--font-heading);
+		font-weight: 700;
+		color: var(--clr-black);
+		opacity: 0.5;        
+		border-bottom: 4px solid transparent;
+		padding: 0.45rem 1.25rem 0.25rem;
+		outline: none;
+
+		&:focus-visible {
+			outline: 1px solid var(--clr-gray-900);
+			outline-offset: -4px;
+		}
+        
+
+		&[aria-selected="true"] {
+			opacity: 1;
+			border-bottom-color: var(--clr-gray-900);
+		}
+
+
+	}
+
+
+	&-tabpanel {
+		min-height: 200px;
+		padding: 0.5rem 0.75rem 1rem;
+		background: var(--clr-white);
+		border-radius: 0;
+		border: var(--border);
+
+
+		@media (min-width: 800px) {
+			border-radius: 0 0 0.5rem 0.5rem;
+		}
+	}
+}
+
 </style>

@@ -2,7 +2,7 @@
     <div role="presentation" class="header-wrapper" data-grid>
         <strong class="header-logo text-gradient">
             <svg class="header-logo-svg" viewBox="0 0 16 16"><use href="#charm-cards"></use></svg>
-            match.io
+            med.match
         </strong>
 
 
@@ -33,7 +33,7 @@
                     </a>
                 </li>
                 <li class="header-li">
-                    <a class="header-link" href="/">
+                    <a class="header-link" href="/dev">
                         <svg class="header-link-svg" viewBox="0 0 24 24">
                             <use href="#for-you"></use>
                         </svg>
@@ -55,25 +55,26 @@
     display: contents;
 
     &-wrapper {
-        grid-column: full;
-        margin-inline: var(--space-2xs);
         gap: 1.2rem 1rem;
         display: flex;
         flex-direction: column;
         align-items: start;
         justify-content: space-between;
-        padding: 1rem 1.5rem 1.5rem;
+        padding: 1rem 1.5rem 1.75rem;
         background: var(--clr-white);
-        margin-block: 0.5rem 0.25rem;
-        border-radius: 0.5rem;
         border: 1px solid hsl(var(--shadow-color-dark) / 20%);
+        grid-column: full;
+        margin: 0 0 0.25rem;
+        border-radius: 0 0 0.5rem 0.5rem;
 
 
         @media (min-width: 800px) {
             grid-column: content;
-            margin-inline: 0;
             flex-direction: row;
             align-items: center;
+            border-radius: 0.5rem;
+            margin-block: 0.5rem 0.25rem;
+            padding: 1rem 1.5rem 1.5rem;
         }
     }
 
@@ -82,6 +83,7 @@
         font-family: var(--font-heading);
         font-size: 2.75ch;
         font-weight: 600;
+        letter-spacing: -0.5px;
         display: flex;
         gap: 0.25rem;
         align-items: center;

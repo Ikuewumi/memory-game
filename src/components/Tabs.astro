@@ -1,0 +1,58 @@
+---
+
+
+interface Props {
+    id: string,
+    label: string
+}
+
+
+
+const { id="custom-tabs", label="A Demo Tabs System" } = Astro.props
+
+
+const [ titleClass ] = [ `${id}-title` ] 
+---
+
+
+<div class="tab-wrapper" id={id}>
+
+    <h2 class="sr-only" id={titleClass}>{label}</h2>
+
+    <ul class="tab-list" aria-labelledby={titleClass}>
+        <slot name="tab-list"></slot>
+    </ul>
+
+    <div class="tab-panels">
+        <slot name="tab-panels"></slot>
+    </div>
+
+
+
+</div>
+
+
+
+
+
+
+<style lang="scss">
+.tab {
+
+    &-list {
+        display: flex;
+        gap: 0;
+        align-items: center;
+        list-style: none;
+
+    }
+
+
+    
+
+
+}
+
+
+
+</style>

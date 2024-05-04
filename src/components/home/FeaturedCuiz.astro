@@ -14,7 +14,7 @@ const { card } = Astro.props;
 
     <div class="featured-cuiz-content">
         <span class="featured-cuiz-course text-gradient">{card.course}</span>
-        <h2 class="featured-cuiz-heading">{card.title}</h2>
+        <h3 class="featured-cuiz-heading">{card.title}</h3>
         <p class="featured-cuiz-description">{card.description}</p> 
         <span class="featured-cuiz-difficulty">{card.difficulty}</span>
         <span class="featured-cuiz-count">{card.questions.length} terms</span>
@@ -49,7 +49,7 @@ const { card } = Astro.props;
     }
 
     &-image {
-        height: min(150px, 60vh);
+        height: min(120px, 60vh);
         width: 100%;
         border: 1px solid hsl(var(--shadow-color-dark) / 20%);
         object-fit: cover;

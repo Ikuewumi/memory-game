@@ -61,7 +61,7 @@ const cards: CardProps[] = [
 
 <style lang="scss">
     .featured {
-        margin-top: 2rem;
+        margin-top: 0.75rem;
         display: grid;
         gap: 0.75rem;
 
@@ -86,13 +86,13 @@ const cards: CardProps[] = [
         &-link {
             font-family: var(--font-heading);
             font-size: calc(1.45 * var(--step-0));
-            filter: drop-shadow(2px 1px 0.5px hsl(var(--shadow-color-dark) / 40%));
+            filter: drop-shadow(2px 1px 1px hsl(var(--shadow-color-dark) / 20%));
             
             font-weight: 700;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
             text-transform: uppercase;
             justify-self: end;
-            margin-block: var(--space-s);
+            margin-block: 0.5rem 1.5rem;
 
             &:hover,
             &:focus {

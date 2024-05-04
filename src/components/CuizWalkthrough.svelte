@@ -54,10 +54,9 @@
             font-size: var(--step-2);
             font-weight: 700;
             text-transform: uppercase;
-            //font-family: var(--font-heading);
             border-radius: 0.5rem;
             letter-spacing: 0.5px;
-            margin-top: 2rem;
+            margin-block: 2rem 1rem;
             background: var(--clr-gray-200);
             color: var(--clr-gray-800);
             border: none;
