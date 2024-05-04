@@ -66,5 +66,6 @@
     img {
         // max-height: min(400px, 70vh); 
         max-width: min(800px, 90vw);
+        max-height: 80vh;
     }
 </style>
