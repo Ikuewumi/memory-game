@@ -52,6 +52,7 @@
                     "image" in question &&
                     Object.hasOwn(json, zUrlString.parse(question.image))
                 ) {
+                    output.multipleImages = true
                     return {
                         ...question,
                         image: json[zUrlString.parse(question.image)],

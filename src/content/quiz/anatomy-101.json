@@ -28,7 +28,6 @@
         { "question": "5D", "answer": "dorsal" },
         { "question": "5K", "answer": "superior" },
         { "question": "5L", "answer": "inferior" },
-        { "question": "5A", "answer": "cranial" },
         { "question": "5E, 5H", "answer": "proximal" },
         { "question": "5J, 5I", "answer": "distal" },
         { "question": "5F", "answer": "medial" },
