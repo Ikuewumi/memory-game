@@ -1,0 +1,27 @@
+---
+import CuizMetadata from '@/components/CuizMetadata.astro';
+import CuizWalkthrough from '@/components/CuizWalkthrough.svelte';
+import { decodeString, encodeString } from '@/composables/engine';
+import Base from '@/layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('quiz');
+  return entries.map(entry => ({
+    params: { slug: entry.id }, props: { entry },
+  }));
+}
+
+
+const { entry } = Astro.props;
+const encodedString = encodeString(JSON.stringify(entry.data))
+---
+
+<Base title="Cuiz | A Sample Page">
+
+
+	<CuizMetadata data={entry.data} />
+        <CuizWalkthrough client:only="svelte" slug={entry.id} cuizDataString={encodeString(JSON.stringify(entry.data))} />
+    
+
+</Base>

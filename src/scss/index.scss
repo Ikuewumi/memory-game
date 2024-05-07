@@ -58,9 +58,9 @@
     --clr-white: hsl(210deg 30% 99%);
     --clr-black: hsl(210deg 60% 7%);
     --clr-all-white: hsl(210deg 30% 99%);
-    --clr-easy: hsl(165deg 51% 35%);
-    --clr-medium: hsl(60deg 65% 28%);
-    --clr-hard: hsl(352deg 69% 42%);
+    --clr-easy: hsl(165deg 85.38% 26.59%);
+    --clr-medium: hsl(60deg 90% 20%);
+    --clr-hard: hsl(351.89deg 85.38% 30.37% / 80%);
 
     /* control the size */
     --s: 82px;
@@ -169,6 +169,7 @@ astro-static-slot {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
+    color: var(--clr-gray-800);
 }
 
 button:focus {

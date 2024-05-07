@@ -10,11 +10,11 @@ const { card } = Astro.props;
 
 
 <article class="featured-cuiz" data-difficulty={card.difficulty.toLowerCase()}>
-    <img hidden={!card?.image} class="featured-cuiz-image" src="/test.png" alt="Trachea" />
+{card?.image && <img class="featured-cuiz-image" src={card.image} alt={card.title} /> }
 
     <div class="featured-cuiz-content">
         <span class="featured-cuiz-course text-gradient">{card.course}</span>
-        <h3 class="featured-cuiz-heading">{card.title}</h3>
+        <a class="featured-cuiz-heading-link" href="/"><h3 class="featured-cuiz-heading">{card.title}</h3></a>
         <p class="featured-cuiz-description">{card.description}</p> 
         <span class="featured-cuiz-difficulty">{card.difficulty}</span>
         <span class="featured-cuiz-count">{card.questions.length} terms</span>
@@ -27,7 +27,7 @@ const { card } = Astro.props;
     --border-radius: 0.5rem;
     --clr: hsl(306deg 30% 97%);
     --bg: hsl(306deg 30% 45%);
-    padding: var(--border-radius);
+    padding: 0.25rem 0.5rem 0.1rem;
     //width: min(350px, 100%);
     background: var(--clr-white);
     border: 1px solid hsl(var(--shadow-color-dark) / 20%);
@@ -35,6 +35,10 @@ const { card } = Astro.props;
     box-shadow: 0 2px 5px -3px hsl(var(--shadow-color-light) / 20%);
     overflow: hidden;
     position: relative;
+
+    @media (min-width: 800px) {
+        padding: 0.35rem 0.75rem 0.1rem;
+    }
 
 
 
@@ -56,6 +60,7 @@ const { card } = Astro.props;
         border-radius: var(--border-radius);
         filter: grayscale(0.75);
         transition: 200ms filter ease-out;
+        margin-block: 0.25rem;
     }
 
 
@@ -66,33 +71,39 @@ const { card } = Astro.props;
 
     &-content {
         display: grid;
-        gap: var(--space-3xs);
-        padding: var(--space-xs) var(--space-2xs) var(--space-s);
+        gap: 0.15rem;
+        padding: 0.1rem 0.25rem 1rem;
     }
 
     &-course {
         justify-self: start;
         font-weight: 700;
-        font-size: var(--step-n2);
+        font-size: var(--step-n1);
         letter-spacing: 1px;
         cursor: pointer;
         text-transform: uppercase;
-
-
     }
 
 
     &-heading {
-        font-size: var(--step-3);
+        font-size: calc(1.25 * var(--step-2));
         font-weight: 600;
         line-height: 0.95;
+    }
+
+    &-heading-link {
         justify-self: start;
+        text-decoration: none;
+
+        &:focus-visible, &:hover {
+            text-decoration:  2px solid var(--clr-gray-700) underline;
+        }
     }
 
 
     &-description {
         font-size: var(--step-n0);
-        margin-top: 0.25rem;
+        margin-top: 0.15rem;
         line-height: 1.4;
     }
 
@@ -104,7 +115,7 @@ const { card } = Astro.props;
         justify-self: start;
         padding: 0.2rem 0.4rem 0.25rem;
         border-radius: 0.65rem;
-        margin-top: var(--space-2xs);
+        margin-top: 0.4rem;
         background: var(--bg);
         color: var(--clr);
         

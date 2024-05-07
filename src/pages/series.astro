@@ -1,0 +1,145 @@
+---
+import FeaturedCuiz from "@/components/home/FeaturedCuiz.astro";
+import Base from "@/layouts/Base.astro";
+import type { Cuiz } from "@/types";
+
+const cards: Cuiz[] = [
+	{
+		title: "Larynx",
+		description:
+			"You can also define your props with TypeScript with a Props type interface",
+		course: "anatomy",
+		author: "Ayobami Ikuewumi",
+		difficulty: "Medium",
+		questions: [],
+	},
+
+	{
+		title: "Laryngeal Incisure",
+		description:
+			"You can also define your props with TypeScript with a Props type interface",
+		course: "anatomy",
+		author: "Ayobami Ikuewumi",
+		difficulty: "Medium",
+		questions: [{ question: "a", answer: "" }],
+	},
+
+	{
+		title: "Blood components",
+		description:
+			"You can also define your props with TypeScript with a Props type interface",
+		course: "anatomy",
+		author: "Ayobami Ikuewumi",
+		difficulty: "Medium",
+		questions: [],
+	},
+];
+---
+
+<Base title="Sample Series Page | anatomy" description="a sample series page">
+	<h1 class="series-page-title">Respiratory System</h1>
+	<div class="series-page-extras">
+
+	<span class="series-page-course text-gradient">Anatomy</span>
+	<strong class="series-page-count">a 7-quiz series</strong>
+	</div>
+	<p class="series-page-description">
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
+		consectetur praesentium nam itaque placeat rem laborum molestiae
+		nemo officia saepe!
+	</p>
+
+	<ul class="series-page-list">
+		{
+			cards.map((card) => (
+				<li class="series-page-li">
+					<FeaturedCuiz card={card} />
+				</li>
+			))
+		}
+	</ul>
+</Base>
+
+<style lang="scss">
+	.series-page {
+		&-title {
+			font-size: calc(1.25 * var(--step-4));
+			font-weight: 600;
+			color: var(--clr-gray-700);
+			line-height: 0.9;
+			margin-top: 0.25rem;
+		}
+
+		&-extras {
+			display: flex;
+			align-items: center;
+			gap: 0.25rem;
+			background: var(--clr-white);
+			flex-flow: row wrap;
+			padding: 0.25rem 0.5rem 0.35rem;
+			border-radius: 1.5rem;
+			border: var(--border);
+			justify-self: start;
+			margin-top: 0.75rem;
+		}
+
+		&-course {
+			justify-self: start;
+			font-weight: 700;
+			font-size: var(--step-n1);
+			letter-spacing: 1px;
+			cursor: pointer;
+			text-transform: uppercase;
+		}
+
+		&-count {
+			font-size: var(--step-n1);
+			font-family: var(--font-heading);
+			font-weight: 600;
+			background: var(--clr-gray-800);
+			color: var(--clr-gray-100);
+			border-radius: 0.75rem;
+			padding: 0.15rem 0.5rem;
+		}
+
+		&-description {
+			margin-top: 0.45rem;
+			font-size: var(--step-1);
+		}
+
+		&-list {
+			margin-top: 1.25rem;
+			display: grid;
+			grid-template-columns: repeat(
+				auto-fill,
+				minmax(300px, 1fr)
+			);
+			gap: 0.75rem;
+			align-items: start;
+		}
+
+		&-li {
+			display: contents;
+		}
+	}
+</style>
+
+<style lang="scss" is:global>
+
+
+.series-page {
+	&-list > &-li .featured-cuiz {
+		&-course {
+			display: none;
+		}
+
+		&-content {
+			margin-top: 0.15rem;
+		}
+	}
+}
+
+
+
+
+</style>

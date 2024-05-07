@@ -24,13 +24,12 @@
 </script>
 
 <div class="draft-wrapper" data-grid role="presentation" data-open={$modals.game}
+    id="modals-game"
     inert={!$modals.game}
     aria-hidden={!$modals.game}>
     <GameStatus />
     <div class="draft">
-        {#if $gameData.image > ""}
-            <Image src={$gameData.image} alt="Alternative Text" />
-        {/if}
+        <Image />
         <div class="draft-main" data-focus={$focusData.state}>
             <ul class="card-list">
                 {#each $cardsList as card, i (i)}

@@ -3,9 +3,8 @@ import type { CardData, FocusData, FocusState, GameData, GameStatus, Question } 
 import { computed, map, atom } from "nanostores";
 import { MODE } from "./modes";
 import { writeMessage } from "./toast";
-import { startListening, stopListening } from "./keymaps";
 import { metrics } from "./metrics";
-import { modals } from "./modals";
+import { addNewImage } from "./image";
 
 
 let TIME_ID = 0
@@ -17,6 +16,7 @@ const DEFAULT_GAME_DATA: GameData = {
 }
 
 const DEFAULT_GAME_STATUS: GameStatus = {
+    multipleImages: false,
     gameStarted: false,
     lives: 0,
     time: 0
@@ -67,6 +67,8 @@ export const enterData = (questions: Question[] = [], image = "", text = ""): vo
     focusData.set({ ...DEFAULT_FOCUS_DATA })
     gameStatus.set({ ...DEFAULT_GAME_STATUS })
     gameData.set({ questions: shuffle(questions), image, text })
+    addNewImage(image, text)
+    console.log(gameData.value)
     fullQuestionCount.set(questions.length)
 }
 
@@ -93,7 +95,6 @@ export const startGame = (): void => {
     MODE.get().onSetup?.()
     gameStatus.setKey("gameStarted", true)
     MODE.get()?.onStart?.()
-    //startListening()
     metrics.onStart()
 
     const gameContinues = MODE.get()?.gameComplete()
@@ -113,7 +114,6 @@ export const stopGame = () => {
     metrics.onEnd()
     gameStatus.set({ ...DEFAULT_GAME_STATUS })
     stopClock()
-    //stopListening()
 
 }
 
@@ -132,7 +132,6 @@ export const resetGame = () => {
     focusData.off()
     gameStatus.off()
     gameData.off()
-    stopListening()
 
 
     writeMessage("")  
@@ -143,11 +142,6 @@ export const resetGame = () => {
 export const clickCard = (index: number): void => {
     if (!(gameStatus.get().gameStarted)) return
 
-    /*     console.log({
-            gameStatus: gameStatus.get(),
-            gameData: gameData.get()
-        })
-       */
     const focus = focusData.get()
 
     switch (focus.cards.length) {
@@ -162,6 +156,20 @@ export const clickCard = (index: number): void => {
 
 
 
+
+}
+
+
+
+const chooseNewQuestion = (questions: Question[]) => {
+    const max = questions.length > 6 ? 6 : questions.length
+    const min = 0
+    const randomIndex = Math.floor(Math.random() * (max - min) + min);
+
+    const question = questions[randomIndex]
+    if ("image" in question) return addNewImage(question.image) 
+    else if ("text" in question) return addNewImage("", question.text) 
+    return addNewImage(gameData.get()?.image ??  "", "")
 
 }
 
@@ -188,7 +196,10 @@ const matchGameCards = (a: number, b: number) => {
             MODE.get()?.onComplete?.() 
             metrics.onEnd()
         }
-        else { MODE.get().onMatchRight?.() }
+        else { 
+            if (gameStatus.get().multipleImages) chooseNewQuestion(gameData.get().questions)
+            MODE.get().onMatchRight?.() 
+        }
 
     } else {
         currentStatus.set("failure")

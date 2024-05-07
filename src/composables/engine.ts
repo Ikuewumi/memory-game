@@ -1,6 +1,6 @@
-import type { Question, CardData, Data } from "@/types"
+import type { Question, CardData } from "@/types"
 import confetti from "canvas-confetti"
-
+import {z} from "astro/zod"
 
 export const getCardsData = (questions: Question[]): CardData[] => {
     let array: CardData[] = []
@@ -91,3 +91,30 @@ export const throwConfetti = async (timeInMs = 2000) => {
 }
 
 
+
+export const zUrlString = z.string().url().transform(url => {
+    return url.endsWith('/') ? url : `${url}/`
+})
+
+
+
+
+function base64ToBytes(base64:string) {
+  const binString = atob(base64);
+  return Uint8Array.from(binString, (m) => m.codePointAt(0));
+}
+
+function bytesToBase64(bytes:Uint8Array) {
+  const binString = String.fromCodePoint(...bytes);
+  return btoa(binString);
+}
+
+
+/* // Usage
+bytesToBase64(new TextEncoder().encode("a Ā 𐀀 文 🦄")); // "YSDEgCDwkICAIOaWhyDwn6aE"
+new TextDecoder().decode(base64ToBytes("YSDEgCDwkICAIOaWhyDwn6aE"));
+ */
+
+
+export const encodeString = (string: string) => bytesToBase64(new TextEncoder().encode(string));
+export const decodeString = (string: string) => (new TextDecoder().decode(base64ToBytes(string)));

@@ -1,10 +1,10 @@
 <script lang="ts">
-    import { addNewImage, imageData } from "@/stores/image";
+    import { showImage, imageData } from "@/stores/image";
 
-    const closeModal = () => addNewImage()
+    const closeModal = () => showImage.set(false)
 </script>
 
-<div role="dialog" aria-hidden={$imageData.at(0) <= ""} on:click|self={closeModal}>
+<div role="dialog" aria-hidden={!$showImage} on:click|self={closeModal}>
     <button title="Close Image Modal" on:click={closeModal}>
         <svg viewBox="0 0 24 24"><use href="#close"/></svg>
     </button>

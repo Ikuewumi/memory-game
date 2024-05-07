@@ -8,10 +8,9 @@
     
     <span class="series-card-course text-gradient">anatomy</span>
     <h3 class="series-card-title">The Larynx</h3>
-    <p class="description">Learn the parts of the Larynx (anteriolateral view)</p>
+    <p class="series-card-description">Learn the parts of the Larynx (anteriolateral view)</p>
     <p class="series-card-count">
-        <svg viewBox="0 0 24 24"><use href="#list"></use></svg>
-        10 quizzes
+        {Math.floor((Math.random() * 15) + 1)} quizzes
     </p>
 
 </div>
@@ -24,7 +23,7 @@
     justify-items: start;
     border: var(--border);
     background: var(--clr-white);
-    border-radius: 0.4rem;
+    border-radius: 0.75rem;
     padding: 0.5rem 0.75rem 1rem;
     box-shadow: 0 1px 4px -3px hsl(var(--shadow-color-dark) / 10%);
 
@@ -39,32 +38,34 @@
 
 
     &-title {
-        font-size: var(--step-3);
+        font-size: calc(1.25 * var(--step-2));
         font-weight: 600;
-        line-height: 0.95;
+        line-height: 0.9;
+        letter-spacing: -0.5px;
         color: var(--clr-gray-800);
         margin-top: 0rem;
     }
 
 
     &-description {
+        font-size: var(--step-n0);
+        margin-top: 0.15rem;
         line-height: 1.4;
-        margin-top: 0.5rem;
     }
 
 
     &-count {
-        --icon-size: 20px;
         justify-self: end;
         border: var(--border);
-        border-radius: 50vmax;
+        border-radius: 0.75rem;
         display: flex;
         align-items: center;
         place-content: center;
         gap: 0.25rem;
-        padding: 0.25rem 0.75rem 0.4rem;
+        padding: 0.25rem 0.5rem 0.3rem;
         font-family: var(--font-heading);
-        font-weight: 600;
+        font-size: var(--step-n1);
+        font-weight: 700;
         margin-top: 0.75rem;
         
     }

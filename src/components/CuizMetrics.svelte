@@ -30,6 +30,7 @@
 </script>
 
 <div class="cuiz-metrics-wrapper" role="presentation" data-grid data-open={$modals.metrics}
+    id="modals-metrics"
     inert={!$modals.metrics}
     aria-hidden={!$modals.metrics}>
     

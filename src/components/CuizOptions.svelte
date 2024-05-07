@@ -22,6 +22,7 @@
 </script>
 
 <div
+    id="modals-options"
     class="cuiz-options-wrapper"
     role="presentation"
     data-open={$modals.options}

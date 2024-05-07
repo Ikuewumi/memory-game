@@ -1,5 +1,6 @@
 export const setupTabs = (tabsWrapperId:string) => {
-    const tabsWrapper = document.querySelector(`#${tabsWrapperId}`) as HTMLDivElement
+    const tabsId = `#${tabsWrapperId}`
+    const tabsWrapper = document.querySelector(tabsId) as HTMLDivElement
     if (!tabsWrapper) return
 
     const tabsList = tabsWrapper.querySelector('.tab-list') as HTMLDivElement
@@ -15,6 +16,7 @@ export const setupTabs = (tabsWrapperId:string) => {
 
     tabsList.addEventListener('click', (e) => {
         e.preventDefault()  
+        
         const tabIsLink = Array.from(tabLinks).findIndex(tab => e.target === tab)
         if (tabIsLink !== -1) {
             showTab(tabIsLink)
@@ -56,7 +58,9 @@ export const setupTabs = (tabsWrapperId:string) => {
                 tab.setAttribute('aria-selected', 'true')
                 tab.removeAttribute('tabindex')
                 tabPanels[index_].removeAttribute('hidden')
-                if (starting) return
+
+                if (starting) return 
+                location.hash = tab.hash
                 tab.focus()
             }
             else {
@@ -65,12 +69,16 @@ export const setupTabs = (tabsWrapperId:string) => {
                 tabPanels[index_].setAttribute('hidden', '')
             }
         })
-        
-        
+             
     }
 
-    showTab(0, true)
-    console.log("setting up tabs")
+
+    const hash = window.location.hash
+    if (!hash) return showTab(0, true)
+
+    const hashIndex =  Array.from(tabLinks).findIndex(link => link.hash.toLowerCase().trim() === hash.toLowerCase().trim())
+    if (hashIndex === -1) showTab(0, true)
+    else showTab(hashIndex,  true)
  
 }
 

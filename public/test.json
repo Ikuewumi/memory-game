@@ -5,8 +5,7 @@
   "description": "Learn the parts of the Larynx (anteriolateral view)",
   "difficulty": "easy",
   "text": "",
-  "imageUrl": "https://i.ibb.co/v1VMYYw/Larynx.jpg",
-  "image": "/test.png",
+  "image": "https://i.ibb.co/v1VMYYw/Larynx.jpg",
   "questions": [
     { "question": "A", "answer": "hyoid bone" },
     { "question": "B", "answer": "lateral thyrohyoid ligament" },

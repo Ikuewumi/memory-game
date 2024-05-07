@@ -54,10 +54,7 @@ const onWrong = (question: Question) => {
 }
 
 const onEnd = () => {
-    console.time("12:")
     metricsData.setKey("endingTime", Date.now())
-    console.timeEnd("12:")
-    console.log(metricsData.get())
     modals.set({
         ...DEFAULT_MODAL_STATES,
         "metrics": true,

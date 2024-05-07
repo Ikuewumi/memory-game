@@ -5,7 +5,6 @@
   "description": "Review some tidbits about the cell",
   "difficulty": "easy",
   "text": "",
-  "imageUrl": "https://i.ibb.co/x7w12Vm/Untitled-2024-04-09-1938-1-1.jpg",
   "image": "https://i.ibb.co/x7w12Vm/Untitled-2024-04-09-1938-1-1.jpg",
   "questions": [
     { "question": "1", "answer": "nucleolus" },
@@ -24,7 +23,9 @@
     { "question": "lysosomes", "answer": "an organelle that breaks down waste in the cell" },
 
     { "question": "peroxisome", "answer": "in animals, they breakdown long chain fatty acids to medium and short chain fatty acids" },
-    { "question": "8", "answer": "smooth endoplasmic reticulum" }
+    { "question": "8", "answer": "smooth endoplasmic reticulum" },
+
+    {"question": "what is A", "answer": "hyoid bone", "image": "https://i.ibb.co/v1VMYYw/Larynx.jpg"}
 
   ]
 

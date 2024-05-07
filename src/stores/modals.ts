@@ -7,6 +7,13 @@ export const DEFAULT_MODAL_STATES = {
     metrics: false as boolean,
 } as const
 
+const modalElements = {
+   "settings": "#modals-settings", 
+   "options": "#modals-options", 
+   "game": "#modals-game", 
+   "metrics": "#modals-metrics", 
+} as Record<keyof typeof DEFAULT_MODAL_STATES, string>
+
 export const modals = map({ ...DEFAULT_MODAL_STATES })
 export const resetModals = () => {
     modals.set({ ...DEFAULT_MODAL_STATES })
@@ -16,9 +23,13 @@ const elements = ['header.header', 'button.cuiz-walkthrough-play', 'footer.foote
 const MODAL_OPEN_CLASS = "modal-open"
 
 modals.subscribe(modals => {
-    const modalIsOpen = Object.values(modals).includes(true)
+    let modalKey: keyof typeof DEFAULT_MODAL_STATES;
+    Object.keys(modals).forEach(key => {
+        if (modals[key] !== true) return
+        modalKey = modalElements[key] as typeof modalKey
+    })
 
-    if (modalIsOpen) {
+    if (modalKey > "") {
         document.body.classList.add(MODAL_OPEN_CLASS)
         elements.forEach(element => {
             const el = document.querySelector(element)
@@ -27,6 +38,12 @@ modals.subscribe(modals => {
                 el.setAttribute("aria-hidden", "true")
             }
         })
+
+        const currentModalElement = document.querySelector(modalKey) as HTMLDivElement
+        if (!currentModalElement) return
+
+
+        currentModalElement.focus()
 
     } else {
         document.body.classList.remove(MODAL_OPEN_CLASS)

@@ -2,6 +2,9 @@ import type { ReadableAtom } from "nanostores"
 
 export type FocusState = "idle" | "focus" | "success" | "failure"
 
+export type ImageFile = Record<string, string>
+
+
 export interface FocusData {
   state: FocusState
   cards: number[]
@@ -10,6 +13,8 @@ export interface FocusData {
 export interface Question {
   question: string
   answer: string
+  text?: string
+  image?: string
 }
 
 export interface CardData {
@@ -23,8 +28,7 @@ export interface Metadata {
   description: string
   author: string
   course: string
-  difficulty: "Easy" | "Medium" | "Hard"
-  updatedAt: Date
+  difficulty: "easy" | "medium" | "hard"
 }
 
 export interface Data {
@@ -42,6 +46,7 @@ export type Cuiz = GameData & Metadata
 export interface GameStatus {
   time: number
   lives: number
+  multipleImages: boolean
   gameStarted: boolean
 }
 

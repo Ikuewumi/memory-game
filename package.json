@@ -4,9 +4,11 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "images": "node ./images-json.mjs",
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "pnpm run images && astro build",
+    "sync": "astro sync",
     "preview": "astro preview",
     "astro": "astro",
     "lint:ts": "pnpm exec eslint",
@@ -22,6 +24,7 @@
     "@types/canvas-confetti": "^1.6.4",
     "astro": "^4.5.17",
     "canvas-confetti": "^1.9.2",
+    "node-fetch": "^3.3.2",
     "solid-js": "^1.8.17",
     "svelte": "^4.2.12"
   },
