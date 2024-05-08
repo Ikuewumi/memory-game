@@ -188,7 +188,7 @@ const modifyCache = async (cacheFileName, imagesData) => {
 
 const runJob = async () => {
     const RELATIVE_PATH = "./src/content/quiz/"
-    const CACHE_RELATIVE_PATH = "./public/.images/"
+    const CACHE_RELATIVE_PATH = "./public/_images/"
     const fileNames = await getSourceFiles(RELATIVE_PATH);
 
     /** @type {Promise<ImagesObject>[]} */

@@ -38,7 +38,7 @@
 
         try {
             writeMessage("...Loading images");
-            const res = await fetch(`/.images/${pageSlug}.json`, {
+            const res = await fetch(`/_images/${pageSlug}.json`, {
                 signal: controller.signal,
             });
             const json: ImageFile = await res.json();
