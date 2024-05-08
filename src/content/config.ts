@@ -23,7 +23,8 @@ const course = defineCollection({
         title: z.string(),
         description: z.string().min(30),
         icon: z.string(),
-        iconSize: z.number()
+        iconSize: z.number(),
+        series: z.array(reference("course")).optional()
     })
 })
 
@@ -31,7 +32,7 @@ const metadata = z.object({
     title: z.string(),
     description: z.string(),
     author: reference("author"),
-    course: reference("course")
+    course: reference("course"),
 })
 
 const series = defineCollection({
@@ -64,7 +65,8 @@ const quiz = defineCollection({
             image: z.string().url().optional(),
             difficulty: z.enum(["easy", "medium", "hard"]),
             text: z.string().optional(),
-            questions: z.array(question).min(1)
+            questions: z.array(question).min(1),
+            date: z.string()
         })
     )
 })

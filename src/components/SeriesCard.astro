@@ -1,16 +1,28 @@
 ---
+import type {SeriesCardProps} from "@/types"
 
+
+interface Props {
+    card: SeriesCardProps 
+}
+
+
+const {card} = Astro.props
+const quizCountString = card.quizCount > 1 ? "quizzes" : "quiz"
 ---
 
 
 
 <div class="series-card">
     
-    <span class="series-card-course text-gradient">anatomy</span>
-    <h3 class="series-card-title">The Larynx</h3>
-    <p class="series-card-description">Learn the parts of the Larynx (anteriolateral view)</p>
+
+    <span class="series-card-course text-gradient">{card.course}</span>
+    <a href={`/series/${card.seriesLink}`} class="series-card-title-link">
+        <h3 class="series-card-title">{card.title}</h3> 
+    </a>
+    <p class="series-card-description">{card.description}</p>
     <p class="series-card-count">
-        {Math.floor((Math.random() * 15) + 1)} quizzes
+        {card.quizCount} {quizCountString}
     </p>
 
 </div>
@@ -24,8 +36,14 @@
     border: var(--border);
     background: var(--clr-white);
     border-radius: 0.75rem;
-    padding: 0.5rem 0.75rem 1rem;
+    padding: 0.35rem 0.75rem 0.5rem;
     box-shadow: 0 1px 4px -3px hsl(var(--shadow-color-dark) / 10%);
+    position: relative;
+
+
+    @media (min-width: 800px) {
+        padding: 0.5rem 1rem 1rem;
+    }
 
 
     &-course {
@@ -43,7 +61,16 @@
         line-height: 0.9;
         letter-spacing: -0.5px;
         color: var(--clr-gray-800);
-        margin-top: 0rem;
+    }
+
+    &-title-link {
+        justify-self: start;
+        text-decoration: none;
+
+        &:focus-visible, &:hover {
+            text-decoration:  2px solid var(--clr-gray-700) underline;
+        }
+ 
     }
 
 

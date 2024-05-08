@@ -5,7 +5,7 @@ import { gameData, gameStatus, startClock, stopClock } from "./game";
 
 const DEFAULT_MODE = 0
 
-export const BLITZ_SECONDS = [60, 120, 180]
+export const BLITZ_SECONDS = [300, 180, 120, 60]
 
 const DEFAULT_LIVES = 4
 const DEFAULT_INTERVAL_MS = 1000

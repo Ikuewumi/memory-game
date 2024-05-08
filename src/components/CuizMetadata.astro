@@ -1,9 +1,9 @@
 ---
 import "@scss/css-gram.scss";
-import type { GameData, Metadata } from "@/types";
+import type { CuizMetadataProps } from "@/types";
 import { Show } from "solid-js";
 interface Props {
-    data: Metadata & GameData;
+    data: CuizMetadataProps;
 }
 
 const { data } = Astro.props;
@@ -21,23 +21,24 @@ const { data } = Astro.props;
         </figure>
     </Show>
 
-    <span class="cuiz-metadata-course text-gradient">{data.course}</span>
+    <a href={`/courses/${data.courseLink}`} class="cuiz-metadata-course-link">
+        <span class="cuiz-metadata-course text-gradient">{data.course}</span>
+    </a>
 
     <h1 class="cuiz-metadata-heading">{data.title}</h1>
 
     <div class="cuiz-metadata-author">
         <img
-            src="/test.png"
-            alt="Ayobami Ikuewumi"
+            src={data.authorImage}
+            alt={data.author}
             class="cuiz-metadata-author-image"
         />
-        <strong class="cuiz-metadata-author-name">By Ayobami Ikuewumi</strong>
+        <strong class="cuiz-metadata-author-name">By {data.author}</strong>
     </div>
 
     <div class="cuiz-metadata-extras">
-        <span class="cuiz-metadata-difficulty" data-difficulty="easy" title="Difficulty">{data.difficulty}</span
-        >
-        <span class="cuiz-metadata-count">{data.questions.length} terms</span>
+        <span class="cuiz-metadata-difficulty" data-difficulty={data.difficulty} title="Difficulty">{data.difficulty}</span>
+        <span class="cuiz-metadata-count">{data.questionCount} terms</span>
     </div>
 
     <p class="cuiz-metadata-description">
@@ -74,8 +75,16 @@ const { data } = Astro.props;
             font-family: var(--font-family);
             letter-spacing: 0.5px;
             filter: drop-shadow(0 0 5px var(--shadow-color-dark));
+        }
+
+        &-course-link {
+            margin-top: 0.75rem;
+            text-decoration: none;
             justify-self: start;
-            margin-top: var(--space-xs);
+
+            &:focus, &:hover {
+                text-decoration: 3px underline var(--text-gradient-fallback);
+            }
         }
 
         &-heading {

@@ -1,6 +1,20 @@
 ---
 import CourseCard from "@/components/CourseCard.astro";
 import Base from "@/layouts/Base.astro";
+import type { CourseCardProps } from "@/types";
+import { getCollection, type CollectionEntry } from "astro:content";
+
+
+const courses = await getCollection("course")
+const coursesData: CourseCardProps[] = courses.map((course:CollectionEntry<"course">) => {
+	return {
+		title: course.data.title,
+		description: course.data.description,
+		iconSize: course.data.iconSize,
+		icon: course.data.icon,
+		courseLink: course.id
+	}
+})
 
 ---
 
@@ -11,9 +25,13 @@ import Base from "@/layouts/Base.astro";
 <p class="courses-message">This is a list of all the courses on this app. More To Be Added In The Future</p>
 
 <ul class="courses-list">
-	<li class="courses-li"><CourseCard /></li>
-	<li class="courses-li"><CourseCard /></li>
-	<li class="courses-li"><CourseCard /></li>
+	{
+		coursesData.map(course => 
+			<li class="courses-li">
+				<CourseCard data={course} />
+			</li>
+		)
+	}
 	
 </ul>
 

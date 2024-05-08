@@ -60,7 +60,6 @@ export const setupTabs = (tabsWrapperId:string) => {
                 tabPanels[index_].removeAttribute('hidden')
 
                 if (starting) return 
-                location.hash = tab.hash
                 tab.focus()
             }
             else {

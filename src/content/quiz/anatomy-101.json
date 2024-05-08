@@ -2,6 +2,7 @@
     "title": "Anatomy 101",
     "author": "ayobami",
     "course": "anatomy",
+    "date": "2024-05-08",
     "description": "starting off with the basics of anatomy, terms of reference, types of motions, and more...",
     "difficulty": "easy",
     "text": "",
@@ -31,7 +32,21 @@
         { "question": "5E, 5H", "answer": "proximal" },
         { "question": "5J, 5I", "answer": "distal" },
         { "question": "5F", "answer": "medial" },
-        { "question": "5G", "answer": "lateral" }
+        { "question": "5G", "answer": "lateral" },
+
+
+
+
+        {"question": "6A", "answer": "cranial cavity", "image": "https://i.ibb.co/pbjJXnK/Body-Cavities1.jpg"},
+        {"question": "6B", "answer": "dorsal cavity", "image": "https://i.ibb.co/pbjJXnK/Body-Cavities1.jpg"},
+        {"question": "6C", "answer": "thoracic cavity", "image": "https://i.ibb.co/pbjJXnK/Body-Cavities1.jpg"},
+        {"question": "6D", "answer": "ventral cavity", "image": "https://i.ibb.co/pbjJXnK/Body-Cavities1.jpg"},
+        {"question": "6E", "answer": "abdominal cavity", "image": "https://i.ibb.co/pbjJXnK/Body-Cavities1.jpg"},
+        {"question": "6F", "answer": "abdominopelvic cavity", "image": "https://i.ibb.co/pbjJXnK/Body-Cavities1.jpg"},
+        {"question": "6G", "answer": "pelvic cavity", "image": "https://i.ibb.co/pbjJXnK/Body-Cavities1.jpg"},
+        {"question": "6H", "answer": "spinal cavity", "image": "https://i.ibb.co/pbjJXnK/Body-Cavities1.jpg"}
+
+        
         
     ]
     

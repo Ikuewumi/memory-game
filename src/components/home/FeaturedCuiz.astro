@@ -1,23 +1,24 @@
 ---
-import type { Cuiz } from '@/types'
+import type { QuizCardProps } from '@/types'
 interface Props {
-    card: Cuiz
+    card: QuizCardProps
 }
 
 
 const { card } = Astro.props;
+const cardLink = `/quiz/${card.quizlink}`
 ---
 
 
 <article class="featured-cuiz" data-difficulty={card.difficulty.toLowerCase()}>
-{card?.image && <img class="featured-cuiz-image" src={card.image} alt={card.title} /> }
+    {card?.image && <img class="featured-cuiz-image" src={card.image} alt={card.title} /> }
 
     <div class="featured-cuiz-content">
         <span class="featured-cuiz-course text-gradient">{card.course}</span>
-        <a class="featured-cuiz-heading-link" href="/"><h3 class="featured-cuiz-heading">{card.title}</h3></a>
+        <a class="featured-cuiz-heading-link" href={cardLink}><h3 class="featured-cuiz-heading">{card.title}</h3></a>
         <p class="featured-cuiz-description">{card.description}</p> 
         <span class="featured-cuiz-difficulty">{card.difficulty}</span>
-        <span class="featured-cuiz-count">{card.questions.length} terms</span>
+        <span class="featured-cuiz-count">{card.questionCount} terms</span>
     </div>
 </article>
 
@@ -28,7 +29,6 @@ const { card } = Astro.props;
     --clr: hsl(306deg 30% 97%);
     --bg: hsl(306deg 30% 45%);
     padding: 0.25rem 0.5rem 0.1rem;
-    //width: min(350px, 100%);
     background: var(--clr-white);
     border: 1px solid hsl(var(--shadow-color-dark) / 20%);
     border-radius: calc(1.5 * var(--border-radius));

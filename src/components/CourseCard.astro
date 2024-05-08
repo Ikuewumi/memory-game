@@ -1,18 +1,30 @@
 ---
+import type {CourseCardProps} from "@/types"
+
+
+interface Props {
+    data: CourseCardProps
+}
+
+
+const { data } = Astro.props 
+const svgLink = `#${data.icon}`
+const svgViewBox = `0 0 ${data.iconSize} ${data.iconSize}`
+const courseLink = `/courses/${data.courseLink}`
 
 ---
 
 
 <div class="course-card">
     
-    <svg class="course-card-icon" viewBox="0 0 24 24">
-        <use href="#capsule"></use>
+    <svg class="course-card-icon" viewBox={svgViewBox}>
+        <use href={svgLink}></use>
     </svg>
 
-    <div class="course-card-content">
-        <h2 class="course-card-title">Anatomy</h2>
-        <p class="course-card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos illum.</p>
-    </div>
+        <a href={courseLink} class="course-card-title-link">
+            <h2 class="course-card-title">{data.title}</h2>
+        </a>
+        <p class="course-card-description">{data.description}</p>
 
 
 
@@ -53,15 +65,26 @@
         pointer-events: none;
     }
 
+    &-title-link {
+        display: flex;
+        justify-self: start;
+        text-decoration: none;
+
+        &:hover, &:focus-visible {
+            text-decoration: 3px underline var(--clr-black);
+        }
+    }
+
 
     &-title {
+        text-transform: capitalize;
         font-size: var(--step-3);
         font-weight: 600;
         line-height: 1.1;
     }
 
     &-description {
-        margin-top: 0.25rem;
+        margin-top: 0;
         font-size: var(--step-n0);
         line-height: 1.4;
     }

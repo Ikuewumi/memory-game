@@ -1,0 +1,229 @@
+---
+import Base from "@/layouts/Base.astro";
+import Tabs from "@/components/Tabs.astro";
+import SeriesCard from "@/components/SeriesCard.astro";
+import FeaturedCuiz from "@/components/home/FeaturedCuiz.astro";
+import { getCollection, type CollectionEntry } from "astro:content";
+import type { QuizCardProps, SeriesCardProps } from "@/types";
+
+export async function getStaticPaths() {
+	const courseEntries = await getCollection("course");
+	return courseEntries.map((entry) => ({
+		params: { slug: entry.id },
+		props: { entry },
+	}));
+}
+
+interface Props {
+	entry: CollectionEntry<"course">;
+}
+
+const { entry } = Astro.props;
+const quizEntries = await getCollection(
+	"quiz",
+	(quiz) => quiz.data.course.id === entry.id
+);
+const quizzes: QuizCardProps[] = quizEntries.map((quiz) => {
+	return {
+		title: quiz.data.title,
+		description: quiz.data.description,
+		difficulty: quiz.data.difficulty,
+		questionCount: quiz.data.questions.length,
+		quizlink: quiz.id,
+		courseLink: entry.id,
+		course: entry.data.title,
+	};
+});
+
+
+
+const seriesEntries = await getCollection(
+	"series",
+	(series) => series.data.course.id === entry.id
+);
+const series: SeriesCardProps[] = seriesEntries.map((series) => {
+	return {
+		title: series.data.title,
+		description: series.data.description,
+		quizCount: series.data.quizzes.length,
+		"seriesLink": series.id,
+		"courseLink": entry.id,
+		course: entry.data.title,
+	};
+});
+
+---
+
+<Base title={entry.data.title} description={entry.data.description}>
+	<h1 class="course-page-title">{entry.data.title}</h1>
+
+	<p class="course-page-description">{entry.data.description}</p>
+
+	<Tabs
+		id="course-tabs"
+		label="A list of all the series and quizzes in this course"
+	>
+		<Fragment slot="tab-list">
+			<li class="course-page-tab-li">
+				<a
+					href="#course-quizzes"
+					id="course-page-tab-quizzes"
+					class="course-page-tab"
+					>Quizzes ({quizzes.length})</a
+				>
+			</li>
+			<li class="course-page-tab-li">
+				<a
+					href="#course-series"
+					id="course-page-tab-series"
+					class="course-page-tab">Series (2)</a
+				>
+			</li>
+		</Fragment>
+		<Fragment slot="tab-panels">
+			<div
+				id="course-quizzes"
+				class="course-page-tab-panel"
+				aria-labelledby="course-page-tab-quizzes"
+			>
+				<ul class="course-page-quizzes-list">
+					{
+						quizzes.map((quiz) => (
+							<li class="course-page-quizzes-li">
+								<FeaturedCuiz
+									card={
+										quiz
+									}
+								/>
+							</li>
+						))
+					}
+				</ul>
+			</div>
+			<div
+				id="course-series"
+				class="course-page-tab-panel"
+				aria-labelledby="course-page-tab-series"
+			>
+				<ul class="course-page-series-list">
+					{
+						series.map((data) => (
+							<li class="course-page-series-li">
+								<SeriesCard
+									card={data}
+								/>
+							</li>
+						))
+					}			
+				</ul>
+			</div>
+		</Fragment>
+	</Tabs>
+
+	<script>
+		import { setupTabs } from "@/composables/tabs";
+
+		document.addEventListener("DOMContentLoaded", () =>
+			setupTabs("course-tabs")
+		);
+	</script>
+</Base>
+
+<style lang="scss">
+	.course-page {
+		&-title {
+			font-size: calc(1.25 * var(--step-4));
+			font-weight: 600;
+			color: var(--clr-gray-700);
+			text-transform: capitalize;
+		}
+
+		&-description {
+			font-size: var(--step-1);
+		}
+	}
+</style>
+
+<style is:global lang="scss">
+	#course-tabs {
+		.tab-list {
+			margin-block: 1rem 0.5rem;
+			border-bottom: var(--border);
+			width: fit-content;
+		}
+
+		.course-page {
+			&-tab-li {
+				display: contents;
+			}
+			&-tab {
+				text-decoration: none;
+				font-family: var(--font-heading);
+				font-weight: 700;
+				color: var(--clr-black);
+				opacity: 0.5;
+				border-bottom: 4px solid transparent;
+				padding: 0.45rem 1.25rem 0.25rem;
+				outline: none;
+
+				&:focus-visible {
+					outline: 1px solid var(--clr-gray-900);
+					outline-offset: -4px;
+				}
+
+				&[aria-selected="true"] {
+					opacity: 1;
+					border-bottom-color: var(
+						--clr-gray-900
+					);
+				}
+			}
+
+			&-tab-panel {
+				min-height: 200px;
+				padding: 0rem 0rem 0.5rem;
+				//background: var(--clr-white);
+				border-radius: 0;
+				// border: var(--border);
+
+				@media (min-width: 800px) {
+					border-radius: 0 0 0.5rem 0.5rem;
+				}
+			}
+
+			&-series-list,
+			&-quizzes-list {
+				display: grid;
+				grid-template-columns: repeat(
+					auto-fill,
+					minmax(325px, 1fr)
+				);
+				gap: 0.75rem;
+				align-items: start;
+			}
+
+			&-series-li,
+			&-quizzes-li {
+				list-style: none;
+			}
+
+			// Removing The Course Title
+			&-quizzes-list .featured-cuiz,
+			&-series-list .series-card {
+				&-course {
+				 	display: none;
+				}
+
+				&-content {
+					margin-top: 0.25rem;
+				}
+			}
+
+			&-series-list .series-card {
+				&-title {
+					margin-top: 0.25rem;
+				}
+			}
+		}
+	}
+</style>

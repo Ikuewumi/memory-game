@@ -1,0 +1,11 @@
+{
+    "title": "Anatomy Basics",
+    "description": "An introductory series to anatomical terminologies",
+    "author": "ayobami",
+    "course": "anatomy",
+    "quizzes": [
+        "anatomy-101",
+        "epithelium"
+    ]
+
+}

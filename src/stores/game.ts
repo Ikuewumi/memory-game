@@ -68,7 +68,6 @@ export const enterData = (questions: Question[] = [], image = "", text = ""): vo
     gameStatus.set({ ...DEFAULT_GAME_STATUS })
     gameData.set({ questions: shuffle(questions), image, text })
     addNewImage(image, text)
-    console.log(gameData.value)
     fullQuestionCount.set(questions.length)
 }
 
@@ -92,6 +91,7 @@ export const startGame = (): void => {
     }
 
 
+    if (gameStatus.get().multipleImages) chooseNewQuestion(gameData.get().questions)
     MODE.get().onSetup?.()
     gameStatus.setKey("gameStarted", true)
     MODE.get()?.onStart?.()

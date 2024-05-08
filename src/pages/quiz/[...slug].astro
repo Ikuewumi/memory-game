@@ -1,9 +1,10 @@
 ---
+import type { CuizMetadataProps } from "@/types"
 import CuizMetadata from '@/components/CuizMetadata.astro';
 import CuizWalkthrough from '@/components/CuizWalkthrough.svelte';
-import { decodeString, encodeString } from '@/composables/engine';
+import { encodeString } from '@/composables/engine';
 import Base from '@/layouts/Base.astro';
-import { getCollection } from 'astro:content';
+import { getCollection, getEntry, type CollectionEntry } from 'astro:content';
 
 export async function getStaticPaths() {
   const entries = await getCollection('quiz');
@@ -13,15 +14,36 @@ export async function getStaticPaths() {
 }
 
 
+interface Props {
+  entry: CollectionEntry<"quiz">
+}
+
 const { entry } = Astro.props;
+
+const course = await getEntry("course", entry.data.course.id)
+const author = await getEntry("author", entry.data.author.id)
 const encodedString = encodeString(JSON.stringify(entry.data))
+
+const metadata: CuizMetadataProps = {
+  title: entry.data.title,
+  date: entry.data.date,
+  description: entry.data.description,
+  image: entry.data.image,
+  difficulty: entry.data.difficulty,
+  questionCount: entry.data.questions.length,
+  author: author.data.name,
+  authorImage: author.data.image,
+  course: course.data.title,
+  courseLink: course.id,
+  
+}
 ---
 
 <Base title="Cuiz | A Sample Page">
 
 
-	<CuizMetadata data={entry.data} />
-        <CuizWalkthrough client:only="svelte" slug={entry.id} cuizDataString={encodeString(JSON.stringify(entry.data))} />
+	<CuizMetadata data={metadata} />
+        <CuizWalkthrough client:only="svelte" slug={entry.id} cuizDataString={encodedString} />
     
 
 </Base>

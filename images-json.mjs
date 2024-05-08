@@ -1,3 +1,4 @@
+import { fetch, setGlobalDispatcher, Agent } from 'undici'
 import { existsSync } from "node:fs"
 import { opendir, readFile, writeFile } from "node:fs/promises"
 import path from "node:path"
@@ -40,6 +41,9 @@ import path from "node:path"
  *
  */
 
+
+// set fetch timeout
+setGlobalDispatcher(new Agent({ connect: { timeout: 60_000 } }) )
 
 
 /**
@@ -184,7 +188,7 @@ const modifyCache = async (cacheFileName, imagesData) => {
 
 const runJob = async () => {
     const RELATIVE_PATH = "./src/content/quiz/"
-    const CACHE_RELATIVE_PATH = "./public/images/"
+    const CACHE_RELATIVE_PATH = "./public/.images/"
     const fileNames = await getSourceFiles(RELATIVE_PATH);
 
     /** @type {Promise<ImagesObject>[]} */
@@ -196,7 +200,6 @@ const runJob = async () => {
     })
 
     const filesArray = await Promise.all(jsonPromises)
-    console.log(filesArray)
     filesArray.forEach((file) => {
         const cacheFileName = getCacheFileName(file.name, CACHE_RELATIVE_PATH)
         modifyCache(cacheFileName, file)

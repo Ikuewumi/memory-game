@@ -38,10 +38,52 @@ export interface Data {
 }
 
 
+
+
+
 export interface GameData extends Data {
 }
 
 export type Cuiz = GameData & Metadata
+
+
+export interface CuizMetadataProps extends Metadata {
+  date: string
+  courseLink: string
+  authorImage: string,
+  image: string
+  questionCount: number
+}
+
+
+export interface CourseCardProps {
+  title: string
+  description: string
+  icon: string
+  iconSize: number,
+  courseLink: string
+}
+
+
+export interface QuizCardProps extends Omit<Metadata, "author"> {
+  questionCount:  number
+  courseLink: string
+  quizlink: string
+}
+
+
+export interface SeriesCardProps { 
+  title: string
+  description: string
+  quizCount: number
+  seriesLink: string
+  course: string
+  courseLink: string
+}
+
+
+
+
 
 export interface GameStatus {
   time: number
