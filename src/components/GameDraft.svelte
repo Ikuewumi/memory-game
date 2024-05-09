@@ -62,6 +62,7 @@
             grid-column: content;
         }
         &-wrapper {
+            overscroll-behavior: contain;
             position: fixed;
             z-index: var(--z-dialog);
             inset: 0;
