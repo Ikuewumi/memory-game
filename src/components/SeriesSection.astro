@@ -1,0 +1,89 @@
+---
+import type { SeriesSectionProps } from '@/types';
+import { Show } from 'solid-js';
+interface Props {
+    data: SeriesSectionProps
+}
+
+const { data } = Astro.props
+---
+
+
+<div class="series-section">
+    <p class="series-section-message">This quiz is {data.currentIndex + 1} of {data.seriesCount} in the <a href={`/series/${data.seriesLink}`} class="series-section-series-link">{data.title}</a> series</p>
+
+    <div class="series-section-quizzes">
+        <Show when={data.previousTitle > ""}>
+            <a href={`/quiz/${data.previousLink}`} class="series-section-link-previous">Previous: <span>{data.previousTitle}</span></a>
+        </Show>
+        <Show when={data.nextTitle > ""}>
+            <a href={`/quiz/${data.nextLink}`} class="series-section-link-next">Next: <span>{data.nextTitle}</span></a>
+            
+        </Show>
+    </div>
+</div>
+
+
+
+<style lang="scss">
+.series-section {
+    width: min(45rem, 100%);
+    margin-inline: auto;
+    padding: 1rem 1.5rem 1.25rem;
+    border-radius: 0.5rem;
+    background: var(--clr-white);
+    border: var(--border);
+    margin-block: 1rem 1.5rem;
+    display: grid;
+    gap: 0.75rem;
+
+    &-message {
+        line-height: 1.4;
+        font-size: var(--step-1);
+    }
+
+
+    &-series-link {
+        text-decoration: 3px var(--text-gradient-fallback) underline;
+        font-weight: 500;
+        color: var(--clr-gray-700);
+    }
+
+
+    &-quizzes {
+        display: flex;
+        gap: 0.5rem;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+
+
+    &-link-previous, &-link-next {
+        font-size: var(--step-1);
+        font-weight: 500;
+        padding: 0.5rem 0.75rem 0.65rem;
+        border: var(--border);
+        box-shadow: 0 0 4px -2px hsl(var(--shadow-color-dark) / 50%);
+        border-radius: 0.5rem;
+        text-decoration: none;
+        color: var(--clr-gray-700);
+
+
+        &:hover {
+            transition: 600ms;
+            background: var(--clr-gray-700);
+            color: var(--clr-white);
+        }
+
+        &:focus-visible {
+            text-decoration: underline;
+        }
+    }
+
+
+    &-link-next {
+        margin-left: auto;
+    }
+
+}
+</style>

@@ -39,7 +39,7 @@ const series = defineCollection({
     type: "data",
     schema: metadata.merge(
         z.object({
-            quizzes: z.array(reference("quiz")).min(1)
+            quizzes: z.array(reference("quiz")).min(2)
         })
     )
 })

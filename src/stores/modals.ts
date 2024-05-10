@@ -19,7 +19,7 @@ export const resetModals = () => {
     modals.set({ ...DEFAULT_MODAL_STATES })
 }
 
-const elements = ['header.header', 'button.cuiz-walkthrough-play', 'footer.footer']
+const elements = ['header.header', 'button.cuiz-walkthrough-play', 'footer.footer', 'div.series-section', 'a.cuiz-metadata-course-link']
 const MODAL_OPEN_CLASS = "modal-open"
 
 modals.subscribe(modals => {

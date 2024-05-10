@@ -11,18 +11,18 @@
     import { onMount } from "svelte";
 
     export let cuizDataString: string;
-    export let slug: string
-    let cuizData: GameData & Metadata = JSON.parse(decodeString(cuizDataString))
+    export let slug: string;
+    let cuizData: GameData & Metadata = JSON.parse(
+        decodeString(cuizDataString),
+    );
 
     onMount(() => {
-        cuizData = JSON.parse(decodeString(cuizDataString))
-        console.log(cuizData)
-    })
-
+        cuizData = JSON.parse(decodeString(cuizDataString));
+    });
 
     const checkImages = async (
         pageSlug: string,
-        cover: string,
+        cover: string = "",
         questions: Question[],
     ) => {
         const controller = new AbortController();
@@ -38,11 +38,17 @@
 
         try {
             writeMessage("...Loading images");
-            const res = await fetch(`/_images/${pageSlug}.json`, {
-                signal: controller.signal,
-            });
-            const json: ImageFile = await res.json();
-            console.log(json);
+            let json: ImageFile = {};
+            const imageInQuestions = questions.find(
+                (question) => "image" in question,
+            );
+            if (imageInQuestions) output.multipleImages = true;
+            if (cover > "" || imageInQuestions) {
+                const res = await fetch(`/_images/${pageSlug}.json`, {
+                    signal: controller.signal,
+                });
+                json = await res.json();
+            }
 
             if (cover > "") {
                 output.data.image = json[zUrlString.parse(cover)];
@@ -52,7 +58,6 @@
                     "image" in question &&
                     Object.hasOwn(json, zUrlString.parse(question.image))
                 ) {
-                    output.multipleImages = true
                     return {
                         ...question,
                         image: json[zUrlString.parse(question.image)],
@@ -77,11 +82,16 @@
     const showOptions = () => modals.setKey("options", true);
     const start = async () => {
         resetGame();
-        const { ok, multipleImages, data } = await checkImages(slug, cuizData.image, cuizData.questions); 
+        const { ok, multipleImages, data } = await checkImages(
+            slug,
+            cuizData.image,
+            cuizData.questions,
+        );
         if (!ok) return;
-        console.log(data)
         enterData(data.questions, data.image, cuizData.text ?? "");
+
         gameStatus.setKey("multipleImages", multipleImages);
+
         modals.set({ ...DEFAULT_MODAL_STATES, game: true });
         await sleep(400);
         startGame();
@@ -97,14 +107,11 @@
 </script>
 
 {#if cuizData}
-    
+    <button class="cuiz-walkthrough-play" on:click={showOptions}> Play </button>
 
-<button class="cuiz-walkthrough-play" on:click={showOptions}> Play </button>
-
-<CuizOptions on:start-game={startWithOptions} />
-<GameDraft />
-<CuizMetrics />
-
+    <CuizOptions on:start-game={startWithOptions} />
+    <GameDraft />
+    <CuizMetrics />
 {/if}
 
 <style lang="scss">

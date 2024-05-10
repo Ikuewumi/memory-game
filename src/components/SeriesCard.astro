@@ -16,7 +16,9 @@ const quizCountString = card.quizCount > 1 ? "quizzes" : "quiz"
 <div class="series-card">
     
 
-    <span class="series-card-course text-gradient">{card.course}</span>
+    <a href={`/courses/${card.courseLink}`} class="series-card-course-link">
+        <span class="series-card-course text-gradient">{card.course}</span>
+    </a>
     <a href={`/series/${card.seriesLink}`} class="series-card-title-link">
         <h3 class="series-card-title">{card.title}</h3> 
     </a>
@@ -36,13 +38,14 @@ const quizCountString = card.quizCount > 1 ? "quizzes" : "quiz"
     border: var(--border);
     background: var(--clr-white);
     border-radius: 0.75rem;
-    padding: 0.35rem 0.75rem 0.5rem;
+    padding: 0.35rem 0.75rem 0.75rem;
     box-shadow: 0 1px 4px -3px hsl(var(--shadow-color-dark) / 10%);
     position: relative;
+    isolation: isolate;
 
 
     @media (min-width: 800px) {
-        padding: 0.5rem 1rem 1rem;
+        padding: 0.5rem 1rem 1.25rem;
     }
 
 
@@ -53,7 +56,15 @@ const quizCountString = card.quizCount > 1 ? "quizzes" : "quiz"
         letter-spacing: 0.75px;
         
     }
+    &-course-link {
+		justify-self: start;
+		text-decoration: none;
 
+		&:focus-visible, &:hover {
+	    text-decoration:  3px solid var(--text-gradient-fallback) underline;
+		}
+ 
+	}
 
     &-title {
         font-size: calc(1.25 * var(--step-2));

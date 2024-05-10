@@ -82,7 +82,16 @@ export interface SeriesCardProps {
 }
 
 
-
+export interface SeriesSectionProps {
+  title: string
+  seriesLink: string
+  previousTitle: string
+  previousLink: string
+  nextTitle: string
+  nextLink: string,
+  currentIndex: number
+  seriesCount: number
+}
 
 
 export interface GameStatus {

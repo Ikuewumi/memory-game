@@ -170,7 +170,7 @@ const modifyCache = async (cacheFileName, imagesData) => {
         
         imagesData.images.forEach(image => {
             if (image in imageFileContents) {
-                console.info("cache hit!")
+                console.count("cache hit!")
                 outputFile[image] = imageFileContents[image]
             } else {
                 const imagePromise = getImageData(image).then(url => outputFile[image] = url)

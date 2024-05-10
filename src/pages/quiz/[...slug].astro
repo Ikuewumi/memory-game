@@ -1,28 +1,30 @@
 ---
-import type { CuizMetadataProps } from "@/types"
-import CuizMetadata from '@/components/CuizMetadata.astro';
-import CuizWalkthrough from '@/components/CuizWalkthrough.svelte';
-import { encodeString } from '@/composables/engine';
-import Base from '@/layouts/Base.astro';
-import { getCollection, getEntry, type CollectionEntry } from 'astro:content';
+import type { CuizMetadataProps, SeriesSectionProps } from "@/types";
+import CuizMetadata from "@/components/CuizMetadata.astro";
+import CuizWalkthrough from "@/components/CuizWalkthrough.svelte";
+import { encodeString } from "@/composables/engine";
+import Base from "@/layouts/Base.astro";
+import { getCollection, getEntry, type CollectionEntry } from "astro:content";
+import SeriesSection from "@/components/SeriesSection.astro";
+import { Show } from "solid-js";
 
 export async function getStaticPaths() {
-  const entries = await getCollection('quiz');
-  return entries.map(entry => ({
-    params: { slug: entry.id }, props: { entry },
+  const entries = await getCollection("quiz");
+  return entries.map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry },
   }));
 }
 
-
 interface Props {
-  entry: CollectionEntry<"quiz">
+  entry: CollectionEntry<"quiz">;
 }
 
 const { entry } = Astro.props;
 
-const course = await getEntry("course", entry.data.course.id)
-const author = await getEntry("author", entry.data.author.id)
-const encodedString = encodeString(JSON.stringify(entry.data))
+const course = await getEntry("course", entry.data.course.id);
+const author = await getEntry("author", entry.data.author.id);
+const encodedString = encodeString(JSON.stringify(entry.data));
 
 const metadata: CuizMetadataProps = {
   title: entry.data.title,
@@ -35,15 +37,62 @@ const metadata: CuizMetadataProps = {
   authorImage: author.data.image,
   course: course.data.title,
   courseLink: course.id,
+};
+
+const seriesEntry = await getCollection("series", ({ data }) => {
+  return data.quizzes.findIndex((quiz) => quiz.id === entry.id) > -1;
+});
+
+const getSeriesData = async (series: CollectionEntry<"series">) => {
   
+  const currentIndex = series.data.quizzes.findIndex(quiz => quiz.id === entry.id)
+  const previousIndex = currentIndex <= 0 ? -1 : currentIndex - 1;
+  const nextIndex = currentIndex === (series.data.quizzes.length - 1) ? -1 : currentIndex + 1; 
+
+  const output = {
+    previousTitle: "",
+    previousLink: "",
+    nextLink: "",
+    nextTitle: "",
+    title: series.data.title,
+    seriesLink: series.id,
+    currentIndex,
+    seriesCount: series.data.quizzes.length
+  } as SeriesSectionProps
+
+
+  if (previousIndex !== -1) {
+    const quiz = await getEntry("quiz", series.data.quizzes[previousIndex].id)
+    output.previousLink = quiz.id,
+    output.previousTitle = quiz.data.title
+  }
+
+  if (nextIndex !== -1) {
+    const quiz = await getEntry("quiz", series.data.quizzes[nextIndex].id)
+    output.nextLink = quiz.id,
+    output.nextTitle = quiz.data.title
+  }
+
+
+  return output
 }
+
+
+
+const seriesIsPresent = seriesEntry.length >= 1;
+let series: SeriesSectionProps
+
+if (seriesIsPresent) series = await getSeriesData(seriesEntry[0])
 ---
 
-<Base title="Cuiz | A Sample Page">
-
-
-	<CuizMetadata data={metadata} />
-        <CuizWalkthrough client:only="svelte" slug={entry.id} cuizDataString={encodedString} />
-    
-
+<Base title={metadata.title} description={metadata.description}>
+  <CuizMetadata data={metadata} />
+  <CuizWalkthrough
+    client:only="svelte"
+    slug={entry.id}
+    cuizDataString={encodedString}
+  />
+  <Show when={seriesIsPresent}>
+    <SeriesSection data={series} />
+  </Show>
 </Base>

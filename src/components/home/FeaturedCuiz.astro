@@ -6,7 +6,6 @@ interface Props {
 
 
 const { card } = Astro.props;
-const cardLink = `/quiz/${card.quizlink}`
 ---
 
 
@@ -14,8 +13,10 @@ const cardLink = `/quiz/${card.quizlink}`
     {card?.image && <img class="featured-cuiz-image" src={card.image} alt={card.title} /> }
 
     <div class="featured-cuiz-content">
-        <span class="featured-cuiz-course text-gradient">{card.course}</span>
-        <a class="featured-cuiz-heading-link" href={cardLink}><h3 class="featured-cuiz-heading">{card.title}</h3></a>
+        <a href={`/courses/${card.courseLink}`} class="featured-cuiz-course-link">
+            <span class="featured-cuiz-course text-gradient">{card.course}</span>
+        </a>
+        <a class="featured-cuiz-heading-link" href={`/quiz/${card.quizlink}`}><h3 class="featured-cuiz-heading">{card.title}</h3></a>
         <p class="featured-cuiz-description">{card.description}</p> 
         <span class="featured-cuiz-difficulty">{card.difficulty}</span>
         <span class="featured-cuiz-count">{card.questionCount} terms</span>
@@ -84,7 +85,15 @@ const cardLink = `/quiz/${card.quizlink}`
         text-transform: uppercase;
     }
 
+	&-course-link {
+		justify-self: start;
+		text-decoration: none;
 
+		&:focus-visible, &:hover {
+		    text-decoration:  3px solid var(--text-gradient-fallback) underline;
+		}
+ 
+	}
     &-heading {
         font-size: calc(1.25 * var(--step-2));
         font-weight: 600;

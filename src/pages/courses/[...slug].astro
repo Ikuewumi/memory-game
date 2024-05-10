@@ -76,7 +76,7 @@ const series: SeriesCardProps[] = seriesEntries.map((series) => {
 				<a
 					href="#course-series"
 					id="course-page-tab-series"
-					class="course-page-tab">Series (2)</a
+					class="course-page-tab">Series ({series.length})</a
 				>
 			</li>
 		</Fragment>
@@ -210,7 +210,7 @@ const series: SeriesCardProps[] = seriesEntries.map((series) => {
 			// Removing The Course Title
 			&-quizzes-list .featured-cuiz,
 			&-series-list .series-card {
-				&-course {
+				&-course-link {
 				 	display: none;
 				}
 

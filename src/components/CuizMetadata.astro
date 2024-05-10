@@ -7,6 +7,7 @@ interface Props {
 }
 
 const { data } = Astro.props;
+const imagePresent = data?.image > "" ? "true" : "false"
 ---
 
 <>
@@ -37,7 +38,7 @@ const { data } = Astro.props;
         <strong class="cuiz-metadata-author-name">By {data.author}</strong>
     </div>
 
-    <div class="cuiz-metadata-extras">
+    <div class="cuiz-metadata-extras" data-image-present={imagePresent}>
         <span class="cuiz-metadata-difficulty" data-difficulty={data.difficulty} title="Difficulty">{data.difficulty}</span>
         <span class="cuiz-metadata-count">{data.questionCount} terms</span>
     </div>
@@ -140,6 +141,12 @@ const { data } = Astro.props;
             border: var(--border);
             margin-top: calc(0.75rem + var(--space-2xs));
             margin-left: var(--space-xs);
+
+
+            &[data-image-present="false"] {
+                margin: 0.75rem auto -0.25rem -0.25rem;
+                grid-row: auto;
+            }
 
             @media (min-width: 800px) {
             }
