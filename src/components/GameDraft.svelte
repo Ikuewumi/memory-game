@@ -111,7 +111,6 @@
         gap: var(--space-3xs);
         font-size: var(--step-0);
         padding-inline: var(--space-2xs);
-        width: fit-content;
 
         @media (min-width: 800px) {
             flex-direction: column;
