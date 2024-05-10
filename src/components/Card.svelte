@@ -8,7 +8,7 @@
 <!-- svelte-ignore a11y-role-supports-aria-props -->
 <button {disabled} aria-selected={chosen} class="card" on:click>
     {text}
-    <span class="card-badge" >{badge}</span>
+    <span class="card-badge" hidden={true}>{badge}</span>
 </button>
 
 <style lang="scss">
@@ -18,6 +18,7 @@
         display: grid;
         place-content: center;
         line-height: 1.2;
+        word-break:break-all;
         //height: fit-content;
         text-align: center;
         background: var(--clr-white);
