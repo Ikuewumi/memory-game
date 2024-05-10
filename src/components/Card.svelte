@@ -18,15 +18,13 @@
         display: grid;
         place-content: center;
         line-height: 1.2;
-        word-break:break-all;
-        //height: fit-content;
         text-align: center;
         background: var(--clr-white);
         color: var(--clr-gray-900);
         border-radius: var(--space-3xs);
         border: 1px solid hsl(var(--shadow-color-dark) / 20%);
         box-shadow: 0 0.5px 5px -4px hsl(var(--shadow-color-dark) / 80%);
-        padding: 1rem 0.25rem 1.1rem;
+        padding: 1rem 0.35rem 1.1rem;
         font-size: var(--step-card);
         font-weight: 500;
         cursor: pointer;

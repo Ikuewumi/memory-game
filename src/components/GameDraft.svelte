@@ -82,7 +82,11 @@
 
     .draft-main {
         width: 100%;
-        --bg: var(--clr-white);
+        overflow-x: auto;
+        padding: 0 0 0.5rem;
+        overscroll-behavior: contain;
+        
+	--bg: var(--clr-white);
         --clr: var(--clr-black);
         --delay: 0ms;
         &[data-focus="focus"] {
@@ -107,6 +111,7 @@
         gap: var(--space-3xs);
         font-size: var(--step-0);
         padding-inline: var(--space-2xs);
+        width: fit-content;
 
         @media (min-width: 800px) {
             flex-direction: column;
