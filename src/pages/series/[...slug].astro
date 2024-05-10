@@ -135,6 +135,9 @@ const pageData = {
 
 <style lang="scss" is:global>
 	.series-page {
+		&-list {
+			counter-reset: series-item;
+		}
 		&-list > &-li .featured-cuiz {
 			counter-increment: series-item;
 
