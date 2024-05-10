@@ -1,3 +1,9 @@
+---
+const path = Astro.url.pathname
+const url = path.endsWith('/') ? path : `${path}/`
+---
+
+
 <header class="header">
     <div role="presentation" class="header-wrapper" data-grid>
         <strong class="header-logo text-gradient">
@@ -9,7 +15,7 @@
         <nav class="header-nav">
             <ul class="header-list">
                 <li class="header-li">
-                    <a class="header-link" href="/">
+                    <a class="header-link" href="/" aria-current={url === "/" ? "page" : "false" }>
                         <svg class="header-link-svg" viewBox="0 0 24 24">
                             <use href="#house"></use>
                         </svg>
@@ -17,7 +23,7 @@
                     </a>
                 </li>
                 <li class="header-li">
-                    <a class="header-link" href="/courses">
+                    <a class="header-link" href="/courses" aria-current={url === "/courses/" ? "page" : "false" }>
                         <svg class="header-link-svg" viewBox="0 0 24 24">
                             <use href="#library"></use>
                         </svg>
@@ -25,7 +31,7 @@
                     </a>
                 </li>
                 <li class="header-li">
-                    <a class="header-link" href="/archive">
+                    <a class="header-link" href="/archive" aria-current={url === "/archive/" ? "page" : "false" }>
                         <svg class="header-link-svg" viewBox="0 0 24 24">
                             <use href="#archive"></use>
                         </svg>
@@ -33,7 +39,7 @@
                     </a>
                 </li>
                 <li class="header-li">
-                    <a class="header-link" href="/">
+                    <a class="header-link" href="/" aria-current={url === "/you/" ? "page" : "false" }>
                         <svg class="header-link-svg" viewBox="0 0 24 24">
                             <use href="#for-you"></use>
                         </svg>
@@ -150,6 +156,12 @@
         font-size: calc(0.95 * var(--step-n0));
         line-height: 0.9;
         opacity: 0.75;
+
+
+        &[aria-current="page"] {
+            opacity: 1;
+            text-decoration: 4px underline var(--text-gradient-fallback);
+        }
 
 
         &:hover, &:focus-visible {

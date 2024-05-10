@@ -1,5 +1,5 @@
 ---
-import type { Cuiz, QuizCardProps } from "@/types";
+import type { QuizCardProps } from "@/types";
 import FeaturedCuiz from "./FeaturedCuiz.astro";
 import { getEntry } from "astro:content";
 
@@ -20,7 +20,7 @@ const quizPromises = featuredEntries.data.featuredQuizzes.map(async(quizEntry) =
 })
 
 
-const quizzes = await Promise.all(quizPromises)
+const quizzes = (await Promise.all(quizPromises)).slice(0, 3)
 
 
 ---
@@ -40,7 +40,7 @@ const quizzes = await Promise.all(quizPromises)
         }
     </ul>
 
-    <a class="featured-link text-gradient" href="/courses">See all courses here</a>
+    <a class="featured-link text-gradient" href="/archive">See all quizzes here</a>
 </section>
 
 <style lang="scss">

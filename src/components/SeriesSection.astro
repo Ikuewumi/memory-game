@@ -6,8 +6,8 @@ interface Props {
 }
 
 const { data } = Astro.props
+console.log(data)
 ---
-
 
 <div class="series-section">
     <p class="series-section-message">This quiz is <span class="series-section-count">{data.currentIndex + 1} of {data.seriesCount}</span> in the <a href={`/series/${data.seriesLink}`} class="series-section-series-link">{data.title}</a> series</p>

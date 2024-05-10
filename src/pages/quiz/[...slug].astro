@@ -79,7 +79,7 @@ const getSeriesData = async (series: CollectionEntry<"series">) => {
 
 
 
-const seriesIsPresent = seriesEntry.length >= 1;
+const seriesIsPresent = seriesEntry.length > 0;
 let series: SeriesSectionProps
 
 if (seriesIsPresent) series = await getSeriesData(seriesEntry[0])
@@ -92,7 +92,5 @@ if (seriesIsPresent) series = await getSeriesData(seriesEntry[0])
     slug={entry.id}
     cuizDataString={encodedString}
   />
-  <Show when={seriesIsPresent}>
-    <SeriesSection data={series} />
-  </Show>
+  {seriesIsPresent && <SeriesSection data={series} />}
 </Base>
