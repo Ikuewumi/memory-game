@@ -6,12 +6,15 @@ import Toast from "@/components/Toast.svelte";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import SkipLink from "@/components/SkipLink.astro";
+import { Show } from "solid-js";
+import { getEntry, type CollectionEntry } from "astro:content";
 interface Props {
 	title: string;
 	description?: string;
 }
 
 const { title = "Home Page", description = "" } = Astro.props;
+const extras: CollectionEntry<"extras"> = await getEntry("extras", "index")
 ---
 
 <html lang="en">
@@ -25,6 +28,9 @@ const { title = "Home Page", description = "" } = Astro.props;
 	</head>
 	<body data-grid>
 		<SkipLink />
+		<Show when={extras.data.message > ""}>
+			<div class="extras-message">{extras.data.message}</div>
+		</Show>
 		<Header />
 		<main id="main-content" data-grid>
 			<slot />
@@ -36,3 +42,19 @@ const { title = "Home Page", description = "" } = Astro.props;
 		<slot name="script" />
 	</body>
 </html>
+
+
+
+<style lang="scss">
+.extras-message {
+	padding: 0.5rem 0.75rem;
+	background: var(--clr-gray-700);
+	color: var(--clr-gray-200);
+	grid-column: full;
+	text-align: center;
+	font-size: calc(1.1 * var(--step-n1));
+	font-weight: 600;
+	font-family: var(--font-heading);
+
+}
+</style>

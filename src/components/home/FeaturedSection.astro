@@ -1,10 +1,26 @@
 ---
-import type { Cuiz } from "@/types";
+import type { Cuiz, QuizCardProps } from "@/types";
 import FeaturedCuiz from "./FeaturedCuiz.astro";
+import { getEntry } from "astro:content";
+
+const featuredEntries = await getEntry("extras", "index")
+const quizPromises = featuredEntries.data.featuredQuizzes.map(async(quizEntry) => {
+    const quiz = await getEntry("quiz", quizEntry.id)
+    const course = await getEntry("course", quiz.data.course.id)
+    return {
+        "title": quiz.data.title,
+        "image": quiz.data?.image ?? "",
+        "quizlink": quiz.id,
+        "difficulty": quiz.data.difficulty,
+        "description": quiz.data.description,
+        "questionCount": quiz.data.questions.length,
+        "course": course.data.title,
+        "courseLink": course.id
+    } as QuizCardProps
+})
 
 
-
-
+const quizzes = await Promise.all(quizPromises)
 
 
 ---
@@ -15,13 +31,13 @@ import FeaturedCuiz from "./FeaturedCuiz.astro";
     </h2>
 
     <ul class="featured-list">
-       <!-- {
-            cards.map((card) => (
+       {
+            quizzes.map((quiz) => (
                 <li class="featured-li">
-                    <FeaturedCuiz card={card} />
+                    <FeaturedCuiz card={quiz} />
                 </li>
             ))
-        } -->
+        }
     </ul>
 
     <a class="featured-link text-gradient" href="/courses">See all courses here</a>

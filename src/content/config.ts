@@ -1,6 +1,12 @@
 import { z, defineCollection, reference } from 'astro:content';
 
-
+const extras = defineCollection({
+    type: "data",
+    schema: z.object({
+        message: z.string(),
+        featuredQuizzes: z.array(reference("quiz")).min(3)
+    })
+})
 
 const author = defineCollection({
     type: "data",
@@ -79,5 +85,6 @@ export const collections = {
     quiz,
     author,
     series,
-    course
+    course,
+    extras
 }
