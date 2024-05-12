@@ -1,8 +1,8 @@
 {
     "message": "This website is in beta, bugs may occur",
     "featuredQuizzes": [
+        "nervous-tissue",
         "muscle-tissue",
-        "epithelium",
         "anatomy-101"
     ]
     

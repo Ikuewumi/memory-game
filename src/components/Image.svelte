@@ -44,7 +44,8 @@
     }
 
     figcaption.text {
-        min-width: var(--c-img-height);
+        overflow-y: auto;
+        max-width: var(--c-img-height);
         background: var(--clr-white);
         color: var(--clr-gray-800);
         border-radius: 0.75rem;
