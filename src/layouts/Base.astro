@@ -17,7 +17,7 @@ interface Props {
 const { title = "Home Page", description = "" } = Astro.props;
 const extras: CollectionEntry<"extras"> = await getEntry("extras", "index")
 
-const isProduction = process.env.NODE_ENV === "procdution"
+const isProduction = process.env.NODE_ENV === "__production"
 console.log(isProduction)
 ---
 
