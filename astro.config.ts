@@ -2,12 +2,13 @@ import { defineConfig } from 'astro/config';
 import svelte from "@astrojs/svelte";
 import path from 'path';
 import solidJs from "@astrojs/solid-js";
+import partytown from "@astrojs/partytown";
 const __dirname = path.dirname(".");
 
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [svelte(), solidJs()],
+  integrations: [svelte(), solidJs(), partytown()],
   vite: {
     resolve: {
       alias: {

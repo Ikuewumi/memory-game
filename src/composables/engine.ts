@@ -1,6 +1,5 @@
 import type { Question, CardData } from "@/types"
-import confetti from "canvas-confetti"
-import {z} from "astro/zod"
+import { z } from "astro/zod"
 
 export const getCardsData = (questions: Question[]): CardData[] => {
     let array: CardData[] = []
@@ -85,9 +84,44 @@ export const getFormattedTimeNumber = (seconds: number): [string, string] => {
 
 
 export const throwConfetti = async (timeInMs = 2000) => {
-    confetti()
-    await sleep(timeInMs)
-    return confetti.reset()
+    try {
+        if (!("confetti" in window)) {
+            // @ts-ignore
+            await import("/confetti.browser.min.js?url");
+        }
+        // @ts-ignore
+        var duration = timeInMs;
+        var end = Date.now() + duration;
+
+        // @ts-ignore
+        confetti.reset();
+
+        (function frame() {
+            // launch a few confetti from the left edge
+            // @ts-ignore
+            confetti({
+                particleCount: 7,
+                angle: 60,
+                spread: 55,
+                origin: { x: 0 }
+            });
+            // and launch a few from the right edge
+            // @ts-ignore
+            confetti({
+                particleCount: 7,
+                angle: 120,
+                spread: 55,
+                origin: { x: 1 }
+            });
+
+            // keep going until we are out of time
+            if (Date.now() < end) {
+                requestAnimationFrame(frame);
+            }
+        }());
+    } catch (e) {
+        console.error(e)
+    }
 }
 
 
@@ -99,14 +133,14 @@ export const zUrlString = z.string().url().transform(url => {
 
 
 
-function base64ToBytes(base64:string) {
-  const binString = atob(base64);
-  return Uint8Array.from(binString, (m) => m.codePointAt(0));
+function base64ToBytes(base64: string) {
+    const binString = atob(base64);
+    return Uint8Array.from(binString, (m) => m.codePointAt(0));
 }
 
-function bytesToBase64(bytes:Uint8Array) {
-  const binString = String.fromCodePoint(...bytes);
-  return btoa(binString);
+function bytesToBase64(bytes: Uint8Array) {
+    const binString = String.fromCodePoint(...bytes);
+    return btoa(binString);
 }
 
 

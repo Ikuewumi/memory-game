@@ -19,11 +19,13 @@
     "test:ui": "vitest --ui"
   },
   "dependencies": {
+    "@astrojs/partytown": "^2.1.0",
     "@astrojs/solid-js": "^4.1.0",
     "@astrojs/svelte": "^5.3.0",
     "@types/canvas-confetti": "^1.6.4",
     "astro": "^4.5.17",
     "canvas-confetti": "^1.9.2",
+    "idb": "^8.0.0",
     "node-fetch": "^3.3.2",
     "solid-js": "^1.8.17",
     "svelte": "^4.2.12"
@@ -36,6 +38,7 @@
     "@testing-library/user-event": "^14.5.2",
     "@types/node": "^20.12.7",
     "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "@vite-pwa/astro": "^0.4.0",
     "@vitest/coverage-v8": "^1.5.0",
     "@vitest/ui": "^1.4.0",
     "c8": "^9.1.0",

@@ -8,6 +8,7 @@ import Footer from "@/components/Footer.astro";
 import SkipLink from "@/components/SkipLink.astro";
 import { Show } from "solid-js";
 import { getEntry, type CollectionEntry } from "astro:content";
+import Analytics from "@/components/Analytics.astro";
 interface Props {
 	title: string;
 	description?: string;
@@ -15,6 +16,9 @@ interface Props {
 
 const { title = "Home Page", description = "" } = Astro.props;
 const extras: CollectionEntry<"extras"> = await getEntry("extras", "index")
+
+const isProduction = process.env.NODE_ENV === "procdution"
+console.log(isProduction)
 ---
 
 <html lang="en">
@@ -29,6 +33,9 @@ const extras: CollectionEntry<"extras"> = await getEntry("extras", "index")
 		<title>{title}</title>
 	</head>
 	<body data-grid>
+		<slot name="structured-data" />
+
+		{isProduction && <Analytics measurementId="G-0EFZKCT0RY" />}
 		<SkipLink />
 		<Show when={extras.data.message > ""}>
 			<div class="extras-message">{extras.data.message}</div>

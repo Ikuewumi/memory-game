@@ -4,6 +4,10 @@ import Base from "@/layouts/Base.astro";
 ---
 
 <Base title="You Page" description="check your bookmarks and set your preferences here">
+	<Fragment slot="meta">
+		<meta name="robots" content="noindex,nofollow"><!-- All Search Engines -->
+		<meta name="googlebot" content="noindex,nofollow"><!-- Google Specific -->
+	</Fragment>
 
 	<h1 class="sr-only">You Page</h1>
 
