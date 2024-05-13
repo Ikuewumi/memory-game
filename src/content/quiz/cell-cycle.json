@@ -14,16 +14,16 @@
         { "question": "2D", "answer": "gap 1" },
         { "question": "2E", "answer": "synthesis" },
         { "question": "2F", "answer": "interphase" },
-        { "question": "example(s) of cells in the 2B stage", "answer": "neurons"},
+        { "question": "example(s) of cells permanently in the 2B stage", "answer": "mature neurons"},
 
         { 
             "question": "f(G1)", 
-            "answer": "cell growth. has a checkpoint to ensure everything is right for DNA synthesis", 
+            "answer": "prepares the cell for DNA synthesis", 
             "text": "match `f(cell cycle stage)` and the stage's description" 
         },
         { 
             "question": "f(G2)", 
-            "answer": "cell growth. has a checkpoint to ensure everything is right for mitosis", 
+            "answer": "prepares the cell for mitosis", 
             "text": "match `f(cell cycle stage)` and the stage's description" 
         },
         { 
@@ -39,7 +39,7 @@
 
         { 
             "question": "f(G0)", 
-            "answer": "the cell has left the cycle and has stopped dividing", 
+            "answer": "the cell has left the cycle", 
             "text": "match `f(cell cycle stage)` and the stage's description" 
         }
         
