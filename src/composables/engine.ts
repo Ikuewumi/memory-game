@@ -82,49 +82,64 @@ export const getFormattedTimeNumber = (seconds: number): [string, string] => {
 }
 
 
+export const setupConfetti = (func: (() => any)) => {
 
-export const throwConfetti = async (timeInMs = 2000) => {
-    try {
+    return new Promise((resolve) => {
+
         if (!("confetti" in window)) {
             // @ts-ignore
-            await import("/confetti.browser.min.js?url");
+            const script = document.createElement('script')
+            script.src = '/confetti.browser.min.js';
+
+            document.querySelector('head').appendChild(script)
+            script.addEventListener("load", () => {
+
+               return resolve(func())
+            })
+        } else {
+            return resolve(func())
         }
-        // @ts-ignore
-        var duration = timeInMs;
-        var end = Date.now() + duration;
 
-        // @ts-ignore
-        confetti.reset();
 
-        (function frame() {
-            // launch a few confetti from the left edge
-            // @ts-ignore
-            confetti({
-                particleCount: 7,
-                angle: 60,
-                spread: 55,
-                origin: { x: 0 }
-            });
-            // and launch a few from the right edge
-            // @ts-ignore
-            confetti({
-                particleCount: 7,
-                angle: 120,
-                spread: 55,
-                origin: { x: 1 }
-            });
+    }).catch(console.error)
 
-            // keep going until we are out of time
-            if (Date.now() < end) {
-                requestAnimationFrame(frame);
-            }
-        }());
-    } catch (e) {
-        console.error(e)
-    }
 }
 
 
+export const throwConfetti = (timeInMs = 2000) => {
+        return setupConfetti(() => {
+            // @ts-ignore
+            var duration = timeInMs;
+            var end = Date.now() + duration;
+
+            // @ts-ignore
+            confetti.reset();
+
+            (function frame() {
+                // launch a few confetti from the left edge
+                // @ts-ignore
+                confetti({
+                    particleCount: 7,
+                    angle: 60,
+                    spread: 55,
+                    origin: { x: 0 }
+                });
+                // and launch a few from the right edge
+                // @ts-ignore
+                confetti({
+                    particleCount: 7,
+                    angle: 120,
+                    spread: 55,
+                    origin: { x: 1 }
+                });
+
+                // keep going until we are out of time
+                if (Date.now() < end) {
+                    requestAnimationFrame(frame);
+                }
+            }());
+        })
+}
 
 export const zUrlString = z.string().url().transform(url => {
     return url.endsWith('/') ? url : `${url}/`

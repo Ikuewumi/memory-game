@@ -52,6 +52,6 @@ export default defineConfig({
         '@scss': path.resolve(__dirname, './src/scss'),
         '@types': path.resolve(__dirname, './src/types')
       }
-    }
+    },
   }
 });
