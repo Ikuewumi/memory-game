@@ -20,7 +20,8 @@ export const DEFAULT_USER_METRICS: Metrics = {
     "numberOfWrongQuestions": 0,
     "numberOfCorrectQuestions": 0,
     "numberOfAnsweredQuestions": 0,
-    "numberOfUnansweredQuestions": 0
+    "numberOfUnansweredQuestions": 0,
+    "percentAnswered": 0
 }
 
 export const metricsData = map({ ...DEFAULT_METRICS })
@@ -75,7 +76,8 @@ const getUserMetrics = (data: MetricsData): Metrics => {
         "numberOfAttempts": data.attemptsCount,
         "numberOfAnsweredQuestions": data.correctCount + data.wrong.length,
         "numberOfUnansweredQuestions": data.questionCount - (data.correctCount + data.wrong.length),
-        "numberOfCorrectQuestions": data.correctCount
+        "numberOfCorrectQuestions": data.correctCount,
+        "percentAnswered": Math.floor((data.correctCount / data.questionCount) * 100)
     }
 
 

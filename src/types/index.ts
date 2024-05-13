@@ -136,4 +136,5 @@ export interface Metrics {
   wrongQuestions: Question[]
   timeTaken: number
   numberOfAttempts: number
+  percentAnswered: number
 }

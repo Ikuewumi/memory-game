@@ -64,6 +64,10 @@
                     };
                 }
 
+                if ("text" in question) {
+                    output.multipleImages = true
+                }
+
                 return { ...question };
             });
 

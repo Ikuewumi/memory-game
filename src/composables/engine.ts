@@ -119,17 +119,17 @@ export const throwConfetti = (timeInMs = 2000) => {
                 // launch a few confetti from the left edge
                 // @ts-ignore
                 confetti({
-                    particleCount: 7,
+                    particleCount: 3,
                     angle: 60,
-                    spread: 55,
+                    spread: 40,
                     origin: { x: 0 }
                 });
                 // and launch a few from the right edge
                 // @ts-ignore
                 confetti({
-                    particleCount: 7,
+                    particleCount: 3,
                     angle: 120,
-                    spread: 55,
+                    spread: 40,
                     origin: { x: 1 }
                 });
 

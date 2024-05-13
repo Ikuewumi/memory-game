@@ -38,6 +38,7 @@
 
     <ul class="cuiz-metrics-list">
         <li class="cuiz-metrics-list-item"><CuizMetricsCard icon="#percent" title="accuracy" content={`${data.acuracy}%`} /></li>
+        <li class="cuiz-metrics-list-item"><CuizMetricsCard icon="#percent" title="questions answered" content={`${data.percentAnswered}%`} /></li>
         <li class="cuiz-metrics-list-item"><CuizMetricsCard title="question count" content={`${data.numberOfQuestions}`} /></li>
         <li class="cuiz-metrics-list-item"><CuizMetricsCard title="question attempts" content={`${data.numberOfAnsweredQuestions}`} /></li>
         <li class="cuiz-metrics-list-item"><CuizMetricsCard title="correct questions" content={`${data.numberOfCorrectQuestions}`} /></li>

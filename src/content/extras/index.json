@@ -1,8 +1,8 @@
 {
     "message": "This website is in beta, bugs may occur",
     "featuredQuizzes": [
+        "cell-cycle",
         "nervous-tissue",
-        "muscle-tissue",
         "anatomy-101"
     ]
     
