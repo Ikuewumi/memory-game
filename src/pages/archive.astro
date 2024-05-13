@@ -55,14 +55,14 @@ const series = await Promise.all(seriesPromises)
 		label="A list of all the series and quizzes in this course"
 	>
 		<Fragment slot="tab-list">
-			<li class="course-page-tab-li">
+			<li class="course-page-tab-li" role="presentation">
 				<a
 					href="#course-quizzes"
 					id="course-page-tab-quizzes"
 					class="course-page-tab">Quizzes ({quizzes.length})</a
 				>
 			</li>
-			<li class="course-page-tab-li">
+			<li class="course-page-tab-li" role="presentation" >
 				<a
 					href="#course-series"
 					id="course-page-tab-series"

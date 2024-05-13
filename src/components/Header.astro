@@ -12,7 +12,8 @@ const url = path.endsWith('/') ? path : `${path}/`
         </strong>
 
 
-        <nav class="header-nav">
+        <span id="header-nav" class="sr-only">Header Navigation</span>
+        <nav class="header-nav" aria-labelledby="header-nav">
             <ul class="header-list">
                 <li class="header-li">
                     <a class="header-link" href="/" aria-current={url === "/" ? "page" : "false" }>

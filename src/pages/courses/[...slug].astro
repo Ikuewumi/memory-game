@@ -64,7 +64,7 @@ const series: SeriesCardProps[] = seriesEntries.map((series) => {
 		label="A list of all the series and quizzes in this course"
 	>
 		<Fragment slot="tab-list">
-			<li class="course-page-tab-li">
+			<li class="course-page-tab-li" role="presentation" >
 				<a
 					href="#course-quizzes"
 					id="course-page-tab-quizzes"
@@ -72,7 +72,7 @@ const series: SeriesCardProps[] = seriesEntries.map((series) => {
 					>Quizzes ({quizzes.length})</a
 				>
 			</li>
-			<li class="course-page-tab-li">
+			<li class="course-page-tab-li" role="presentation" >
 				<a
 					href="#course-series"
 					id="course-page-tab-series"
