@@ -8,7 +8,7 @@ import { getEntry, getCollection } from "astro:content";
 
 const quizEntries = await getCollection("quiz");
 const quizzesPromises = quizEntries.sort((a, b) => {
-	return +(new Date(a.data.date)) - +(new Date(b.data.date))
+	return +(new Date(b.data.date)) - +(new Date(a.data.date))
 }).map(async (quiz) => {
 	const course = await getEntry("course", quiz.data.course.id)
 	return {

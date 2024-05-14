@@ -139,25 +139,7 @@ export const resetGame = () => {
 
 
 
-export const clickCard = (index: number): void => {
-    if (!(gameStatus.get().gameStarted)) return
 
-    const focus = focusData.get()
-
-    switch (focus.cards.length) {
-        case 0:
-            focusData.set({ state: "focus", cards: [index] })
-            break
-        case 1:
-            if (focus.cards[0] === index) return focusData.set({ ...DEFAULT_FOCUS_DATA })
-            matchGameCards(index, focus.cards[0])
-            break
-    }
-
-
-
-
-}
 
 
 
@@ -213,3 +195,22 @@ const matchGameCards = (a: number, b: number) => {
     return focusData.set({ ...DEFAULT_FOCUS_DATA })
 }
 
+export const clickCard = (index: number): void => {
+    if (!(gameStatus.get().gameStarted)) return
+
+    const focus = focusData.get()
+
+    switch (focus.cards.length) {
+        case 0:
+            focusData.set({ state: "focus", cards: [index] })
+            break
+        case 1:
+            if (focus.cards[0] === index) return focusData.set({ ...DEFAULT_FOCUS_DATA })
+            matchGameCards(index, focus.cards[0])
+            break
+    }
+
+
+
+
+}

@@ -158,7 +158,9 @@ const modifyCache = async (cacheFileName, imagesData) => {
 
     if (!cacheExists) {
         imagesData.images.forEach(image => {
-            const imagePromise = getImageData(image).then(url => outputFile[image] = url)
+            const imagePromise = getImageData(image).then(url => {
+                outputFile[image] = url
+            })
             promises.push(imagePromise)
         })
 
@@ -173,14 +175,16 @@ const modifyCache = async (cacheFileName, imagesData) => {
                 console.count("cache hit!")
                 outputFile[image] = imageFileContents[image]
             } else {
-                const imagePromise = getImageData(image).then(url => outputFile[image] = url)
+                const imagePromise = getImageData(image).then(url => {
+                    outputFile[image] = url
+                })
                 promises.push(imagePromise)
             }
         })
     }
 
     if (promises.length) await Promise.all(promises)
-    return writeFile(cacheFileName, JSON.stringify(outputFile, null) + "\n", { encoding: 'utf8' })
+    return writeFile(cacheFileName, `${JSON.stringify(outputFile, null)} \n`, { encoding: 'utf8' })
 }
 
 

@@ -10,6 +10,28 @@ export const setupTabs = (tabsWrapperId:string) => {
 
     if (!(tabsList && tabsPanelsWrapper)) return
 
+    const showTab = (index: number, starting = false) => {
+        if (index < 0 || index > tabLinks.length) return
+
+        tabLinks.forEach((tab, index_) => {
+            if (index_ === index) {
+                tab.setAttribute('aria-selected', 'true')
+                tab.removeAttribute('tabindex')
+                tabPanels[index_].removeAttribute('hidden')
+
+                if (starting) return 
+                tab.focus()
+            }
+            else {
+                tab.setAttribute('aria-selected', 'false')
+                tab.setAttribute('tabindex', '-1')
+                tabPanels[index_].setAttribute('hidden', '')
+            }
+        })
+             
+    }
+
+
     tabsList.setAttribute('role', 'tablist')
     tabLinks.forEach(link => { link.setAttribute('role', 'tab') })
     tabPanels.forEach(panel => { panel.setAttribute('role', 'tabpanel') })
@@ -36,48 +58,32 @@ export const setupTabs = (tabsWrapperId:string) => {
         if (tabIndex <= -1) return
         switch(eventKey) {
                 case "ArrowRight":
-                case "ArrowDown":
+                case "ArrowDown": {
                     const nextIndex = (tabIndex >= (tabLinks.length - 1)) ? 0 : tabIndex + 1; 
                     showTab(nextIndex)
                     break;
+                }
 
                 case "ArrowLeft":
-                case "ArrowUp":
+                case "ArrowUp": {
                     const prevIndex = (tabIndex <= 0) ? tabLinks.length - 1 : tabIndex - 1
                     showTab(prevIndex)
                     break;
+                }
+                default: {
+                    return;
+                }
             }
 
     })
-
-    const showTab = (index: number, starting = false) => {
-        if (index < 0 || index > tabLinks.length) return
-
-        tabLinks.forEach((tab, index_) => {
-            if (index_ === index) {
-                tab.setAttribute('aria-selected', 'true')
-                tab.removeAttribute('tabindex')
-                tabPanels[index_].removeAttribute('hidden')
-
-                if (starting) return 
-                tab.focus()
-            }
-            else {
-                tab.setAttribute('aria-selected', 'false')
-                tab.setAttribute('tabindex', '-1')
-                tabPanels[index_].setAttribute('hidden', '')
-            }
-        })
-             
-    }
 
 
     const hash = window.location.hash
     if (!hash) return showTab(0, true)
 
     const hashIndex =  Array.from(tabLinks).findIndex(link => link.hash.toLowerCase().trim() === hash.toLowerCase().trim())
-    if (hashIndex === -1) showTab(0, true)
-    else showTab(hashIndex,  true)
+    if (hashIndex === -1) return showTab(0, true)
+    else return showTab(hashIndex,  true)
  
 }
 

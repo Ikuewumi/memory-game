@@ -52,7 +52,7 @@ export const shuffle = <T>(array: T[]) => {
 }
 
 export const checkIndex = <T>(index: number, array: T[] | (() => T[])) => {
-    let array_ = typeof array === "function" ? array() : array
+    const array_ = typeof array === "function" ? array() : array
     const indexValid = index >= 0 && index < array_.length
     return indexValid ? index : 0
 }
@@ -82,18 +82,16 @@ export const getFormattedTimeNumber = (seconds: number): [string, string] => {
 }
 
 
-export const setupConfetti = (func: (() => any)) => {
+export const setupConfetti = (func: (() => void)) => {
 
     return new Promise((resolve) => {
 
         if (!("confetti" in window)) {
-            // @ts-ignore
             const script = document.createElement('script')
             script.src = '/confetti.browser.min.js';
 
             document.querySelector('head').appendChild(script)
             script.addEventListener("load", () => {
-
                return resolve(func())
             })
         } else {
@@ -108,26 +106,25 @@ export const setupConfetti = (func: (() => any)) => {
 
 export const throwConfetti = (timeInMs = 2000) => {
         return setupConfetti(() => {
-            // @ts-ignore
-            var duration = timeInMs;
-            var end = Date.now() + duration;
+            const duration = timeInMs;
+            const end = Date.now() + duration;
 
-            // @ts-ignore
+            // @ts-expect-error - the confetti object wasn't imported but because of the setupFunction, it now exists on the window object  
             confetti.reset();
 
             (function frame() {
                 // launch a few confetti from the left edge
-                // @ts-ignore
+                // @ts-expect-error - the confetti object wasn't imported but because of the setupFunction, it now exists on the window object  
                 confetti({
-                    particleCount: 3,
+                    particleCount: 2,
                     angle: 60,
                     spread: 40,
                     origin: { x: 0 }
                 });
                 // and launch a few from the right edge
-                // @ts-ignore
+                // @ts-expect-error - the confetti object wasn't imported but because of the setupFunction, it now exists on the window object  
                 confetti({
-                    particleCount: 3,
+                    particleCount: 2,
                     angle: 120,
                     spread: 40,
                     origin: { x: 1 }
