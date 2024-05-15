@@ -1,9 +1,9 @@
 {
     "message": "This website is in beta, bugs may occur",
     "featuredQuizzes": [
+        "upper-rs-intro",
         "cell-cycle",
-        "nervous-tissue",
-        "anatomy-101"
+        "nervous-tissue"
     ]
     
 }
