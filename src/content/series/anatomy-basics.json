@@ -1,0 +1,15 @@
+{
+    "title": "Anatomy Basics",
+    "description": "An introductory series to anatomical terminologies",
+    "author": "ayobami",
+    "course": "anatomy",
+    "quizzes": [
+        "anatomy-101",
+        "cell-cycle",
+        "epithelium",
+        "connective-tissue",
+        "muscle-tissue",
+        "nervous-tissue"
+    ]
+
+}

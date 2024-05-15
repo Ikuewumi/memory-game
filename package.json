@@ -4,9 +4,11 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "images": "node ./images-json.mjs",
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "pnpm run images && astro build",
+    "sync": "astro sync",
     "preview": "astro preview",
     "astro": "astro",
     "lint:ts": "pnpm exec eslint",
@@ -17,10 +19,15 @@
     "test:ui": "vitest --ui"
   },
   "dependencies": {
+    "@astrojs/partytown": "^2.1.0",
+    "@astrojs/solid-js": "^4.1.0",
     "@astrojs/svelte": "^5.3.0",
     "@types/canvas-confetti": "^1.6.4",
     "astro": "^4.5.17",
     "canvas-confetti": "^1.9.2",
+    "idb": "^8.0.0",
+    "node-fetch": "^3.3.2",
+    "solid-js": "^1.8.17",
     "svelte": "^4.2.12"
   },
   "devDependencies": {
@@ -31,6 +38,7 @@
     "@testing-library/user-event": "^14.5.2",
     "@types/node": "^20.12.7",
     "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "@vite-pwa/astro": "^0.4.0",
     "@vitest/coverage-v8": "^1.5.0",
     "@vitest/ui": "^1.4.0",
     "c8": "^9.1.0",
@@ -49,6 +57,7 @@
     "stylelint-config-standard-scss": "^13.1.0",
     "typescript": "^5.4.4",
     "typescript-eslint": "^7.6.0",
+    "undici": "^6.16.0",
     "vitest": "^1.4.0"
   }
 }

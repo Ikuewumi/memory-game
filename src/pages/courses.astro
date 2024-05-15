@@ -1,0 +1,78 @@
+---
+import CourseCard from "@/components/CourseCard.astro";
+import Base from "@/layouts/Base.astro";
+import type { CourseCardProps } from "@/types";
+import { getCollection, type CollectionEntry } from "astro:content";
+
+
+const courses = await getCollection("course")
+const coursesData: CourseCardProps[] = courses.map((course:CollectionEntry<"course">) => {
+	return {
+		title: course.data.title,
+		description: course.data.description,
+		iconSize: course.data.iconSize,
+		icon: course.data.icon,
+		courseLink: course.id
+	}
+})
+
+---
+
+
+<Base title="All Courses" description="Lists All The Courses">
+	
+<h1 class="courses-title">Courses</h1>
+<p class="courses-message">This is a list of all the courses on this app. More To Be Added In The Future</p>
+
+<ul class="courses-list">
+	{
+		coursesData.map(course => 
+			<li class="courses-li">
+				<CourseCard data={course} />
+			</li>
+		)
+	}
+	
+</ul>
+
+
+</>
+
+</Base>
+
+
+
+<style lang="scss">
+
+.courses {
+	&-title {
+		margin-top: 0.5rem;
+		line-height: 0.9;
+		font-size: calc(1.25 * var(--step-4));
+		font-weight: 600;
+		color: var(--clr-gray-700);
+	}
+
+	&-message {
+		font-size: var(--step-0);
+		margin-top: 0.5rem;
+	}
+
+
+	&-list {
+		display: grid;
+		align-content: start;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 0.5rem 0.75rem;
+		list-style: none;
+		margin-block: 1rem 1.5rem;
+	}
+
+	&-li {
+		display: contents;
+	}
+	
+}
+
+
+</style>

@@ -1,0 +1,192 @@
+---
+const path = Astro.url.pathname
+const url = path.endsWith('/') ? path : `${path}/`
+---
+
+
+<header class="header">
+    <div role="presentation" class="header-wrapper" data-grid>
+        <strong class="header-logo text-gradient">
+            <svg class="header-logo-svg" viewBox="0 0 16 16"><use href="#charm-cards"></use></svg>
+            medmatch
+        </strong>
+
+
+        <span id="header-nav" class="sr-only">Header Navigation</span>
+        <nav class="header-nav" aria-labelledby="header-nav">
+            <ul class="header-list">
+                <li class="header-li">
+                    <a class="header-link" href="/" aria-current={url === "/" ? "page" : "false" }>
+                        <svg class="header-link-svg" viewBox="0 0 24 24">
+                            <use href="#house"></use>
+                        </svg>
+                        <span class="header-link-text">home</span>
+                    </a>
+                </li>
+                <li class="header-li">
+                    <a class="header-link" href="/courses" aria-current={url === "/courses/" ? "page" : "false" }>
+                        <svg class="header-link-svg" viewBox="0 0 24 24">
+                            <use href="#library"></use>
+                        </svg>
+                        <span class="header-link-text">courses</span>
+                    </a>
+                </li>
+                <li class="header-li">
+                    <a class="header-link" href="/archive" aria-current={url === "/archive/" ? "page" : "false" }>
+                        <svg class="header-link-svg" viewBox="0 0 24 24">
+                            <use href="#archive"></use>
+                        </svg>
+                        <span class="header-link-text">archive</span>
+                    </a>
+                </li>
+                <li class="header-li">
+                    <a class="header-link" href="/you" aria-current={url === "/you/" ? "page" : "false" }>
+                        <svg class="header-link-svg" viewBox="0 0 24 24">
+                            <use href="#for-you"></use>
+                        </svg>
+                        <span class="header-link-text">you</span>
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+
+<style lang="scss">
+
+.header {
+    font-family: var(--font-heading);
+    display: contents;
+
+    &-wrapper {
+        gap: 1.2rem 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: space-between;
+        padding: 1rem 1.5rem 1.75rem;
+        background: var(--clr-white);
+        border: 1px solid hsl(var(--shadow-color-dark) / 20%);
+        grid-column: full;
+        margin: 0 0 0.25rem;
+        border-radius: 0 0 0.5rem 0.5rem;
+
+
+        @media (min-width: 800px) {
+            grid-column: content;
+            flex-direction: row;
+            align-items: center;
+            border-radius: 0.5rem;
+            margin-block: 0.5rem 0.25rem;
+            padding: 1rem 1.5rem 1.5rem;
+        }
+    }
+
+    &-logo {
+        --icon-size: 30px;
+        font-family: var(--font-heading);
+        font-size: 2.75ch;
+        font-weight: 600;
+        letter-spacing: -0.5px;
+        display: flex;
+        gap: 0.25rem;
+        align-items: center;
+        line-height: 0.9;
+        margin-top: 0.1rem;
+
+
+        
+        @media (min-width: 800px) {
+            --icon-size: 45px;
+            font-size: 4ch;
+        }
+    }
+
+
+    &-logo-svg {
+        --drop-shadow: drop-shadow(1px 2px 3px var(--text-gradient-fallback));
+        color: var(--clr-gray-700);
+        //background: var(--text-gradient);
+        filter: var(--drop-shadow); 
+        // display: none;
+        margin-top: -.1rem;
+
+
+
+        @media (min-width: 800px) {
+            display: flex;
+        }
+    }
+
+    &-list, &-li {
+        display: contents;
+    }
+
+
+    &-nav-mobile {
+        display: none; 
+    }
+
+
+    &-nav {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.75rem 1rem; 
+
+
+        @media (min-width: 800px) {
+            justify-content: start;
+            margin-top: 0.5rem;
+            
+        }
+    }
+
+    &-link {
+        --icon-size: 25px;
+        display: flex;
+        align-items: center;
+        gap: 0.15rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: var(--clr-gray-800);
+        font-weight: 700;
+        font-size: calc(0.95 * var(--step-n0));
+        line-height: 0.9;
+        opacity: 0.75;
+
+
+        &[aria-current="page"] {
+            opacity: 1;
+            text-decoration: 4px underline var(--text-gradient-fallback);
+        }
+
+
+        &:hover, &:focus-visible {
+            opacity: 1;
+        }
+
+
+        @media (min-width: 800px) {
+            font-size: var(--step-n0);
+        }
+    }
+
+
+    &-link-svg {
+        opacity: 0.5;
+        display: none;
+
+        @media (min-width: 800px) {
+            display: flex;
+        }
+    }
+    
+
+}
+
+
+</style>

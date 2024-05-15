@@ -1,6 +1,5 @@
 import type { Question, CardData } from "@/types"
-import confetti from "canvas-confetti"
-
+import { z } from "astro/zod"
 
 export const getCardsData = (questions: Question[]): CardData[] => {
     let array: CardData[] = []
@@ -53,7 +52,7 @@ export const shuffle = <T>(array: T[]) => {
 }
 
 export const checkIndex = <T>(index: number, array: T[] | (() => T[])) => {
-    let array_ = typeof array === "function" ? array() : array
+    const array_ = typeof array === "function" ? array() : array
     const indexValid = index >= 0 && index < array_.length
     return indexValid ? index : 0
 }
@@ -83,9 +82,85 @@ export const getFormattedTimeNumber = (seconds: number): [string, string] => {
 }
 
 
+export const setupConfetti = (func: (() => void)) => {
 
-export const throwConfetti = async (timeInMs = 2000) => {
-    confetti()
-    await sleep(timeInMs)
-    return confetti.reset()
+    return new Promise((resolve) => {
+
+        if (!("confetti" in window)) {
+            const script = document.createElement('script')
+            script.src = '/confetti.browser.min.js';
+
+            document.querySelector('head').appendChild(script)
+            script.addEventListener("load", () => {
+               return resolve(func())
+            })
+        } else {
+            return resolve(func())
+        }
+
+
+    }).catch(console.error)
+
 }
+
+
+export const throwConfetti = (timeInMs = 2000) => {
+        return setupConfetti(() => {
+            const duration = timeInMs;
+            const end = Date.now() + duration;
+
+            // @ts-expect-error - the confetti object wasn't imported but because of the setupFunction, it now exists on the window object  
+            confetti.reset();
+
+            (function frame() {
+                // launch a few confetti from the left edge
+                // @ts-expect-error - the confetti object wasn't imported but because of the setupFunction, it now exists on the window object  
+                confetti({
+                    particleCount: 2,
+                    angle: 60,
+                    spread: 40,
+                    origin: { x: 0 }
+                });
+                // and launch a few from the right edge
+                // @ts-expect-error - the confetti object wasn't imported but because of the setupFunction, it now exists on the window object  
+                confetti({
+                    particleCount: 2,
+                    angle: 120,
+                    spread: 40,
+                    origin: { x: 1 }
+                });
+
+                // keep going until we are out of time
+                if (Date.now() < end) {
+                    requestAnimationFrame(frame);
+                }
+            }());
+        })
+}
+
+export const zUrlString = z.string().url().transform(url => {
+    return url.endsWith('/') ? url : `${url}/`
+})
+
+
+
+
+function base64ToBytes(base64: string) {
+    const binString = atob(base64);
+    return Uint8Array.from(binString, (m) => m.codePointAt(0));
+}
+
+function bytesToBase64(bytes: Uint8Array) {
+    const binString = String.fromCodePoint(...bytes);
+    return btoa(binString);
+}
+
+
+/* // Usage
+bytesToBase64(new TextEncoder().encode("a Ā 𐀀 文 🦄")); // "YSDEgCDwkICAIOaWhyDwn6aE"
+new TextDecoder().decode(base64ToBytes("YSDEgCDwkICAIOaWhyDwn6aE"));
+ */
+
+
+export const encodeString = (string: string) => bytesToBase64(new TextEncoder().encode(string));
+export const decodeString = (string: string) => (new TextDecoder().decode(base64ToBytes(string)));

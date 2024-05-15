@@ -1,0 +1,36 @@
+{
+    "title": "Muscle Tissue",
+    "author": "ayobami",
+    "course": "anatomy",
+    "date": "2024-05-10 20:36",
+    "description": "a brief quiz on the muscles types and its microstructure",
+    "difficulty": "easy",
+    "image": "https://i.ibb.co/hmRMGQD/Types-Of-Muscle.jpg",
+    "text": "",
+    "questions": [
+        { "question": "A", "answer": "skeletal muscle" },
+        { "question": "B", "answer": "smooth muscle" },
+        { "question": "C", "answer": "cardiac muscle" },
+        
+        { "question": "what types of muscle are striated", "answer": "A, C" },
+        { "question": "what types of muscle are involuntary", "answer": "B, C" },
+        
+        { "question": "location(s) of A", "answer": "biceps brachii, iliopsoas" },
+        { "question": "location(s) of B", "answer": "tunica media of blood vessels, stomach wall"},
+        { "question": "location(s) of C", "answer": "myocardium" },
+        
+        { "question": "2A", "answer": "Actin (Thin Filaments)", "image": "https://i.ibb.co/F6grsX1/Sarcomere.jpg"},
+        { "question": "2B", "answer": "M Line", "image": "https://i.ibb.co/F6grsX1/Sarcomere.jpg"},
+        { "question": "2C", "answer": "Z Line", "image": "https://i.ibb.co/F6grsX1/Sarcomere.jpg"},
+        { "question": "2D", "answer": "Myosin (Thick Filaments)", "image": "https://i.ibb.co/F6grsX1/Sarcomere.jpg"},
+        { "question": "2E", "answer": "I band", "image": "https://i.ibb.co/F6grsX1/Sarcomere.jpg"},
+        { "question": "2F", "answer": "A band", "image": "https://i.ibb.co/F6grsX1/Sarcomere.jpg"},
+        { "question": "What connects 2D to 2C", "answer": "Titin", "image": "https://i.ibb.co/F6grsX1/Sarcomere.jpg"},
+
+        { "question": "Mechanism for muscle contraction", "answer": "Sliding Filament Theory" },
+        { "question": "Smallest functional unit of striated muscle", "answer": "Sarcomere" }
+    ]
+
+
+}
+ 

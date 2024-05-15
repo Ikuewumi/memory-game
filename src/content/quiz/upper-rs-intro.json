@@ -1,0 +1,48 @@
+{
+    "title": "Upper Respiratory System",
+    "author": "ayobami",
+    "course": "anatomy",
+    "date": "2024-05-15 13:16",
+    "description":"An introduction into the Upper part of the Respiratory Tract",
+    "difficulty": "medium",
+    "image": "https://i.ibb.co/rpftdgC/Upper-RS-1.jpg",
+    "text": "",
+    "questions": [
+        { "question": "A", "answer": "Frontal Sinus" },       
+
+        { "question": "B", "answer": "Superior Nasal Conchae" },       
+        { "question": "C", "answer": "Middle Nasal Conchae" },       
+        { "question": "D", "answer": "Inferior Nasal Conchae" },       
+        { "question": "B and C are:", "answer": "Medial projections of the ethmoid" },       
+        { "question": "Function of the nasal conchae", "answer": "Warming and humidification of air" },
+
+        
+        { "question": "E", "answer": "Nasal Cavity" },       
+
+        { "question": "G", "answer": "Hard Palate" },       
+        { "question": "H", "answer": "Soft Palate" },       
+        { "question": "G is formed by which bones", "answer": "The Palatine bone and Maxilla" },       
+        { "question": "What hangs off the posterior end of H", "answer": "The Uvula" },
+        { "question": "I", "answer": "Oral Cavity" },       
+        { "question": "What immune structures are located in I (posteriorly)", "answer": "The Tonsils" },       
+
+        { "question": "J", "answer": "Epiglottis" },       
+        { "question": "J's function", "answer": "Prevents food and water from entering the trachea" },       
+        { "question": "K", "answer": "Glottis" },       
+        { "question": "L", "answer": "Vocal Fold" },       
+        { "question": "M", "answer": "Trachea" },       
+        { "question": "What is the bifurcation point of M called", "answer": "The carina" },       
+
+        { "question": "N", "answer": "Laryngopharynx" },       
+        { "question": "O", "answer": "Nasopharynx" },       
+        { "question": "P", "answer": "Oropharynx" },       
+        { "question": "N, O and P make up", "answer": "The Pharynx" },       
+        { "question": "Q", "answer": "Opening to auditory cavity" },       
+
+        { "question": "S", "answer": "sphenoid sinus" }       
+        
+    ]
+
+
+}
+ 

@@ -1,0 +1,52 @@
+{
+    "title": "Nervous Tissue",
+    "author": "ayobami",
+    "course": "anatomy",
+    "date": "2024-05-11 22:34",
+    "description": "checking out some facts about the nervous tissue, nerves and more....",
+    "difficulty": "easy",
+    "image": "https://i.ibb.co/XL3SL0D/Neuron.jpg",
+    "questions": [
+
+        { "question": "A", "answer": "dendrite" },
+        { "question": "B", "answer": "soma" },
+        { "question": "C", "answer": "axon" },
+        { "question": "D", "answer": "myelin sheath" },
+        { "question": "E", "answer": "node of ranvier" },
+        { "question": "F", "answer": "schwann cell" },
+        { "question": "G", "answer": "axon terminal" },
+        { "question": "H", "answer": "nucleus" },
+        { "question": "how does a nerve impulse skip to parts E of a neuron", "answer": "saltatory conduction" },
+
+        { "question": "2A", "answer": "spinal nerve", "image": "https://i.ibb.co/hsZBmpn/Spinal-Nerve-1.jpg" },
+        { "question": "2B", "answer": "epineurium", "image": "https://i.ibb.co/hsZBmpn/Spinal-Nerve-1.jpg" },
+        { "question": "2C", "answer": "blood vessels", "image": "https://i.ibb.co/hsZBmpn/Spinal-Nerve-1.jpg" },
+        { "question": "2D", "answer": "fascicle", "image": "https://i.ibb.co/hsZBmpn/Spinal-Nerve-1.jpg" },
+        { "question": "2E", "answer": "perineurium", "image": "https://i.ibb.co/hsZBmpn/Spinal-Nerve-1.jpg" },
+
+        { "question": "3A", "answer": "neurotransmitter transporter", "image": "https://i.ibb.co/Jc7Q15H/Synapse-1.jpg" },
+        { "question": "3B", "answer": "receptor", "image": "https://i.ibb.co/Jc7Q15H/Synapse-1.jpg" },
+        { "question": "3C", "answer": "synaptic vessicle", "image": "https://i.ibb.co/Jc7Q15H/Synapse-1.jpg" },
+        { "question": "3D", "answer": "neurotransmitter", "image": "https://i.ibb.co/Jc7Q15H/Synapse-1.jpg" },
+        { "question": "3E", "answer": "synaptic cleft", "image": "https://i.ibb.co/Jc7Q15H/Synapse-1.jpg" },
+        { "question": "what ion stimulates the release of 3D", "answer": "calcium", "image": "https://i.ibb.co/Jc7Q15H/Synapse-1.jpg" },
+
+        
+
+        { 
+            "question": "central nervous system", 
+            "answer": "outer, inner", 
+            "text": "match '____ nervous system' with the correct arrangement of gray matter, white matter"
+        },
+        { 
+            "question": "peripheral nervous system", 
+            "answer": "inner, outer", 
+            "text": "match '____ nervous system' with the correct arrangement of gray matter, white matter"
+        }
+
+
+   ]
+
+
+}
+ 

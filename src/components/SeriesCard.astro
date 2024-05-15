@@ -1,0 +1,115 @@
+---
+import type {SeriesCardProps} from "@/types"
+
+
+interface Props {
+    card: SeriesCardProps 
+}
+
+
+const {card} = Astro.props
+const quizCountString = card.quizCount > 1 ? "quizzes" : "quiz"
+---
+
+
+
+<div class="series-card">
+    
+
+    <a href={`/courses/${card.courseLink}`} class="series-card-course-link">
+        <span class="series-card-course text-gradient">{card.course}</span>
+    </a>
+    <a href={`/series/${card.seriesLink}`} class="series-card-title-link">
+        <h3 class="series-card-title">{card.title}</h3> 
+    </a>
+    <p class="series-card-description">{card.description}</p>
+    <p class="series-card-count">
+        {card.quizCount} {quizCountString}
+    </p>
+
+</div>
+
+
+<style lang="scss">
+.series-card {
+    display: grid;
+    gap: 0.25rem;
+    justify-items: start;
+    border: var(--border);
+    background: var(--clr-white);
+    border-radius: 0.75rem;
+    padding: 0.35rem 0.75rem 0.75rem;
+    box-shadow: 0 1px 4px -3px hsl(var(--shadow-color-dark) / 10%);
+    position: relative;
+    isolation: isolate;
+
+
+    @media (min-width: 800px) {
+        padding: 0.5rem 1rem 1.25rem;
+    }
+
+
+    &-course {
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: var(--step-n1);
+        letter-spacing: 0.75px;
+        
+    }
+    &-course-link {
+		justify-self: start;
+		text-decoration: none;
+
+		&:focus-visible, &:hover {
+	    text-decoration:  3px solid var(--text-gradient-fallback) underline;
+		}
+ 
+	}
+
+    &-title {
+        font-size: calc(1.25 * var(--step-2));
+        font-weight: 600;
+        line-height: 0.9;
+        letter-spacing: -0.5px;
+        color: var(--clr-gray-800);
+    }
+
+    &-title-link {
+        justify-self: start;
+        text-decoration: none;
+
+        &:focus-visible, &:hover {
+            text-decoration:  2px solid var(--clr-gray-700) underline;
+        }
+ 
+    }
+
+
+    &-description {
+        font-size: var(--step-n0);
+        margin-top: 0.15rem;
+        line-height: 1.4;
+    }
+
+
+    &-count {
+        justify-self: end;
+        border: var(--border);
+        border-radius: 0.75rem;
+        display: flex;
+        align-items: center;
+        place-content: center;
+        gap: 0.25rem;
+        padding: 0.25rem 0.5rem 0.3rem;
+        font-family: var(--font-heading);
+        font-size: var(--step-n1);
+        font-weight: 700;
+        margin-top: 0.75rem;
+        
+    }
+    
+
+}
+
+
+</style>

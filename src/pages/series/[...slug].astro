@@ -1,0 +1,167 @@
+---
+import FeaturedCuiz from "@/components/home/FeaturedCuiz.astro";
+import Base from "@/layouts/Base.astro";
+import type { QuizCardProps } from "@/types";
+import { getCollection, getEntry, type CollectionEntry } from "astro:content";
+
+export async function getStaticPaths() {
+	const seriesEntries = await getCollection("series");
+	return seriesEntries.map((entry) => ({
+		params: { slug: entry.id },
+		props: { entry },
+	}));
+}
+
+interface Props {
+	entry: CollectionEntry<"series">;
+}
+const { entry } = Astro.props
+
+
+
+const course: CollectionEntry<"course"> = await getEntry("course", entry.data.course.id)
+
+const quizPromises = entry.data.quizzes.map(async (quiz: CollectionEntry<"series">["data"]["quizzes"][number]) => {
+	const quizData = await getEntry("quiz", quiz.id)
+	return {
+		"title": quizData.data.title,
+		"course": course.data.title,
+		"courseLink": course.id,
+		"quizlink": quizData.id,
+		"difficulty": quizData.data.difficulty,
+		"description": quizData.data.description,
+		"questionCount": quizData.data.questions.length
+	} as QuizCardProps
+})
+
+const quizzes = await Promise.all(quizPromises)
+
+const pageData = {
+	title: entry.data.title,
+	courseLink: course.id,
+	course: course.data.title,
+	quizCount: entry.data.quizzes.length,
+	description: entry.data.description
+}
+---
+
+<Base title="Sample Series Page | anatomy" description="a sample series page">
+	<h1 class="series-page-title">{pageData.title}</h1>
+	<div class="series-page-extras">
+		<a class="series-page-course-link" href={`/courses/${pageData.courseLink}`}>
+			<span class="series-page-course text-gradient">{pageData.course}</span>
+		</a>
+		<strong class="series-page-count">a {pageData.quizCount}-quiz series</strong>
+	</div>
+	<p class="series-page-description">{pageData.description}</p>
+
+	<ul class="series-page-list">
+		{quizzes.map(quiz => (<li class="series-page-li"><FeaturedCuiz card={quiz} /></li>))}
+
+	</ul>
+</Base>
+
+<style lang="scss">
+	.series-page {
+		&-title {
+			font-size: calc(1.25 * var(--step-4));
+			font-weight: 600;
+			color: var(--clr-gray-700);
+			line-height: 0.9;
+			margin-top: 0.25rem;
+		}
+
+		&-extras {
+			display: flex;
+			align-items: center;
+			gap: 0.25rem;
+			background: var(--clr-white);
+			flex-flow: row wrap;
+			padding: 0.25rem 0.5rem 0.35rem;
+			border-radius: 1.5rem;
+			border: var(--border);
+			justify-self: start;
+			margin-top: 0.75rem;
+		}
+
+		&-course {
+			justify-self: start;
+			font-weight: 700;
+			font-size: var(--step-n1);
+			letter-spacing: 1px;
+			cursor: pointer;
+			text-transform: uppercase;
+		}
+		&-course-link {
+			justify-self: start;
+			text-decoration: none;
+
+			&:focus-visible, &:hover {
+				text-decoration:  3px solid var(--text-gradient-fallback) underline;
+			}
+ 
+	    }
+
+
+
+		&-count {
+			font-size: var(--step-n1);
+			font-family: var(--font-heading);
+			font-weight: 600;
+			background: var(--clr-gray-800);
+			color: var(--clr-gray-100);
+			border-radius: 0.75rem;
+			padding: 0.15rem 0.5rem;
+		}
+
+		&-description {
+			margin-top: 0.45rem;
+			font-size: var(--step-1);
+		}
+
+		&-list {
+			margin-top: 1.25rem;
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(325px, 1fr));
+			gap: 0.75rem;
+			align-items: start;
+		}
+
+		&-li {
+			display: contents;
+		}
+	}
+</style>
+
+<style lang="scss" is:global>
+	.series-page {
+		&-list {
+			counter-reset: series-item;
+		}
+		&-list > &-li .featured-cuiz {
+			counter-increment: series-item;
+
+			&::before {
+				content: counter(series-item);
+				position: absolute;
+				inset: 10px 40px 10px auto;
+				pointer-events: none;
+				transform: rotate(4deg);
+				opacity: 0.1;
+				z-index: 0;
+				font-family: var(--font-heading);
+				font-size: 90px;
+				font-weight: 900;
+			}
+
+
+			&-course-link {
+				display: none;
+			}
+
+			&-content {
+				margin-top: 0.15rem;
+			}
+		}
+	}
+</style>

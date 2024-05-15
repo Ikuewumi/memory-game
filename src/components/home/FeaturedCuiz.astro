@@ -1,0 +1,149 @@
+---
+import type { QuizCardProps } from '@/types'
+interface Props {
+    card: QuizCardProps
+}
+
+
+const { card } = Astro.props;
+---
+
+
+<article class="featured-cuiz" data-difficulty={card.difficulty.toLowerCase()}>
+    {card?.image && <img class="featured-cuiz-image" src={card.image} alt={card.title} /> }
+
+    <div class="featured-cuiz-content">
+        <a href={`/courses/${card.courseLink}`} class="featured-cuiz-course-link">
+            <span class="featured-cuiz-course text-gradient">{card.course}</span>
+        </a>
+        <a class="featured-cuiz-heading-link" href={`/quiz/${card.quizlink}`}><h3 class="featured-cuiz-heading">{card.title}</h3></a>
+        <p class="featured-cuiz-description">{card.description}</p> 
+        <span class="featured-cuiz-difficulty">{card.difficulty}</span>
+        <span class="featured-cuiz-count">{card.questionCount} terms</span>
+    </div>
+</article>
+
+
+<style lang="scss">
+.featured-cuiz {
+    --border-radius: 0.5rem;
+    --clr: hsl(306deg 30% 97%);
+    --bg: hsl(306deg 30% 45%);
+    padding: 0.25rem 0.5rem 0.1rem;
+    background: var(--clr-white);
+    border: 1px solid hsl(var(--shadow-color-dark) / 20%);
+    border-radius: calc(1.5 * var(--border-radius));
+    box-shadow: 0 2px 5px -3px hsl(var(--shadow-color-light) / 20%);
+    overflow: hidden;
+    position: relative;
+
+    @media (min-width: 800px) {
+        padding: 0.35rem 0.75rem 0.1rem;
+    }
+
+
+
+    &[data-difficulty="easy"] {
+        --bg: var(--clr-easy); 
+    }
+    &[data-difficulty="medium"] {
+        --bg: var(--clr-medium); 
+    }
+    &[data-difficulty="hard"] {
+        --bg: var(--clr-hard); 
+    }
+
+    &-image {
+        height: min(120px, 60vh);
+        width: 100%;
+        border: 1px solid hsl(var(--shadow-color-dark) / 20%);
+        object-fit: cover;
+        border-radius: var(--border-radius);
+        filter: grayscale(0.75);
+        transition: 200ms filter ease-out;
+        margin-block: 0.25rem;
+    }
+
+
+    &:hover &-image {
+        filter: none;
+    }
+
+
+    &-content {
+        display: grid;
+        gap: 0.15rem;
+        padding: 0.1rem 0.25rem 1rem;
+    }
+
+    &-course {
+        justify-self: start;
+        font-weight: 700;
+        font-size: var(--step-n1);
+        letter-spacing: 1px;
+        cursor: pointer;
+        text-transform: uppercase;
+    }
+
+	&-course-link {
+		justify-self: start;
+		text-decoration: none;
+
+		&:focus-visible, &:hover {
+		    text-decoration:  3px solid var(--text-gradient-fallback) underline;
+		}
+ 
+	}
+    &-heading {
+        font-size: calc(1.25 * var(--step-2));
+        font-weight: 600;
+        line-height: 0.95;
+    }
+
+    &-heading-link {
+        justify-self: start;
+        text-decoration: none;
+
+        &:focus-visible, &:hover {
+            text-decoration:  2px solid var(--clr-gray-700) underline;
+        }
+    }
+
+
+    &-description {
+        font-size: var(--step-n0);
+        margin-top: 0.15rem;
+        line-height: 1.4;
+    }
+
+    &-difficulty {
+        font-weight: 700;
+        font-size: var(--step-n2);
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        justify-self: start;
+        padding: 0.2rem 0.4rem 0.25rem;
+        border-radius: 0.65rem;
+        margin-top: 0.4rem;
+        background: var(--bg);
+        color: var(--clr);
+        
+    }
+
+    &-count {
+        --offset: calc(0 * var(--border-radius));
+        position: absolute;
+        inset: var(--offset) var(--offset) auto auto;
+        background: var(--clr-white);
+        padding: 0.5rem 0.65rem;
+        border-radius: 0 var(--border-radius) 0;
+        border: 1px solid hsl(var(--shadow-color-dark) / 10%);
+        border-width: 0 0 1px 1px;
+        font-weight: 700;
+        font-size: var(--step-n1);
+    }
+
+}
+
+
+</style>

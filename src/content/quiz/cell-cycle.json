@@ -1,0 +1,51 @@
+{
+    "title": "Cell Cycle",
+    "author": "ayobami",
+    "course": "anatomy",
+    "date": "2024-05-13 20:46",
+    "description": "viewing the cell cycle in some detail. Watch out though, not to get confused by the colors",
+    "difficulty": "medium",
+    "image": "https://i.ibb.co/8dYvshZ/Cell-Cycle-1.jpg",
+    "text": "",
+    "questions": [
+        { "question": "2A", "answer": "mitosis" },
+        { "question": "2B", "answer": "gap 0" },
+        { "question": "2C", "answer": "gap 2" },
+        { "question": "2D", "answer": "gap 1" },
+        { "question": "2E", "answer": "synthesis" },
+        { "question": "2F", "answer": "interphase" },
+        { "question": "example(s) of cells permanently in the 2B stage", "answer": "mature neurons"},
+
+        { 
+            "question": "f(G1)", 
+            "answer": "prepares the cell for DNA synthesis", 
+            "text": "match `f(cell cycle stage)` and the stage's description" 
+        },
+        { 
+            "question": "f(G2)", 
+            "answer": "prepares the cell for mitosis", 
+            "text": "match `f(cell cycle stage)` and the stage's description" 
+        },
+        { 
+            "question": "f(S)", 
+            "answer": "DNA replication", 
+            "text": "match `f(cell cycle stage)` and the stage's description" 
+        },
+        { 
+            "question": "f(M)", 
+            "answer": "cell division to form two diploid child cells", 
+            "text": "match `f(cell cycle stage)` and the stage's description" 
+        },
+
+        { 
+            "question": "f(G0)", 
+            "answer": "the cell has left the cycle", 
+            "text": "match `f(cell cycle stage)` and the stage's description" 
+        }
+        
+        
+    ]
+
+
+}
+ 

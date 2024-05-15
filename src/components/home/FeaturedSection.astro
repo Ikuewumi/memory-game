@@ -1,0 +1,88 @@
+---
+import type { QuizCardProps } from "@/types";
+import FeaturedCuiz from "./FeaturedCuiz.astro";
+import { getEntry } from "astro:content";
+
+const featuredEntries = await getEntry("extras", "index")
+const quizPromises = featuredEntries.data.featuredQuizzes.map(async(quizEntry) => {
+    const quiz = await getEntry("quiz", quizEntry.id)
+    const course = await getEntry("course", quiz.data.course.id)
+    return {
+        "title": quiz.data.title,
+        "image": quiz.data?.image ?? "",
+        "quizlink": quiz.id,
+        "difficulty": quiz.data.difficulty,
+        "description": quiz.data.description,
+        "questionCount": quiz.data.questions.length,
+        "course": course.data.title,
+        "courseLink": course.id
+    } as QuizCardProps
+})
+
+
+const quizzes = (await Promise.all(quizPromises)).slice(0, 3)
+
+
+---
+
+<section class="featured">
+    <h2 class="featured-heading">
+        Featured <span class="featured-heading-span text-gradient">Cuizzes</span>
+    </h2>
+
+    <ul class="featured-list">
+       {
+            quizzes.map((quiz) => (
+                <li class="featured-li">
+                    <FeaturedCuiz card={quiz} />
+                </li>
+            ))
+        }
+    </ul>
+
+    <a class="featured-link text-gradient" href="/archive">See all quizzes here</a>
+</section>
+
+<style lang="scss">
+    .featured {
+        margin-top: 0.75rem;
+        display: grid;
+        gap: 0.75rem;
+
+        &-heading {
+            font-size: var(--step-4);
+            font-weight: 600;
+        }
+
+
+        &-list {
+            list-style: none;
+            display: grid;
+            gap: var(--space-s);
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            align-items: start;
+        }
+
+        &-li {
+            display: contents;
+        }
+
+        &-link {
+            font-family: var(--font-heading);
+            font-size: calc(1.45 * var(--step-0));
+            filter: drop-shadow(2px 1px 1px hsl(var(--shadow-color-dark) / 20%));
+            
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            justify-self: end;
+            margin-block: 0.5rem 1.5rem;
+
+            &:hover,
+            &:focus {
+                text-decoration: 2px underline var(--clr-gray-900);
+                text-underline-offset: 4px;
+            }
+        }
+    }
+</style>

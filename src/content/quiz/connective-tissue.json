@@ -1,0 +1,48 @@
+{
+    "title": "Connective Tissue",
+    "author": "ayobami",
+    "course": "anatomy",
+    "date": "2024-05-09 20:14",
+    "description": "some facts about connective tissue (called CT here)",
+    "difficulty": "medium",
+    "text": "",
+    "questions": [
+        {"question": "CT is derived from the", "answer": "Mesoderm"},
+        {"question": "CT proper is divided into", "answer": "Loose CT and Dense CT"},
+        {"question": "What is the difference between loose and dense CT", "answer": "Ratio of ground substance to fibrous tissue"},
+        {"question": "Examples of Special CT", "answer": "Bone, Blood, Cartilage"},
+        {"question": "The major types of fibres in CT", "answer": "Collagen, Elastic and Reticular"},
+        {"question": "Most Common Fibre Type in the body", "answer": "Collagen"},
+        {"question": "Examples of Cells in CT", "answer": "Fibroblasts, Macrophages, Chondrocytes"},
+        {"question": "Compounds found in ground substance", "answer": "Glycosaminoglycans, Proteoglycans"},
+
+        {"question": "Types of Loose CT", "answer": "Areolar, Reticular and Adipose CT"},
+        {"question": "Types of Dense CT", "answer": "Dense Regular and Dense Irregular CT"},
+        
+        {"question": "Examples of Dense Regular CT", "answer": "Ligaments, Tendons and Aponeuroses"},
+        {"question": "Examples of Dense Irregular CT", "answer": "Sclera, Periosteum"},
+
+        {"question": "A", "answer": "Hyaline Cartilage", "image": "https://i.ibb.co/Sm2X2HC/Types-Of-Cartilage.jpg"},
+        {"question": "B", "answer": "Elastic Cartilage", "image": "https://i.ibb.co/Sm2X2HC/Types-Of-Cartilage.jpg"},
+        {"question": "C", "answer": "Fibrocartilage", "image": "https://i.ibb.co/Sm2X2HC/Types-Of-Cartilage.jpg"},
+        {"question": "Location of A in the body", "answer": "Trachea", "image": "https://i.ibb.co/Sm2X2HC/Types-Of-Cartilage.jpg"},
+        {"question": "Location of B in the body", "answer": "Pinna", "image": "https://i.ibb.co/Sm2X2HC/Types-Of-Cartilage.jpg"},
+        {"question": "Location of C in the body", "answer": "Meniscus", "image": "https://i.ibb.co/Sm2X2HC/Types-Of-Cartilage.jpg"},
+
+        {"question": "White Fat's main function", "answer": "Energy Storage"},
+        {"question": "Brown Fat's main function", "answer": "Thermoregulation"},
+
+        {"question": "2A", "answer": "erythrocytes", "image": "https://i.ibb.co/RDm0fsv/Formed-Elements-Of-Blood-1.jpg"},
+        {"question": "2B", "answer": "thrombocytes", "image": "https://i.ibb.co/RDm0fsv/Formed-Elements-Of-Blood-1.jpg"},
+        {"question": "2C-2G", "answer": "leucocytes", "image": "https://i.ibb.co/RDm0fsv/Formed-Elements-Of-Blood-1.jpg"},
+        {"question": "2C", "answer": "monocyte", "image": "https://i.ibb.co/RDm0fsv/Formed-Elements-Of-Blood-1.jpg"},
+        {"question": "2D", "answer": "lymphocytes", "image": "https://i.ibb.co/RDm0fsv/Formed-Elements-Of-Blood-1.jpg"},
+        {"question": "2E-2G", "answer": "granulocytes", "image": "https://i.ibb.co/RDm0fsv/Formed-Elements-Of-Blood-1.jpg"},
+        {"question": "2G", "answer": "neutrophil", "image": "https://i.ibb.co/RDm0fsv/Formed-Elements-Of-Blood-1.jpg"},
+        
+        {"question": "CT is typically made of these components", "answer": "Fibers, Ground Substance and Cells"}
+    ]
+
+
+}
+ 

@@ -1,0 +1,188 @@
+---
+import type { CuizMetadataProps } from "@/types";
+import { Show } from "solid-js";
+interface Props {
+    data: CuizMetadataProps;
+}
+
+const { data } = Astro.props;
+const imagePresent = data?.image > "" ? "true" : "false"
+---
+
+<>
+    <Show when={data?.image}>
+        <figure class="cuiz-metadata-figure">
+            <img
+                class="cuiz-metadata-image perpetua"
+                src={data.image}
+                alt={data.title}
+            />
+            <figcaption class="sr-only">{data.title}</figcaption>
+        </figure>
+    </Show>
+
+    <a href={`/courses/${data.courseLink}`} class="cuiz-metadata-course-link">
+        <span class="cuiz-metadata-course text-gradient">{data.course}</span>
+    </a>
+
+    <h1 class="cuiz-metadata-heading">{data.title}</h1>
+
+    <div class="cuiz-metadata-author">
+        <img
+            src={data.authorImage}
+            alt={data.author}
+            class="cuiz-metadata-author-image"
+            loading="lazy"
+        />
+        <strong class="cuiz-metadata-author-name">By {data.author}</strong>
+    </div>
+
+    <div class="cuiz-metadata-extras" data-image-present={imagePresent}>
+        <span class="cuiz-metadata-difficulty" data-difficulty={data.difficulty} title="Difficulty">{data.difficulty}</span>
+        <span class="cuiz-metadata-count">{data.questionCount} terms</span>
+    </div>
+
+    <p class="cuiz-metadata-description">
+        {data.description}
+    </p>
+</>
+
+<style lang="scss">
+    .cuiz-metadata {
+
+        &-figure {
+            display: contents;
+        }
+
+        &-image, &-extras {
+            grid-row: 1 / 2;
+        }
+
+        &-image {
+            width: 100%;
+            height: min(325px, 40vh);
+            object-fit: cover;
+            box-shadow: 0 2px 7px -5px hsl(var(--shadow-color-dark) / 50%);
+            border-radius: 0.4rem;
+            border: var(--border);
+            margin-top: 0.75rem;
+            grid-column: content;
+        }
+
+        &-course {
+            text-transform: uppercase;
+            font-size: var(--step-0);
+            font-weight: 700;
+            font-family: var(--font-family);
+            letter-spacing: 0.5px;
+            filter: drop-shadow(0 0 5px var(--shadow-color-dark));
+        }
+
+        &-course-link {
+            margin-top: 0.75rem;
+            text-decoration: none;
+            justify-self: start;
+
+            &:focus, &:hover {
+                text-decoration: 3px underline var(--text-gradient-fallback);
+            }
+        }
+
+        &-heading {
+            font-size: calc(1.25 * var(--step-4));
+            line-height: 0.95;
+            color: var(--clr-gray-700); 
+            margin-top: 0.15rem;
+        }
+
+        &-author {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: var(--space-2xs);
+            font-size: var(--step-1);
+            font-weight: 500;
+            color: var(--clr-gray-700);
+            margin-top: 0.5rem;
+        }
+
+        &-author-image {
+            width: 30px;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            object-fit: cover;
+            cursor: pointer;
+            box-shadow: 0 0 0px 2px var(--clr-gray-500);
+            transition: transform 100ms ease-out;
+
+            &:hover {
+                transform: scale(2);
+            }
+
+        }
+
+        &-extras {
+            justify-self: start;
+            display: flex;
+            z-index: var(--z-dialog);
+            // gap: var(--space-3xs);
+            align-items: center;
+            border-radius: 5vmax;
+            padding: 0.25rem 0.35rem 0.275rem;
+            align-self: start;
+            gap: 0.2rem;
+            flex-wrap: wrap;
+            font-size: var(--step-n1);
+            background: hsl(210deg 60% 1%);
+            color: hsl(210deg 60% 93%);
+            background: var(--clr-white);
+            color: var(--clr-black);
+            border: var(--border);
+            margin-top: calc(0.75rem + var(--space-2xs));
+            margin-left: var(--space-xs);
+
+
+            &[data-image-present="false"] {
+                margin: 0.75rem auto -0.25rem -0.25rem;
+                grid-row: auto;
+            }
+
+            @media (min-width: 800px) {
+            }
+        }
+
+        &-difficulty {
+            --clr: hsl(210deg 30% 96%);
+
+            &[data-difficulty="easy"] {
+                --bg: var(--clr-easy);
+            }
+            &[data-difficulty="medium"] {
+                --bg: var(--clr-medium);
+            }
+            &[data-difficulty="hard"] {
+                --bg: var(--clr-hard);
+            }
+
+            background: var(--bg);
+            color: var(--clr);
+            padding: 0 0.35rem;
+            border-radius: 5vmax;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 0.25px;
+        }
+
+        &-count {
+            font-weight: 600;
+            font-size: var(--step-n1);
+        }
+
+
+        &-description {
+            font-size: var(--step-1);
+            margin-top: 0.75rem;
+            line-height: 1.6;
+        }
+    }
+</style>

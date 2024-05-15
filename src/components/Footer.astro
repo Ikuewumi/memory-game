@@ -1,0 +1,94 @@
+---
+const path = Astro.url.pathname
+const url = path.endsWith('/') ? path : `${path}/`
+---
+
+<footer class="footer">
+    <p class="footer-message">
+        built with 💙 by <a class="footer-message-link" target="_blank" href="https://github.com/Ikuewumi/">@iKAY</a>. <a class="footer-message-link" target="_blank" href="https://github.com/Ikuewumi/memory-game">Source Code</a> 
+    </p>
+
+    <span id="footer-nav" class="sr-only">Footer Navigation</span>   
+    <nav class="footer-nav" aria-labelledby="footer-nav">
+        <ul class="footer-list">
+            <li class="footer-li"><a aria-current={url === "/" ? "page" : "false" } href="/" class="footer-link">Home</a></li>
+            <li class="footer-li"><a aria-current={url === "/courses/" ? "page" : "false" } href="/courses" class="footer-link">Courses</a></li>
+            <li class="footer-li"><a aria-current={url === "/archive/" ? "page" : "false" } href="/archive" class="footer-link">Archive</a></li>
+            <li class="footer-li"><a aria-current={url === "/you/" ? "page" : "false" } href="/you" class="footer-link">You</a></li>
+        </ul>
+    </nav>
+</footer>
+
+<style lang="scss">
+.footer {
+    display: grid;
+    place-items: center;
+    gap: 1rem;
+    align-self: end;
+    padding: 1.5rem 1.25rem 1.5rem;
+    background: var(--clr-white);
+    border: var(--border);
+
+    grid-column: full;
+    margin-block: 1.5rem 0;
+    border-radius: 0.5rem 0.5rem 0 0;
+    // margin-inline: var(--space-2xs);
+
+
+    @media (min-width: 800px) {
+        grid-column: content;
+        margin-inline: 0;
+        border-radius: 0.5rem;
+        margin-block: 1.5rem 0.5rem;
+    }
+
+
+
+    &-message {
+        font-size: var(--step-0);
+    }
+
+    &-message-link {
+        color: var(--clr-gray-700);
+        text-decoration: underline;
+        font-family: var(--font-heading);
+        font-weight: 800;
+        border-radius: 0.5rem;
+        text-decoration: none;
+        outline-width: 2px;
+
+        &:hover, &:focus {
+            text-decoration: 1px underline;
+        }
+    }
+
+
+    &-nav {
+        display: flex;
+        align-items: center;
+        place-content: center;
+        flex-wrap: wrap;
+        gap: 0.5rem 1rem;
+    }
+
+    &-list, &-li {
+        display: contents;   
+    }
+
+    &-link {
+        text-transform: uppercase;
+        font-size: calc(1 * var(--step-0));
+        font-family: var(--font-heading);
+        font-weight: 500;
+        color: var(--clr-gray-600);
+        text-decoration: none;
+        transition: color 50ms ease-in;
+
+        &:hover, &:focus {
+            color: var(--clr-gray-900);
+            text-decoration: 2px underline;
+        }
+    }
+}
+
+</style>

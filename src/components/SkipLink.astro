@@ -1,0 +1,26 @@
+<a class="skip-link" id="skip-link" href="#main-content">Skip To Content</a>
+
+
+<style lang="scss">
+.skip-link {
+    padding: 0.35rem 0.75rem 0.5rem;
+    background: var(--clr-white);
+    z-index: var(--z-toast);
+    color: var(--clr-black);
+    font-size: var(--step-n0);
+    font-weight: 600;
+    text-decoration: none;
+    position: absolute;
+    transform: translate(-100%, -100%);
+
+    @media (prefers-reduced-motion: no-preference) {
+        transition: transform 100ms ease;
+    }
+
+    &:focus {
+        outline: 3px dotted currentColor;
+        transform: translate(0, 0);
+    }
+
+}
+</style>

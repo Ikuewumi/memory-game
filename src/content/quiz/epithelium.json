@@ -1,0 +1,49 @@
+{
+    "title": "Epithelium",
+    "author": "ayobami",
+    "course": "anatomy",
+    "date": "2024-05-08 21:28",
+    "description": "match and learn various types of epithelia",
+    "difficulty": "medium",
+    "text": "",
+    "image": "https://i.ibb.co/4Vc63hF/Epithelia-Unlabelled-1.jpg",
+    "questions": [
+        {"question": "A", "answer": "pseudostratified columnar epithelium"},
+        {"question": "B", "answer": "stratified columnar epithelium"},
+        {"question": "C", "answer": "stratified cuboidal epithelium"},
+        {"question": "D", "answer": "transitional epithelium"},
+        {"question": "E", "answer": "simple columnar epithelium"},
+        {"question": "F", "answer": "simple cuboidal epithelium"},
+        {"question": "G", "answer": "simple squamous epithelium"},
+
+
+        {"question": "what structure(s) are lined by G", "answer": "alveoli (type 1 pneumocytes)"},
+        {"question": "what structure(s) are lined by A", "answer": "trachea"},
+        {"question": "what structure(s) are lined by D", "answer": "urethra, ureters, urinary bladder"},
+        {"question": "what structure(s) are lined by stratified squamous epithelium", "answer": "mouth, vagina"},
+
+
+        {"question": "what kind of secretion occurs in 2A", "answer": "merocrine", "image": "https://i.ibb.co/d4rThJB/Types-of-Glands.jpg"},
+        {"question": "what kind of secretion occurs in 2B", "answer": "apocrine", "image": "https://i.ibb.co/d4rThJB/Types-of-Glands.jpg"},
+        {"question": "what kind of secretion occurs in 2C", "answer": "holocrine", "image": "https://i.ibb.co/d4rThJB/Types-of-Glands.jpg"},
+
+
+
+        {"question": "3A", "answer": "a simple branched alveolar gland", "image": "https://i.ibb.co/9pb8kMx/Glands.jpg"},
+        {"question": "3B", "answer": "a simple coiled tubular gland", "image": "https://i.ibb.co/9pb8kMx/Glands.jpg"},
+        {"question": "3C", "answer": "a simple branched tubular gland", "image": "https://i.ibb.co/9pb8kMx/Glands.jpg"},
+        {"question": "3D", "answer": "a simple tubular gland", "image": "https://i.ibb.co/9pb8kMx/Glands.jpg"},
+        {"question": "3E", "answer": "a compound tubular gland", "image": "https://i.ibb.co/9pb8kMx/Glands.jpg"},
+        {"question": "3F", "answer": "a compound tubuloalveolar gland", "image": "https://i.ibb.co/9pb8kMx/Glands.jpg"},
+        {"question": "3G", "answer": "a compound alveolar gland", "image": "https://i.ibb.co/9pb8kMx/Glands.jpg"},
+
+
+        {"question": "an example of 3F", "answer": "salivary glands", "image": "https://i.ibb.co/9pb8kMx/Glands.jpg"},
+        {"question": "an example of 3G", "answer": "mammary glands", "image": "https://i.ibb.co/9pb8kMx/Glands.jpg"},
+        {"question": "an example of 3E", "answer": "mucous glands (in the mouth)", "image": "https://i.ibb.co/9pb8kMx/Glands.jpg"}
+            
+    ]
+
+
+}
+ 

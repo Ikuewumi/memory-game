@@ -1,0 +1,53 @@
+{
+    "title": "Anatomy 101",
+    "author": "ayobami",
+    "course": "anatomy",
+    "date": "2024-05-08",
+    "description": "starting off with the basics of anatomy, terms of reference, types of motions, and more...",
+    "difficulty": "easy",
+    "text": "",
+    "image": "https://i.ibb.co/WPxcZy2/Untitled-2024-04-09-1938-7.png",
+    "questions": [
+        { "question": "what movement is 1A", "answer": "eversion", "image": "https://i.ibb.co/6w5WTGr/Untitled-2024-04-09-1938-2.png" },
+        { "question": "what movement is 1B", "answer": "inversion", "image": "https://i.ibb.co/6w5WTGr/Untitled-2024-04-09-1938-2.png" },
+
+        { "question": "what is action 4A", "answer": "protrusion", "image": "https://i.ibb.co/7p5Qtd3/Untitled-2024-04-09-1938-5.png" },
+        { "question": "what is action 4B", "answer": "retrusion", "image": "https://i.ibb.co/7p5Qtd3/Untitled-2024-04-09-1938-5.png" },
+
+        { "question": "what is movement 2A", "answer": "flexion", "image": "https://i.ibb.co/g3wNv1B/Untitled-2024-04-09-1938-3.png" },
+        { "question": "what is movement 2B", "answer": "extension", "image": "https://i.ibb.co/g3wNv1B/Untitled-2024-04-09-1938-3.png" },
+
+        { "question": "what is plane 3A", "answer": "coronal", "image": "https://i.ibb.co/mtSLK7X/Untitled-2024-04-09-1938-4.png" },
+        { "question": "what is plane 3B", "answer": "transverse", "image": "https://i.ibb.co/mtSLK7X/Untitled-2024-04-09-1938-4.png" },
+        { "question": "what is plane 3C", "answer": "median", "image": "https://i.ibb.co/mtSLK7X/Untitled-2024-04-09-1938-4.png" },
+        { "question": "what is plane 3D", "answer": "parasagittal", "image": "https://i.ibb.co/mtSLK7X/Untitled-2024-04-09-1938-4.png" },
+        { "question": "planes 3C and 3D are both examples of ___ plane", "answer": "longitudinal", "image": "https://i.ibb.co/mtSLK7X/Untitled-2024-04-09-1938-4.png" },
+
+        { "question": "5A", "answer": "cranial" },
+        { "question": "5B", "answer": "ventral" },
+        { "question": "5C", "answer": "caudal" },
+        { "question": "5D", "answer": "dorsal" },
+        { "question": "5K", "answer": "superior" },
+        { "question": "5L", "answer": "inferior" },
+        { "question": "5E, 5H", "answer": "proximal" },
+        { "question": "5J, 5I", "answer": "distal" },
+        { "question": "5F", "answer": "medial" },
+        { "question": "5G", "answer": "lateral" },
+
+
+
+
+        {"question": "6A", "answer": "cranial cavity", "image": "https://i.ibb.co/pbjJXnK/Body-Cavities1.jpg"},
+        {"question": "6B", "answer": "dorsal cavity", "image": "https://i.ibb.co/pbjJXnK/Body-Cavities1.jpg"},
+        {"question": "6C", "answer": "thoracic cavity", "image": "https://i.ibb.co/pbjJXnK/Body-Cavities1.jpg"},
+        {"question": "6D", "answer": "ventral cavity", "image": "https://i.ibb.co/pbjJXnK/Body-Cavities1.jpg"},
+        {"question": "6E", "answer": "abdominal cavity", "image": "https://i.ibb.co/pbjJXnK/Body-Cavities1.jpg"},
+        {"question": "6F", "answer": "abdominopelvic cavity", "image": "https://i.ibb.co/pbjJXnK/Body-Cavities1.jpg"},
+        {"question": "6G", "answer": "pelvic cavity", "image": "https://i.ibb.co/pbjJXnK/Body-Cavities1.jpg"},
+        {"question": "6H", "answer": "spinal cavity", "image": "https://i.ibb.co/pbjJXnK/Body-Cavities1.jpg"}
+
+        
+        
+    ]
+    
+}
