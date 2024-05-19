@@ -5,7 +5,6 @@
     import { modals } from "@stores/modals";
     import { gameKeys } from "@stores/keymaps"
     import {
-        gameData,
         gameStatus,
         cardsList,
         clickCard,
@@ -13,6 +12,7 @@
         resetGame,
     } from "@stores/game";
     import GameStatus from "./GameStatus.svelte";
+    import Dcq from "./Dcq.svelte";
 
     onDestroy(resetGame);
 
@@ -29,6 +29,8 @@
     aria-hidden={!$modals.game}>
     <GameStatus />
     <div class="draft">
+        {#if $gameStatus.type === "multiple"}
+            
         <Image />
         <div class="draft-main" data-focus={$focusData.state}>
             <ul class="card-list">
@@ -45,6 +47,9 @@
                 {/each}
             </ul>
         </div>
+        {:else if $gameStatus.type === "dcq"}
+           <Dcq /> 
+        {/if}
     </div>
 </div>
 

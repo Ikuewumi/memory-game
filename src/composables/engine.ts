@@ -54,7 +54,7 @@ export const shuffle = <T>(array: T[]) => {
 export const checkIndex = <T>(index: number, array: T[] | (() => T[])) => {
     const array_ = typeof array === "function" ? array() : array
     const indexValid = index >= 0 && index < array_.length
-    return indexValid ? index : 0
+    return indexValid ? index : -1
 }
 
 

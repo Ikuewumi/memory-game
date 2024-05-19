@@ -1,0 +1,28 @@
+{
+    "title": "Pharmacology 101",
+    "type": "dcq",
+    "author": "ayobami",
+    "course": "pharmacology",
+    "date": "2024-05-20 22:28",
+    "description": "basics of pharmacology...",
+    "difficulty": "easy",
+    "text": "",
+    "questions": [
+        { "question": "pharmacology is the science of medications", "answer": "true" },    
+        
+        { "question": "pharmacokinetics is a study of the movement and modification of medication in the body", "answer": "true" },   
+        { "question": "pharmacodynamics is a study of the movement and modification of medication in the body", "answer": "false" },   
+     
+        { "question": "pharmacodynamics is about what the drug does to the body", "answer": "true" },   
+        { "question": "pharmacodynamics is about what the body does to the drug", "answer": "false" },
+
+        { "question": "a xenobiotic refers to any substance foreign to a body's biochemistry", "answer": "true" },   
+
+        { "question": "pharmacokinetics is broadly divided into: assimilation, distribution and excretion", "answer": "false" },  
+        { "question": "pharmacokinetics is broadly divided into: assimilation, distribution and elimination", "answer": "true" },
+
+        { "question": "in pharmacology, excretion is the same as elimination", "answer": "false" },
+        { "question": "in pharmacology, elimination refers to metabolism and excretion", "answer": "true" }
+    ]
+    
+}

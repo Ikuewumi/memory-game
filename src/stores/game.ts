@@ -1,10 +1,11 @@
-import { getCardsData, getFormattedTimeNumber, matchCards, shuffle } from "@/composables/engine";
+import { checkIndex, getCardsData, getFormattedTimeNumber, matchCards, shuffle } from "@/composables/engine";
 import type { CardData, FocusData, FocusState, GameData, GameStatus, Question } from "@/types";
 import { computed, map, atom } from "nanostores";
 import { MODE } from "./modes";
 import { writeMessage } from "./toast";
 import { metrics } from "./metrics";
 import { addNewImage } from "./image";
+import { startListening, stopListening } from "./keymaps";
 
 
 let TIME_ID = 0
@@ -18,6 +19,7 @@ const DEFAULT_GAME_DATA: GameData = {
 const DEFAULT_GAME_STATUS: GameStatus = {
     multipleImages: false,
     gameStarted: false,
+    type: "multiple",
     lives: 0,
     time: 0
 }
@@ -47,8 +49,6 @@ export const stringTime = computed(gameStatus, (gameStatus) => {
 })
 
 export const cardsList = computed(gameData, (gameData): CardData[] => {
-    //if (!(gameStatus.get().gameStarted)) return [] // @TODO enable line for optimization
-
     const DEFAULT_QUESTION_NUMBER = 6
     const cards = shuffle(getCardsData(gameData.questions.slice(0, DEFAULT_QUESTION_NUMBER)))
 
@@ -61,6 +61,27 @@ export const percent = computed(gameData, (gameData): number => {
     return Math.floor(( (count - gameData.questions.length)  / count) * 100)
 })
 
+const chooseRandomQuestionForDCQ = (questionLength: number) => {
+    const max = questionLength
+    const min = 0
+    const randomIndex = Math.floor(Math.random() * (max - min) + min);
+    return randomIndex
+}
+
+export const randomQuestionIndex = computed(gameData, (gameData): number => {
+    if (!gameStatus.get().gameStarted) return 0
+    if (!(gameStatus.get().type === "dcq")) return 0
+    const index = chooseRandomQuestionForDCQ(gameData.questions.length)
+    return index
+})
+
+export const chooseDcqExtras = () => {
+    
+            const question = gameData.get().questions[randomQuestionIndex.get()];
+            gameData.setKey("image", question?.image ?? "");
+            gameData.setKey("text", question?.text ?? "");
+ 
+}
 
 
 export const enterData = (questions: Question[] = [], image = "", text = ""): void => {
@@ -90,12 +111,22 @@ export const startGame = (): void => {
         return console.error("cannot start a game with no questions")
     }
 
+    if (gameStatus.get().type === "dcq") {
+        const answers = ["true", "false"]
+        const invalidQuestionIndex = gameData.get().questions.findIndex(question => !answers.includes(question.answer.trim().toLowerCase()))
+        if (invalidQuestionIndex !== -1) return console.error("cannot start a game with invalid questions")
+    }
 
     if (gameStatus.get().multipleImages) chooseNewQuestion(gameData.get().questions)
     MODE.get().onSetup?.()
     gameStatus.setKey("gameStarted", true)
     MODE.get()?.onStart?.()
     metrics.onStart()
+    
+    if (gameStatus.get().type === "dcq") {
+        startListening()
+        chooseDcqExtras()
+    }
 
     const gameContinues = MODE.get()?.gameComplete()
     gameContinues.subscribe(continues => {
@@ -107,6 +138,7 @@ export const startGame = (): void => {
 
 export const stopGame = () => {
 
+    stopListening()
     gameStatus.setKey("gameStarted", false)
     focusData.set( { ...DEFAULT_FOCUS_DATA })
     MODE.get()?.gameComplete().off()
@@ -121,6 +153,7 @@ export const resetGame = () => {
 
 
 
+    stopListening()
     stopClock()
     focusData.set({ ...DEFAULT_FOCUS_DATA })
     gameStatus.set({ ...DEFAULT_GAME_STATUS })
@@ -197,9 +230,7 @@ const matchGameCards = (a: number, b: number) => {
 
 export const clickCard = (index: number): void => {
     if (!(gameStatus.get().gameStarted)) return
-
     const focus = focusData.get()
-
     switch (focus.cards.length) {
         case 0:
             focusData.set({ state: "focus", cards: [index] })
@@ -209,8 +240,52 @@ export const clickCard = (index: number): void => {
             matchGameCards(index, focus.cards[0])
             break
     }
+}
 
 
+const matchDcqCard = (question: Question, answer: boolean): boolean => {
+    const questionAnswer = question.answer
+    const answersList = ["true", "false"]
+    const answerIsPresent = answersList.includes(questionAnswer.trim().toLowerCase())
+    if (!answerIsPresent) throw Error("invalid question type")
+    
+    
+    const questionAnswerInBoolean = questionAnswer.toLowerCase().trim() === "true"
+
+    return answer === questionAnswerInBoolean
+}
 
 
+export const clickDcqCard = (questionIndex: number, answer: boolean) => {
+    const questions = gameData.get().questions
+    const index = checkIndex(questionIndex, questions)
+    if (index < 0) return
+
+    const question = questions[index]
+
+    metrics.onAttempt()
+    const cardsMatch = matchDcqCard(question, answer)
+
+    if (cardsMatch) {
+        currentStatus.set("success")
+        const newQuestions = shuffle(questions.filter((_, index) => index !== questionIndex))
+        gameData.setKey("questions", newQuestions)
+        
+        metrics.onCorrect()
+        chooseDcqExtras()
+
+        if (newQuestions.length <= 0) { 
+            MODE.get()?.onComplete?.() 
+            metrics.onEnd()
+        }
+        else {
+            MODE.get().onMatchRight?.() 
+        }
+
+    } else {
+        currentStatus.set("failure")
+        focusData.setKey("state", "failure")
+        MODE.get().onMatchWrong?.()
+        metrics.onWrong(question)
+    }
 }
