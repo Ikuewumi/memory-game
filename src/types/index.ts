@@ -29,6 +29,7 @@ export interface Metadata {
   author: string
   course: string
   difficulty: "easy" | "medium" | "hard"
+  type?: "dcq" | "multiple"
 }
 
 export interface Data {
@@ -98,6 +99,7 @@ export interface GameStatus {
   time: number
   lives: number
   multipleImages: boolean
+  type: "dcq" | "multiple"
   gameStarted: boolean
 }
 

@@ -1,18 +1,36 @@
-import { cardsList, clickCard, gameStatus } from "./game"
+import { clickDcqCard, gameStatus, randomQuestionIndex } from "./game"
 
-export const gameKeys = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C"]
+export const gameKeys = ["T", "F"]
 
 
 const startKeyMaps = (e: KeyboardEvent) => {
     if (!gameStatus.get().gameStarted) return
+    if (gameStatus.get().type !== "dcq") return
     if (!gameKeys.includes(e.key.toUpperCase())) return
-    const cardsSize = cardsList.get().length
-    const key = parseInt(e.key, 16)
-    if (!cardsSize) return
-    const keyIsValid = key - 1 <= cardsList.get().length
-    if (keyIsValid) {
-        clickCard(key - 1)
+    if (e.ctrlKey) return
+
+    const questionIndex = randomQuestionIndex.get()
+
+
+    switch(e.key.toUpperCase()) {
+        case "T": {
+            clickDcqCard(questionIndex, true)
+            break;
+        }
+        
+    
+        case "F": {
+            clickDcqCard(questionIndex, false)
+            break;
+        }
+
+        default:
+            break
+
     }
+
+
+     
 }
 
 

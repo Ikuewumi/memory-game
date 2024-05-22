@@ -195,6 +195,7 @@
             border-radius: 0.5rem;
             display: grid;
             gap: 0.25rem;
+            font-size: var(--step-n0);
         }
 
         &-p strong {

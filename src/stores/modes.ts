@@ -22,9 +22,7 @@ const modePracticeComplete = () => computed(gameData, gameData => gameData.quest
 export const modes: Mode[] = [
     {
         name: "pratice",
-        description: `
-            Click on a card to select it, then match it with an appropriate card
-        `,
+        description: `Click on a card to select it, then match it with an appropriate card`,
         gameComplete: modePracticeComplete,
         onComplete: () => {
             throwConfetti(DEFAULT_CONFETTI_TIME_MS)
@@ -34,9 +32,7 @@ export const modes: Mode[] = [
 
     {
         name: "challenge",
-        description: `
-            Click on a card to select it, then match it with an appropriate card. Be careful though, if you're wrong, the number of lives decrease. The game is over once all the lives are gone
-        `,
+        description: `Click on a card to select it, then match it with an appropriate card. Be careful though, if you're wrong, the number of lives decrease. The game is over once all the lives are gone`,
         onSetup: () => { gameStatus.setKey("lives", DEFAULT_LIVES) },
         gameComplete: modeClassicComplete,
         onMatchWrong: () => {
@@ -50,9 +46,7 @@ export const modes: Mode[] = [
 
     {
         name: "blitz",
-        description: `
-            Race against the clock to click and match cards. Don't be too hasty though as wrong answers reduce your time. 
-        `,
+        description: `Race against the clock to click and match cards. Don't be too hasty though as wrong answers reduce your time.`,
         onStart: () => { startClock(BLITZ_SECONDS[blitzSecondsIndex.get()], DEFAULT_INTERVAL_MS) },
         gameComplete: modeSurvivalComplete,
         onMatchWrong: () => {

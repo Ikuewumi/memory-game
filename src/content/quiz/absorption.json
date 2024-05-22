@@ -1,0 +1,34 @@
+{
+    "title": "Absorption",
+    "type": "dcq",
+    "author": "ayobami",
+    "course": "pharmacology",
+    "date": "2024-05-21 19:00",
+    "description": "A refresher of some facts about absorption in pharmacology...",
+    "difficulty": "medium",
+    "questions": [
+   
+        { "question": "pharmacokinetics simply is what the body does to the drug", "answer": "true" },
+        { "question": "pharmacokinetics simply is what the drug does to the body", "answer": "false" },
+
+        { "question": "The phases of pharmacokinetics are absorption, distribution, metabolism and excretion", "answer": "true" },
+        { "question": "The phases of pharmacokinetics are absorption, distribution and elimination", "answer": "true" },
+        { "question": "The phases of pharmacokinetics are absorption, distribution and excretion", "answer": "false" },
+
+        { "question": "Absorption is the transport of drugs from the circulation to the point of action", "answer": "false"},
+        { "question": "Absorption is the transport of drugs from the administration site to the circulation", "answer": "true"},
+        { "question": "Absorption is affected by surface area i.e. lower surface area, higher absorption", "answer": "false"},
+        { "question": "Absorption is affected by solubility. Usually higher solubility leads to higher absorption", "answer": "true"},
+
+        { "question": "A weakly basic drug is less likely to be absorbed in acidic environment", "answer": "true"},
+        { "question": "A weakly acidic drug is more likely to be absorbed in basic environment", "answer": "false"},
+
+        { "question": "A lipophilic drug can easily diffuse through cell membranes", "answer": "true"},
+        { "question": "A hydrophilic drug can easily diffuse through cell membranes", "answer": "false"},
+
+        { "question": "First pass metablosm occurs in the liver", "answer": "true" }, 
+        { "question": "pharmacokinetics is defined as the movement and modification of medication in the body", "answer": "true" }
+
+    ]
+    
+}

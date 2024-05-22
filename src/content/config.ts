@@ -72,7 +72,8 @@ const quiz = defineCollection({
             difficulty: z.enum(["easy", "medium", "hard"]),
             text: z.string().optional(),
             questions: z.array(question).min(1),
-            date: z.string()
+            date: z.string(),
+            type: z.enum(["dcq", "multiple"]).optional()
         })
     )
 })

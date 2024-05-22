@@ -4,7 +4,7 @@
     import GameDraft from "./GameDraft.svelte";
     import { decodeString, sleep, zUrlString } from "@/composables/engine";
     import type { GameData, ImageFile, Metadata, Question } from "@/types";
-    import { enterData, gameStatus, resetGame, startGame } from "@/stores/game";
+    import { enterData, gameData, gameStatus, resetGame, startGame } from "@/stores/game";
     import { blitzSecondsIndex, selectedMode } from "@/stores/modes";
     import CuizMetrics from "./CuizMetrics.svelte";
     import { showMessage, writeMessage } from "@/stores/toast";
@@ -35,6 +35,17 @@
                 questions: [],
             } as GameData,
         };
+
+
+        /* if (cuizData?.type === "dcq") {
+            return {
+                ...output,
+                ok: true,
+                data: {
+                    questions
+                }
+            }
+        } */
 
         try {
             writeMessage("...Loading images");
@@ -93,6 +104,8 @@
         );
         if (!ok) return;
         enterData(data.questions, data.image, cuizData.text ?? "");
+
+        if (cuizData?.type === "dcq") gameStatus.setKey("type", "dcq")
 
         gameStatus.setKey("multipleImages", multipleImages);
 
