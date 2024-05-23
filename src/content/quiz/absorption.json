@@ -26,7 +26,7 @@
         { "question": "A lipophilic drug can easily diffuse through cell membranes", "answer": "true"},
         { "question": "A hydrophilic drug can easily diffuse through cell membranes", "answer": "false"},
 
-        { "question": "First pass metablosm occurs in the liver", "answer": "true" }, 
+        { "question": "First pass metabolism occurs in the liver", "answer": "true" }, 
         { "question": "pharmacokinetics is defined as the movement and modification of medication in the body", "answer": "true" }
 
     ]

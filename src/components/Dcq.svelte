@@ -72,7 +72,7 @@
             outline: 1px solid hsl(var(--shadow-color-dark) / 20%);
             padding: 0.5rem 0.75rem 0.75rem;
             border-radius: 0.5rem;
-            line-height: 1.05;    
+            line-height: 1.25;    
  
         }
 
@@ -92,7 +92,7 @@
             outline: 1px solid hsl(var(--shadow-color-dark) / 20%);
             padding: 0.5rem 0.75rem 0.75rem;
             border-radius: 0.5rem;
-            line-height: 1.05;    
+            line-height: 1.25;    
         }
 
         &-figure + &-question-text {

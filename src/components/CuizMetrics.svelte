@@ -189,6 +189,8 @@
         }
 
         &-item {
+            max-width: min(60ch, 80%);
+            margin-inline: auto;
             background: var(--clr-white);
             border: 1px solid hsl(var(--shadow-color-dark) / 12.5%);
             padding: 0.75rem 1rem 0.85rem;
@@ -196,6 +198,10 @@
             display: grid;
             gap: 0.25rem;
             font-size: var(--step-n0);
+        }
+
+        &-p + &-p {
+            margin-top: 0.5rem;
         }
 
         &-p strong {

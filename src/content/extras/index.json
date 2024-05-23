@@ -1,9 +1,9 @@
 {
     "message": "This website is in beta, bugs may occur",
     "featuredQuizzes": [
+        "routes-of-administration",
         "absorption",
-        "upper-rs-intro",
-        "nervous-tissue"
+        "connective-tissue"
     ]
     
 }

@@ -1,0 +1,27 @@
+{
+    "title": "Routes Of Administration",
+    "type": "dcq",
+    "author": "ayobami",
+    "course": "pharmacology",
+    "date": "2024-05-24 15:22",
+    "description": "reviewing facts about the routes of distribution of a medication and some facts about it's distribution",
+    "difficulty": "medium",
+    "questions": [
+        { "question": "the oral route is not subject to the first-pass metabolism", "answer": "false" },
+        { "question": "the intravenous route typically has about 100% bioavailability", "answer": "true" },
+        { "question": "all of the following routes of adminisitration are not subject to the first pass effect - intravenous, intramuscular, rectal, subcutaneous", "answer": "false" },
+
+        { "question": "bioavailability is a measure of how much of a medication makes it into the systemic circulation", "answer": "true" },
+        { "question": "the apparent volume of distribution is an indication of how much of a medication makes it into the systemic circulation", "answer": "false" },
+        { "question": "the apparent volume of distribution is a measure of how much a medication is distributed into the body compartments", "answer": "true" },
+        
+        { "question": "distribution of a medication to an organ depends on the size of the organ i.e. Smaller Organ, Larger Distribution", "answer": "false" },
+        { "question": "distribution of a medication to an organ depends on the size of the organ i.e. Larger Organ, Larger Distribution", "answer": "true" },
+        { "question": "an organ with a higher perfusion will take up drug slower than an organ with lower perfusion", "answer": "false" },
+        { "question": "a lipid soluble drug would be distributed less than an identical, but water soluble drug", "answer": "false" },
+        { "question": "a medication bound to transport proteins is typically pharmacologically active", "answer": "false" }
+        
+
+    ]
+    
+}

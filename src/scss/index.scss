@@ -322,7 +322,7 @@ code {
 
 .text-gradient {
     --c-gradient: var(--gradient, var(--text-gradient));
-    --c-fallback: var(--fallback,  hsla(208deg 80% 35% / 88%));
+    --c-fallback: var(--fallback,  var(--text-gradient-fallback));
 
     color: transparent;
     background: var(--c-gradient);
