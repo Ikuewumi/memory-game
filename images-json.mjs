@@ -184,6 +184,7 @@ const modifyCache = async (cacheFileName, imagesData) => {
     }
 
     if (promises.length) await Promise.all(promises)
+    if (!Object.keys(outputFile).length) return
     return writeFile(cacheFileName, `${JSON.stringify(outputFile, null)} \n`, { encoding: 'utf8' })
 }
 
@@ -196,7 +197,7 @@ const runJob = async () => {
     const fileNames = await getSourceFiles(RELATIVE_PATH);
 
     /** @type {Promise<ImagesObject>[]} */
-    const jsonPromises = fileNames.map(file => {
+    const jsonPromises = fileNames.filter(file => !file.startsWith('_')).map(file => {
         return new Promise((resolve, reject) => {
             const fileName = path.resolve(RELATIVE_PATH, file)
             return getImagePathsFromJSON(fileName).then(resolve).catch(reject)

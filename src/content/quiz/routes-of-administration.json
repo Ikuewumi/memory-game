@@ -9,7 +9,7 @@
     "questions": [
         { "question": "the oral route is not subject to the first-pass metabolism", "answer": "false" },
         { "question": "the intravenous route typically has about 100% bioavailability", "answer": "true" },
-        { "question": "all of the following routes of adminisitration are not subject to the first pass effect - intravenous, intramuscular, rectal, subcutaneous", "answer": "false" },
+        { "question": "all of the following routes of adminisitration are not subject to the first pass effect - intravenous, intramuscular, subcutaneous", "answer": "true" },
 
         { "question": "bioavailability is a measure of how much of a medication makes it into the systemic circulation", "answer": "true" },
         { "question": "the apparent volume of distribution is an indication of how much of a medication makes it into the systemic circulation", "answer": "false" },

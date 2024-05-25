@@ -201,7 +201,7 @@
         }
 
         &-p + &-p {
-            margin-top: 0.5rem;
+            margin-top: 0.25rem;
         }
 
         &-p strong {

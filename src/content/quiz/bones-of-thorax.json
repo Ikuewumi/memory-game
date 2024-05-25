@@ -1,0 +1,60 @@
+{
+    "title": "Bones of The Thorax",
+    "author": "ayobami",
+    "course": "anatomy",
+    "date": "2024-05-25 11:00",
+    "description":"A supersize quiz to review your knowledge of the thoracic skeleton",
+    "difficulty": "hard",
+    "image": "https://i.postimg.cc/s2WC6G0p/Bones-Of-Thorax-2.jpg",
+    "questions": [
+        {"question": "A", "answer": "scapula"},
+        {"question": "B", "answer": "clavicle"},
+        {"question": "C", "answer": "sternum"},
+        {"question": "D", "answer": "acromion"},
+        {"question": "E", "answer": "sternal angle"},
+        {"question": "F", "answer": "coracoid process"},
+        {"question": "G", "answer": "manubrium"},
+        {"question": "H", "answer": "glenoid cavity"},
+        {"question": "I", "answer": "body of sternum"},
+        {"question": "J", "answer": "xiphoid process"},
+        {"question": "K", "answer": "costal cartilages"},
+        {"question": "L", "answer": "ribs"},
+        {"question": "M", "answer": "subscapular fossa"},
+
+        {"question": "ribs(11,12)", "answer": "floating ribs", "text": "Match `ribs(rib numbers)` to `(type of rib)`"},
+        {"question": "ribs(1,2,11,12)", "answer": "atypical ribs", "text": "Match `ribs(rib numbers)` to `(type of rib)`"},
+        {"question": "ribs(8-12)", "answer": "false ribs", "text": "Match `ribs(rib numbers)` to `(type of rib)`"},
+        {"question": "ribs(1-7)", "answer": "true ribs", "text": "Match `ribs(rib numbers)` to `(type of rib)`"},
+        
+        {"question": "Figure 2", "answer": "posterior view of scapula", "image":"https://i.postimg.cc/ht6q11MD/Posterior-Scapula-1.jpg"},
+        {"question": "2A", "answer": "superior border of scapula", "image":"https://i.postimg.cc/ht6q11MD/Posterior-Scapula-1.jpg"},
+        {"question": "2B", "answer": "suprascapular notch", "image":"https://i.postimg.cc/ht6q11MD/Posterior-Scapula-1.jpg"},
+        {"question": "what passes through 2B", "answer": "suprascapular nerve", "image":"https://i.postimg.cc/ht6q11MD/Posterior-Scapula-1.jpg"},
+        {"question": "2C", "answer": "superior angle of scapula", "image":"https://i.postimg.cc/ht6q11MD/Posterior-Scapula-1.jpg"},
+        {"question": "2D", "answer": "supraspinous fossa", "image":"https://i.postimg.cc/ht6q11MD/Posterior-Scapula-1.jpg"},
+        {"question": "2E", "answer": "medial border of scapula", "image":"https://i.postimg.cc/ht6q11MD/Posterior-Scapula-1.jpg"},
+        {"question": "2F", "answer": "infraspinous fossa", "image":"https://i.postimg.cc/ht6q11MD/Posterior-Scapula-1.jpg"},
+        {"question": "2G", "answer": "inferior angle of scapula", "image":"https://i.postimg.cc/ht6q11MD/Posterior-Scapula-1.jpg"},
+        {"question": "2H", "answer": "spine of scapula", "image":"https://i.postimg.cc/ht6q11MD/Posterior-Scapula-1.jpg"},
+        {"question": "2I", "answer": "lateral border of scapula", "image":"https://i.postimg.cc/ht6q11MD/Posterior-Scapula-1.jpg"},
+        {"question": "2J", "answer": "supraglenoid tubercule", "image":"https://i.postimg.cc/ht6q11MD/Posterior-Scapula-1.jpg"},
+        {"question": "2K", "answer": "infraglenoid tubercule", "image":"https://i.postimg.cc/ht6q11MD/Posterior-Scapula-1.jpg"},
+
+
+
+        {"question": "Figure 3", "answer": "inferior surface of clavicle", "image": "https://i.postimg.cc/wTWz7pms/Inferior-Clavicle.jpg"},
+        {"question": "3A", "answer": "acromial end of clavicle", "image": "https://i.postimg.cc/wTWz7pms/Inferior-Clavicle.jpg"},
+        {"question": "3B", "answer": "trapezoid line", "image": "https://i.postimg.cc/wTWz7pms/Inferior-Clavicle.jpg"},
+        {"question": "what attaches to 3B", "answer": "trapezoid ligament", "image": "https://i.postimg.cc/wTWz7pms/Inferior-Clavicle.jpg"},
+        {"question": "3C", "answer": "conoid tubercule", "image": "https://i.postimg.cc/wTWz7pms/Inferior-Clavicle.jpg"},
+        {"question": "what attaches to 3C", "answer": "conoid ligament", "image": "https://i.postimg.cc/wTWz7pms/Inferior-Clavicle.jpg"},
+        {"question": "the conoid and trapezoid ligaments make up: ", "answer": "coracoclavicular ligament", "image": "https://i.postimg.cc/wTWz7pms/Inferior-Clavicle.jpg"},
+        {"question": "what attaches to 3D", "answer": "costoclavicular ligament", "image": "https://i.postimg.cc/wTWz7pms/Inferior-Clavicle.jpg"},
+        {"question": "3E", "answer": "sternal end of clavicle", "image": "https://i.postimg.cc/wTWz7pms/Inferior-Clavicle.jpg"},
+        {"question": "3F", "answer": "subclavian groove", "image": "https://i.postimg.cc/wTWz7pms/Inferior-Clavicle.jpg"},
+        {"question": "what muscle inserts on 3F", "answer": "subclavius", "image": "https://i.postimg.cc/wTWz7pms/Inferior-Clavicle.jpg"},
+
+        {"question": "Figure 4", "answer": "superior surface of clavicle", "image": "https://i.postimg.cc/vZcsnNr2/Superior-Clavicle.jpg"},
+        {"question": "What side of the body is Figure 4 on", "answer": "right side", "image": "https://i.postimg.cc/vZcsnNr2/Superior-Clavicle.jpg"}
+    ]
+}
