@@ -1,9 +1,9 @@
 {
     "message": "This website is in beta, bugs may occur",
     "featuredQuizzes": [
+        "bones-of-thorax",
         "routes-of-administration",
-        "absorption",
-        "connective-tissue"
+        "absorption"
     ]
     
 }
