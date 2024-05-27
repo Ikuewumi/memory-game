@@ -1,0 +1,36 @@
+{
+    "title": "Acetylcholine Metabolism",
+    "type": "dcq",
+    "author": "ayobami",
+    "course": "pharmacology",
+    "date": "2024-05-27 17:39",
+    "description": "let's review the metabolism and pharmacology of the most common neurotransmitter: ACh",
+    "difficulty": "medium",
+    "questions": [
+       
+
+        {"question": "acetylcholine's half life is less than 1 second","answer": "true"},
+        {"question": "acetylcholine is only released into muscarinic neurons","answer": "false"},
+        {"question": "cholinergic receptors are generally divided into nicotinic and muscarinic types","answer": "true"},
+        {"question": "not all presynaptic sympatethic and parasympatethic neurons release ACh at the nerve terminal","answer": "false"},
+        {"question": "the postsynaptic sympatethic neurons for the sweat glands release ACh" ,"answer": "true"},
+        {"question": "choline is transported into the neuron via a sodium symporter","answer": "true"},
+        {"question": "the choline transporter is inhibited by the botulinum toxin","answer": "false"},
+        {"question": "the choline transporter is inhibited by the hemicholiniums","answer": "true"},
+        {"question": "acetyl-CoA and choline react via cholineacetyltransferase to form ACh","answer": "true"},
+        {"question": "the VAMPs(vessel-associated membrane proteins) help to transport ACh into the vesicle","answer": "false"},
+        {"question": "ACh is transported into the vesicle via VAT(vessel associated transporter)","answer": "true"},
+        {"question": "VATs(vessel associated transporters) are activated by vesamicol","answer": "false"},
+        {"question": "VATs(vessel associated transporters) are inhibited by vesamicol","answer": "true"},
+        {"question": "ACh release is stimulated by Calcium ion","answer": "true"},
+        {"question": "Calcium ion interacts with synaptobrevin to trigger ACh release","answer": "false"},
+        {"question": "Calcium ion interacts with synaptotagmin to trigger ACh release","answer": "true"},
+        {"question": "VAMPs(vessel-associated membrane proteins) and SNAPs(synaptosomal-associated proteins) help with ACh synthesis","answer": "false"},
+        {"question": "VAMPs(vessel-associated membrane proteins) and SNAPs(synaptosomal-associated proteins) help with ACh exocytosis","answer": "true"},
+        {"question": "ACh release can be inhibited by botulinum toxin","answer": "true"},
+        {"question": "acetylcholinesterase cleaves ACh into acetyl-CoA and choline","answer": "false"},
+        {"question": "ACh is formed from acetyl-CoA and choline","answer": "true"}
+
+    ]
+    
+}

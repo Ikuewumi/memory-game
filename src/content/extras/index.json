@@ -1,9 +1,9 @@
 {
     "message": "This website is in beta, bugs may occur",
     "featuredQuizzes": [
+        "acetylcholine-metabolism",
         "bones-of-thorax",
-        "routes-of-administration",
-        "absorption"
+        "routes-of-administration"
     ]
     
 }
