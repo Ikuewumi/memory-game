@@ -1,0 +1,24 @@
+{
+    "title": "Adrenegic Transmission",
+    "type": "dcq",
+    "author": "ayobami",
+    "course": "pharmacology",
+    "date": "2024-05-28 21:48",
+    "description": "fact checking on the pharmacology of catecholamines with a quick look into their biochemistry",
+    "difficulty": "medium",
+    "questions": [
+    
+        {"question": "phenylalanine is the amino-acid taken up into the adrenegic neuron", "answer": "false"},
+        {"question": "tyrosine is the amino-acid taken up into the adrenegic neuron", "answer": "true"},
+        {"question": "tyrosine is decarboxylated to form DOPA", "answer": "false"},
+
+        {"question": "reaction A is the rate limiting step of catecholamine synthesis", "answer": "true", "image": "https://i.postimg.cc/k4LPkkhV/image-3.jpg"},
+        {"question": "reaction B is a catalyzed by dopamine decarboxylase", "answer": "false", "image": "https://i.postimg.cc/k4LPkkhV/image-3.jpg"},
+        {"question": "reaction B is a catalyzed by dopamine hydroxylase", "answer": "true", "image": "https://i.postimg.cc/k4LPkkhV/image-3.jpg"},
+        {"question": "reaction D is not a methylation reaction", "answer": "false", "image": "https://i.postimg.cc/k4LPkkhV/image-3.jpg"},
+        {"question": "reaction D is catalyzed by PNMT(Phenylethanolamine-N-methyl transferase)", "answer": "true", "image": "https://i.postimg.cc/k4LPkkhV/image-3.jpg"},
+        {"question": "reaction A is catalyzed by tyrosine hydroxylase", "answer": "true", "image": "https://i.postimg.cc/k4LPkkhV/image-3.jpg"}
+
+    ]
+}
+

@@ -1,9 +1,14 @@
 <script lang="ts">
     import { clickDcqCard, gameData, randomQuestionIndex } from "@stores/game";
+    import { addNewImage, showImage } from "@/stores/image";
     const click = (userAnswer: boolean) => {
         return clickDcqCard($randomQuestionIndex, userAnswer);
     };
 
+    const showImageModal = () => {
+        addNewImage($gameData.image ?? "") 
+        showImage.set(true)
+    };
 </script>
 
 {#if $gameData.questions.length > 0}
@@ -11,7 +16,9 @@
         {#if $gameData.text || $gameData.image}
             <figure class="dcq-figure">
                 {#if $gameData.image > ""}
-                    <img src={$gameData.image} alt="" class="dcq-image" />
+                    <!-- svelte-ignore a11y-click-events-have-key-events -->
+                    <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+                    <img on:click={showImageModal} src={$gameData.image} alt="" class="dcq-image" />
                 {/if}
                 {#if $gameData.text > ""}<figcaption class="dcq-text">
                         {$gameData.text}
