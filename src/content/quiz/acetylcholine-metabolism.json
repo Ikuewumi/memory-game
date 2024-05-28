@@ -17,7 +17,7 @@
         {"question": "choline is transported into the neuron via a sodium symporter","answer": "true"},
         {"question": "the choline transporter is inhibited by the botulinum toxin","answer": "false"},
         {"question": "the choline transporter is inhibited by the hemicholiniums","answer": "true"},
-        {"question": "acetyl-CoA and choline react via cholineacetyltransferase to form ACh","answer": "true"},
+        {"question": "acetyl-CoA and choline react to form ACh via the enzyme cholineacetyltransferase","answer": "true"},
         {"question": "the VAMPs(vessel-associated membrane proteins) help to transport ACh into the vesicle","answer": "false"},
         {"question": "ACh is transported into the vesicle via VAT(vessel associated transporter)","answer": "true"},
         {"question": "VATs(vessel associated transporters) are activated by vesamicol","answer": "false"},
