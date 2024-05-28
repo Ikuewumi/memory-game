@@ -6,22 +6,23 @@
     };
 
     const showImageModal = () => {
-        addNewImage($gameData.image ?? "") 
+        const image = $gameData.questions[$randomQuestionIndex]?.image ?? ""
+        addNewImage(image ?? "") 
         showImage.set(true)
     };
 </script>
 
 {#if $gameData.questions.length > 0}
     <div class="dcq">
-        {#if $gameData.text || $gameData.image}
+        {#if $gameData.questions[$randomQuestionIndex]?.text || $gameData.questions[$randomQuestionIndex]?.image}
             <figure class="dcq-figure">
-                {#if $gameData.image > ""}
+                {#if $gameData.questions[$randomQuestionIndex]?.image > ""}
                     <!-- svelte-ignore a11y-click-events-have-key-events -->
                     <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-                    <img on:click={showImageModal} src={$gameData.image} alt="" class="dcq-image" />
+                    <img on:click={showImageModal} src={$gameData.questions[$randomQuestionIndex]?.image} alt="" class="dcq-image" />
                 {/if}
-                {#if $gameData.text > ""}<figcaption class="dcq-text">
-                        {$gameData.text}
+                {#if $gameData.questions[$randomQuestionIndex]?.text > ""}<figcaption class="dcq-text">
+                        {$gameData.questions[$randomQuestionIndex]?.text}
                     </figcaption>
                 {/if}
             </figure>
