@@ -25,7 +25,7 @@
         {"question": "ACh release is stimulated by Calcium ion","answer": "true"},
         {"question": "Calcium ion interacts with synaptobrevin to trigger ACh release","answer": "false"},
         {"question": "Calcium ion interacts with synaptotagmin to trigger ACh release","answer": "true"},
-        {"question": "VAMPs(vessel-associated membrane proteins) and SNAPs(synaptosomal-associated proteins) help with ACh synthesis","answer": "false"},
+        {"question": "VAMPs(vesicle-associated membrane proteins) and SNAPs(synaptosomal-associated proteins) help with ACh synthesis","answer": "false"},
         {"question": "VAMPs(vesicle-associated membrane proteins) and SNAPs(synaptosomal-associated proteins) help with ACh exocytosis","answer": "true"},
         {"question": "ACh release can be inhibited by botulinum toxin","answer": "true"},
         {"question": "acetylcholinesterase cleaves ACh into acetyl-CoA and choline","answer": "false"},
