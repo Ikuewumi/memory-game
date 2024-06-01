@@ -17,7 +17,18 @@
         {"question": "reaction B is a catalyzed by dopamine hydroxylase", "answer": "true", "image": "https://i.postimg.cc/k4LPkkhV/image-3.jpg"},
         {"question": "reaction D is not a methylation reaction", "answer": "false", "image": "https://i.postimg.cc/k4LPkkhV/image-3.jpg"},
         {"question": "reaction D is catalyzed by PNMT(Phenylethanolamine-N-methyl transferase)", "answer": "true", "image": "https://i.postimg.cc/k4LPkkhV/image-3.jpg"},
-        {"question": "reaction A is catalyzed by tyrosine hydroxylase", "answer": "true", "image": "https://i.postimg.cc/k4LPkkhV/image-3.jpg"}
+        {"question": "reaction A is catalyzed by tyrosine hydroxylase", "answer": "true", "image": "https://i.postimg.cc/k4LPkkhV/image-3.jpg"},
+
+        {"question": "reserpine alkaloids induce catecholamine transport into the vesicles", "answer": "false"},
+        {"question": "bretylium can inhibit catecholamine release", "answer": "true"},
+        {"question": "vesicle-monoamine transporter(VMAT) is inhibited by reserpine", "answer": "true"},
+        {"question": "amphetamines inhibit catecholamine release", "answer": "false"},
+        {"question": "amoxapine, a tricyclic antidepressant is a drug that is capable of inhibiting the norepinephrine transporter(NET)", "answer": "true"},
+
+        {"question": "dopamine is transported into its vessicle through vesicle-monoamine transporter(VMAT)", "answer": "true"},
+        {"question": "norepinephrine's neurotransmitter action is terminated mainly via enzymatic degradation", "answer": "false"},
+        {"question": "norepinephrine transporter(NET)'s main action is reuptake of catecholamines", "answer": "true"},
+        {"question": "dopamine is transported into its vessicle through vesicle-associated transporter(VAT)", "answer": "false"}
 
     ]
 }

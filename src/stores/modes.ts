@@ -10,7 +10,7 @@ export const BLITZ_SECONDS = [300, 180, 120, 60]
 const DEFAULT_LIVES = 4
 const DEFAULT_INTERVAL_MS = 1000
 
-const DEFAULT_CONFETTI_TIME_MS = 5000
+const DEFAULT_CONFETTI_TIME_MS = 1000
 export const blitzSecondsIndex = atom(0)
 
 // Using a Function to Wrap the Computed vale
