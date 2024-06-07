@@ -1,0 +1,12 @@
+{
+    "title": "Autonomic Pharmacology",
+    "description": "A growing series about pharmacology relating to the autonomic nervous system",
+    "author": "ayobami",
+    "course": "pharmacology",
+    "quizzes": [
+        "acetylcholine-metabolism",
+        "adrenegic-transmission",
+        "direct-cholinomimetics",
+        "direct-cholinomimetics-2"
+    ]
+}
