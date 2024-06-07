@@ -1,0 +1,40 @@
+{
+    "title": "Direct Cholinomimetics 2",
+    "author": "ayobami",
+    "course": "pharmacology",
+    "date": "2024-06-07 12:51",
+    "description": "fact checking the indications for the most common direct cholinomimetics",
+    "difficulty": "medium",
+    "questions": [
+        {
+            "question": "route{pilocarpine}",
+            "answer": "topical",
+            "text": "Match the `route{drug name}` with {route of administration}"
+        },
+        {
+            "question": "route{bethanechol}",
+            "answer": "oral",
+            "text": "Match the `route{drug name}` with {route of administration}"
+        },
+        {
+            "question": "indication{carbachol}",
+            "answer": "open-angle glaucoma",
+            "text": "Match `indication{drug name}` with {indication(s) for using the drug}"
+        },
+        {
+            "question": "indication{methacholine}",
+            "answer": "asthma diagnosis",
+            "text": "Match `indication{drug name}` with {indication(s) for using the drug}"
+        },
+        {
+            "question": "indication{bethanechol}",
+            "answer": "non-obstructive ileus, neurogenic bladder",
+            "text": "Match `indication{drug name}` with {indication(s) for using the drug}"
+        },
+        {
+            "question": "indication{pilocarpine}",
+            "answer": "sjorgen syndrome, open-angle glaucoma",
+            "text": "Match `indication{drug name}` with {indication(s) for using the drug}"
+        }
+    ]
+}

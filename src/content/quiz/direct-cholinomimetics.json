@@ -1,0 +1,72 @@
+{
+    "title": "Direct Cholinomimetics",
+    "type": "dcq",
+    "author": "ayobami",
+    "course": "pharmacology",
+    "date": "2024-06-07 12:51",
+    "description": "the start of a two-part series examinining direct-cholinomimetics",
+    "difficulty": "medium",
+    "questions": [
+        {
+            "question": "cholinomimetics are drugs that mimic the action of acetylcholine in the body",
+            "answer": "true"
+        },
+        {
+            "question": "direct cholinomimetics directly bind to ACh(acetylcholine) receptors to mediate their effects",
+            "answer": "true"
+        },
+        {
+            "question": "bethanechol is a drug that has an effect on both muscarinic and nicotinic receptors",
+            "answer": "false"
+        },
+        {
+            "question": "the following drugs are all direct cholinomimetic esters: carbachol, bethanechol, muscarine, methacholine",
+            "answer": "false"
+        },
+        {
+            "question": "the following drugs are all direct cholinomimetic alkaloids: pilocarpine, cevimeline, nicotine, muscarine",
+            "answer": "true"
+        },
+        {
+            "question": "bethanechol is indicated mainly for asthma diagnosis",
+            "answer": "false"
+        },
+        {
+            "question": "pilocarpine is typically taken into the body orally",
+            "answer": "false"
+        },
+        {
+            "question": "peptic ulcer",
+            "answer": "true",
+            "text": "a direct cholinomimetic is contraindicated in:"
+        },
+        {
+            "question": "hypertension",
+            "answer": "false",
+            "text": "a direct cholinomimetic is contraindicated in:"
+        },
+        {
+            "question": "open-angle glaucoma",
+            "answer": "false",
+            "text": "a direct cholinomimetic is contraindicated in:"
+        },
+        {
+            "question": "closed-angle glaucoma",
+            "answer": "true",
+            "text": "a direct cholinomimetic is contraindicated in:"
+        },
+        {
+            "question": "COPD (chronic obstructive pulmonary disease)",
+            "answer": "true",
+            "text": "a direct cholinomimetic is contraindicated in:"
+        },
+        {
+            "question": "carbachol has an effect on both muscarinic and nicotinic receptors",
+            "answer": "true"
+        },
+        {
+            "question": "bethanechol can be used for obstructive ileus",
+            "answer": "false"
+        }
+    ]
+}

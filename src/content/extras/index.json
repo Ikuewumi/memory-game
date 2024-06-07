@@ -1,9 +1,8 @@
 {
     "message": "This website is in beta, bugs may occur",
     "featuredQuizzes": [
+        "direct-cholinomimetics",
         "acetylcholine-metabolism",
-        "bones-of-thorax",
-        "routes-of-administration"
+        "bones-of-thorax"
     ]
-    
 }
