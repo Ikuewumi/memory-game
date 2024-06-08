@@ -1,8 +1,8 @@
 {
     "message": "This website is in beta, bugs may occur",
     "featuredQuizzes": [
+        "anti-cholinesterases",
         "direct-cholinomimetics",
-        "acetylcholine-metabolism",
-        "bones-of-thorax"
+        "acetylcholine-metabolism"
     ]
 }

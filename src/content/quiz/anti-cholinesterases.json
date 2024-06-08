@@ -1,0 +1,76 @@
+{
+    "title": "Anti-Cholinesterases",
+    "type": "dcq",
+    "author": "ayobami",
+    "course": "pharmacology",
+    "date": "2024-06-08 11:30",
+    "description": "how much do you know about the anti-cholinesterases?",
+    "difficulty": "medium",
+    "questions": [
+        {
+            "question": "(B) can go through the blood-brain barrier",
+            "answer": "true",
+            "text": "rivastigmine(A), physostigmine(B), neostigmine(C), donepezil(D), galantamine(E), edrophonium(F), malathion(G), and sarin(H)"
+        },
+        {
+            "question": "(H) is used as a drug for atropine overdose",
+            "answer": "false",
+            "text": "rivastigmine(A), physostigmine(B), neostigmine(C), donepezil(D), galantamine(E), edrophonium(F), malathion(G), and sarin(H)"
+        },
+        {
+            "question": "(A) is the shortest acting of the above anti-cholinesterases",
+            "answer": "false",
+            "text": "rivastigmine(A), physostigmine(B), neostigmine(C), donepezil(D), galantamine(E), edrophonium(F), malathion(G), and sarin(H)"
+        },
+        {
+            "question": "(F) is the shortest acting of the above anti-cholinesterases",
+            "answer": "true",
+            "text": "rivastigmine(A), physostigmine(B), neostigmine(C), donepezil(D), galantamine(E), edrophonium(F), malathion(G), and sarin(H)"
+        },
+        {
+            "question": "(G) is used in insecticides, pesticides, e.t.c",
+            "answer": "true",
+            "text": "rivastigmine(A), physostigmine(B), neostigmine(C), donepezil(D), galantamine(E), edrophonium(F), malathion(G), and sarin(H)"
+        },
+        {
+            "question": "(A) is indicated for diagnosis of myasthenia gravis",
+            "answer": "false",
+            "text": "rivastigmine(A), physostigmine(B), neostigmine(C), donepezil(D), galantamine(E), edrophonium(F), malathion(G), and sarin(H)"
+        },
+        {
+            "question": "(F) is indicated for diagnosis of myasthenia gravis",
+            "answer": "true",
+            "text": "rivastigmine(A), physostigmine(B), neostigmine(C), donepezil(D), galantamine(E), edrophonium(F), malathion(G), and sarin(H)"
+        },
+        {
+            "question": "(B) is indicated for atropine overdose",
+            "answer": "true",
+            "text": "rivastigmine(A), physostigmine(B), neostigmine(C), donepezil(D), galantamine(E), edrophonium(F), malathion(G), and sarin(H)"
+        },
+        {
+            "question": "all the drugs above typically cause increased secretions",
+            "answer": "true",
+            "text": "rivastigmine(A), physostigmine(B), neostigmine(C), donepezil(D), galantamine(E), edrophonium(F), malathion(G), and sarin(H)"
+        },
+        {
+            "question": "(A), (D), (E) is indicated for curing Alzheimer's disease",
+            "answer": "false",
+            "text": "rivastigmine(A), physostigmine(B), neostigmine(C), donepezil(D), galantamine(E), edrophonium(F), malathion(G), and sarin(H)"
+        },
+        {
+            "question": "all of these drugs are used for disease treatment",
+            "answer": "false",
+            "text": "rivastigmine(A), physostigmine(B), neostigmine(C), donepezil(D), galantamine(E), edrophonium(F), malathion(G), and sarin(H)"
+        },
+        {
+            "question": "(A), (D), (E) is indicated for improving quality of life in Alzheimer's disease",
+            "answer": "true",
+            "text": "rivastigmine(A), physostigmine(B), neostigmine(C), donepezil(D), galantamine(E), edrophonium(F), malathion(G), and sarin(H)"
+        },
+        {
+            "question": "(A), (B), (E), (C) can go through the blood brain barrier",
+            "answer": "false",
+            "text": "rivastigmine(A), physostigmine(B), neostigmine(C), donepezil(D), galantamine(E), edrophonium(F), malathion(G), and sarin(H)"
+        }
+    ]
+}
