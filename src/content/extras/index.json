@@ -1,8 +1,8 @@
 {
     "message": "This website is in beta, bugs may occur",
     "featuredQuizzes": [
+        "anti-muscarinics",
         "anti-cholinesterases",
-        "direct-cholinomimetics",
-        "acetylcholine-metabolism"
+        "direct-cholinomimetics"
     ]
 }

@@ -1,0 +1,130 @@
+{
+    "title": "Anti-Muscarinic agents",
+    "type": "dcq",
+    "author": "ayobami",
+    "course": "pharmacology",
+    "date": "2024-06-14 14:27",
+    "description": "reviewing anti-muscarinic agents?",
+    "difficulty": "medium",
+    "questions": [
+        {
+            "question": "scopalamine causes strong vasoconstriction of the blood vessels",
+            "answer": "false"
+        },
+        {
+            "text": "Atropine (A), Scopolamine (B), Oxybutynin (C), Pralidoxime (D), Ipratropium (E)",
+            "question": "B is indicated for motion sickness",
+            "answer": "true"
+        },
+        {
+            "text": "Atropine (A), Scopolamine (B), Oxybutynin (C), Pralidoxime (D), Ipratropium (E)",
+            "question": "C is indicated for motion sickness",
+            "answer": "false"
+        },
+        {
+            "text": "Atropine (A), Scopolamine (B), Oxybutynin (C), Pralidoxime (D), Ipratropium (E)",
+            "question": "E is administered intravenously",
+            "answer": "false"
+        },
+        {
+            "text": "Atropine (A), Scopolamine (B), Oxybutynin (C), Pralidoxime (D), Ipratropium (E)",
+            "question": "E helps in reducing or preventing bronchospasms",
+            "answer": "true"
+        },
+        {
+            "text": "Atropine (A), Scopolamine (B), Oxybutynin (C), Pralidoxime (D), Ipratropium (E)",
+            "question": "E is administered nasally",
+            "answer": "true"
+        },
+        {
+            "text": "Atropine (A), Scopolamine (B), Oxybutynin (C), Pralidoxime (D), Ipratropium (E)",
+            "question": "C is indicated for COPD",
+            "answer": "false"
+        },
+        {
+            "text": "Atropine (A), Scopolamine (B), Oxybutynin (C), Pralidoxime (D), Ipratropium (E)",
+            "question": "C is indicated for urinary incontinence",
+            "answer": "true"
+        },
+        {
+            "text": "Atropine (A), Scopolamine (B), Oxybutynin (C), Pralidoxime (D), Ipratropium (E)",
+            "question": "A is indicated for nicotinic toxicity",
+            "answer": "false"
+        },
+        {
+            "text": "Atropine (A), Scopolamine (B), Oxybutynin (C), Pralidoxime (D), Ipratropium (E)",
+            "question": "A is indicated for organophosphate poisoning",
+            "answer": "true"
+        },
+        {
+            "text": "Atropine (A), Scopolamine (B), Oxybutynin (C), Pralidoxime (D), Ipratropium (E)",
+            "question": "D can regenerate AcetylCholinesterase after aging",
+            "answer": "false"
+        },
+        {
+            "text": "Atropine (A), Scopolamine (B), Oxybutynin (C), Pralidoxime (D), Ipratropium (E)",
+            "question": "A + D are indicated for cholinergic toxicity",
+            "answer": "true"
+        },
+        {
+            "text": "effects of antimuscarinic agents",
+            "question": "mydriasis",
+            "answer": "true"
+        },
+        {
+            "text": "effects of antimuscarinic agents",
+            "question": "cycloplegia",
+            "answer": "true"
+        },
+        {
+            "text": "effects of antimuscarinic agents",
+            "question": "reduced gastrointestinal motility and secretion",
+            "answer": "true"
+        },
+        {
+            "text": "effects of antimuscarinic agents",
+            "question": "reduced urinary motility",
+            "answer": "true"
+        },
+        {
+            "text": "effects of antimuscarinic agents",
+            "question": "bronchodilation",
+            "answer": "true"
+        },
+        {
+            "text": "effects of antimuscarinic agents",
+            "question": "reduced secretions",
+            "answer": "true"
+        },
+        {
+            "text": "effects of antimuscarinic agents",
+            "question": "cyclospasm",
+            "answer": "false"
+        },
+        {
+            "text": "effects of antimuscarinic agents",
+            "question": "miosis",
+            "answer": "false"
+        },
+        {
+            "text": "effects of antimuscarinic agents",
+            "question": "increased gastrointestinal motility",
+            "answer": "false"
+        },
+        {
+            "text": "effects of antimuscarinic agents",
+            "question": "urinary hypermotility",
+            "answer": "false"
+        },
+        {
+            "text": "effects of antimuscarinic agents",
+            "question": "bronchoconstriction",
+            "answer": "false"
+        },
+        {
+            "text": "effects of antimuscarinic agents",
+            "question": "increased secretions",
+            "answer": "false"
+        }
+    ]
+}
