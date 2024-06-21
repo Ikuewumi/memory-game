@@ -19,6 +19,7 @@
         place-content: center;
         line-height: 1.2;
         text-align: center;
+        min-width: 100px;
         background: var(--clr-white);
         color: var(--clr-gray-900);
         border-radius: var(--space-3xs);

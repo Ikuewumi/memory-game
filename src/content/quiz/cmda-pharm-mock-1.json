@@ -1,0 +1,82 @@
+{
+    "title": "CMDA Pharmacology Mock: Jan 2017",
+    "author": "ayobami",
+    "course": "pharmacology",
+    "date": "2024-06-21 14:22",
+    "description": "some questions in the matching section of a CMDA pharmacology mock",
+    "difficulty": "medium",
+    "questions": [
+        {
+            "question": "A non-selective adrenoceptor blocker with partial agonist activity",
+            "answer": "Labetalol"
+        },
+        {
+            "question": "Direct acting cholinomimetic that is lipid soluble and is favoured in the treatment of glaucoma",
+            "answer": "pilocarpine"
+        },
+        {
+            "question": "Drug of choice in the treatment of anaphylactic shock",
+            "answer": "Epinephrine"
+        },
+        {
+            "question": "A drug that prevents storage of acetylcholine in its vesicle",
+            "answer": "vesamicol"
+        },
+        {
+            "question": "Used to suppress premature labour",
+            "answer": "Ritodrine"
+        },
+        {
+            "question": "Can reduce the binding of aldosterone to its receptor",
+            "answer": "spironolactone"
+        },
+        {
+            "question": "Osmotic agent used to reduce intracranial pressure",
+            "answer": "mannitol"
+        },
+        {
+            "question": "Used for the treatment of edema associated with heart failure",
+            "answer": "Furosemide"
+        },
+        {
+            "question": "Causes hyperchloremic metabolic acidosis",
+            "answer": "acetazolamide"
+        },
+        {
+            "question": "Phase I clinical trials",
+            "answer": "Open/non blind"
+        },
+        {
+            "question": "Phase IV clinical trials",
+            "answer": "Post-marketing surveillance"
+        },
+        {
+            "question": "Sodium-glucose co-transporter-2 inhibitor",
+            "answer": "canagliflozin"
+        },
+        {
+            "question": "CYP450 inhibitor",
+            "answer": "Ketoconazole"
+        },
+        {
+            "question": "CYP450 inducer",
+            "answer": "Phenytoin"
+        },
+        {
+            "question": "A phase I metabolic reaction",
+            "answer": "N-dealkylation"
+        },
+        {
+            "question": "Elimination of constant amount of drug per unit time",
+            "answer": "Zero-order elimination"
+        },
+        {
+            "question": "A measure of how well a drug produces response",
+            "answer": "Efficacy"
+        },
+        {
+            "question": "Most common adverse effect of inhaled insulin",
+            "answer": "Hypoglycemia"
+        }
+    ]
+}
