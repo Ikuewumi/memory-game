@@ -19,7 +19,7 @@
         place-content: center;
         line-height: 1.2;
         text-align: center;
-        min-width: 100px;
+        min-width: 150px;
         background: var(--clr-white);
         color: var(--clr-gray-900);
         border-radius: var(--space-3xs);
@@ -32,7 +32,6 @@
         transition:
             background 50ms ease-in,
             color 100ms ease-in-out;
-
 
         &[aria-selected="true"] {
             background: var(--bg);
@@ -50,9 +49,8 @@
             }
         }
 
-        &:focus-visible:focus-visible{
+        &:focus-visible:focus-visible {
             outline-width: 2px;
-            
         }
 
         &:disabled {
@@ -74,7 +72,7 @@
             pointer-events: none;
 
             @media (min-width: 768px) {
-            //display: block;
+                //display: block;
             }
         }
     }
