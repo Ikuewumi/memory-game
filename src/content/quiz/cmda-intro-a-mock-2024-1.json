@@ -1,0 +1,107 @@
+{
+    "title": "CMDA Intro A Mock: 2024",
+    "author": "ayobami",
+    "course": "pharmacology",
+    "type": "dcq",
+    "date": "2024-06-22 01:35",
+    "description": "the beginning of a series of questions extracted from the CMDA Intro A mock of 2024",
+    "difficulty": "medium",
+    "questions": [
+        {
+            "text": "are all the substances below a positive stimulator for insulin?",
+            "question": "arginine, leucine, glucagon-like peptide",
+            "answer": "true"
+        },
+        {
+            "text": "Carbonic anhydrase inhibitors are contraindicated in:",
+            "question": "respiratory acidosis",
+            "answer": "true"
+        },
+        {
+            "text": "Carbonic anhydrase inhibitors are contraindicated in:",
+            "question": "liver cirrhosis",
+            "answer": "true"
+        },
+        {
+            "text": "Examples of osmotic diuretics",
+            "question": "Lactulose",
+            "answer": "false"
+        },
+        {
+            "text": "Examples of osmotic diuretics",
+            "question": "Galanin",
+            "answer": "false"
+        },
+        {
+            "text": "Examples of osmotic diuretics",
+            "question": "Glycerin",
+            "answer": "true"
+        },
+        {
+            "text": "Examples of osmotic diuretics",
+            "question": "Isorsobide",
+            "answer": "true"
+        },
+        {
+            "question": "Anterior pituitary hormones are all negatively controlled by the hypothalamus except prolactin",
+            "answer": "false"
+        },
+        {
+            "question": "Anterior pituitary hormones are secondarily produced by body organs",
+            "answer": "false"
+        },
+        {
+            "question": "A1 adenosine receptor is implicated in diuresis",
+            "answer": "true"
+        },
+        {
+            "text": "Which of the drugs is a sympathomimetic stimulant: Tasmulosin(T), Cocaine(C), Amphetamine(A)",
+            "question": "T",
+            "answer": "false"
+        },
+        {
+            "text": "Which of the drugs is a sympathomimetic stimulant: Tasmulosin(T), Cocaine(C), Amphetamine(A)",
+            "question": "C",
+            "answer": "true"
+        },
+        {
+            "text": "Which of the drugs isn't a sympathomimetic stimulant: Tasmulosin(T), Cocaine(C), Amphetamine(A)",
+            "question": "A",
+            "answer": "false"
+        },
+        {
+            "text": "Which of the following drugs is a loop diuretic: Furosemide(F), Indapamide(I), Ethacrynic Acid(E), Axosemide(A)",
+            "question": "I",
+            "answer": "false"
+        },
+        {
+            "text": "Which of the following drugs is a loop diuretic: Furosemide(F), Indapamide(I), Ethacrynic Acid(E), Axosemide(A)",
+            "question": "E",
+            "answer": "true"
+        },
+        {
+            "text": "Which of the following drugs is not a loop diuretic: Furosemide(F), Indapamide(I), Ethacrynic Acid(E), Axosemide(A)",
+            "question": "F",
+            "answer": "false"
+        },
+        {
+            "text": "Secretion of growth hormone is stimulated by:",
+            "question": "sleep",
+            "answer": "true"
+        },
+        {
+            "text": "Secretion of growth hormone is stimulated by:",
+            "question": "stress",
+            "answer": "true"
+        },
+        {
+            "text": "Secretion of growth hormone is not stimulated by:",
+            "question": "somatomedin C",
+            "answer": "true"
+        },
+        {
+            "question": "oxytocin is not used for the management of postpartum hemorrhage",
+            "answer": "false"
+        }
+    ]
+}
