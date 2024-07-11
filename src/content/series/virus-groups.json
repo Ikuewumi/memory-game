@@ -1,0 +1,10 @@
+{
+    "title": "Viral Groups",
+    "description": "A series to review knowledge on the various types of viruses",
+    "author": "ayobami",
+    "course": "microbiology",
+    "quizzes": [
+        "virus-groups-1",
+        "virus-groups-2"
+    ]
+}

@@ -1,8 +1,8 @@
 {
     "message": "This website is in beta, bugs may occur",
     "featuredQuizzes": [
+        "virus-groups-2",
         "virus-groups-1",
-        "cmda-intro-a-mock-2024-1",
-        "anti-muscarinics"
+        "cmda-intro-a-mock-2024-1"
     ]
 }
