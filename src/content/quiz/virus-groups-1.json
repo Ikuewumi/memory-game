@@ -1,0 +1,45 @@
+{
+    "title": "Groups of Viruses 1",
+    "author": "ayobami",
+    "course": "microbiology",
+    "date": "2024-07-11 11:21",
+    "description": "A quick quiz to reinforce the groups of viruses and their mechanism of mRNA generation. Examples to come....",
+    "difficulty": "medium",
+    "questions": [
+        {
+            "text": "match the {group} to the {type of virus}",
+            "question": "Group I",
+            "answer": "Double Stranded DNA viruses"
+        },
+        {
+            "text": "match the {group} to the {type of virus}",
+            "question": "Group II",
+            "answer": "Single Stranded DNA viruses"
+        },
+        {
+            "text": "match the {group} to the {type of virus}",
+            "question": "Group III",
+            "answer": "Double Stranded RNA viruses"
+        },
+        {
+            "text": "match the {group} to the {type of virus}",
+            "question": "Group IV",
+            "answer": "Positive Sense Single Stranded RNA viruses"
+        },
+        {
+            "text": "match the {group} to the {type of virus}",
+            "question": "Group V",
+            "answer": "Negative Sense Single Stranded RNA viruses"
+        },
+        {
+            "text": "match the {group} to the {type of virus}",
+            "question": "Group VI",
+            "answer": "Single Stranded RNA viruses using Reverse Transcription with DNA intermediate"
+        },
+        {
+            "text": "match the {group} to the {type of virus}",
+            "question": "Group VII",
+            "answer": "Partially Double Stranded RNA viruses using Reverse Transcription with RNA intermediate"
+        }
+    ]
+}
