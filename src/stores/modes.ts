@@ -21,7 +21,7 @@ const modePracticeComplete = () => computed(gameData, gameData => gameData.quest
 
 export const modes: Mode[] = [
     {
-        name: "pratice",
+        name: "practice",
         description: `Click on a card to select it, then match it with the most appropriate card`,
         gameComplete: modePracticeComplete,
         onComplete: () => {
