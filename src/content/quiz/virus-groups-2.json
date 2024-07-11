@@ -1,0 +1,69 @@
+{
+    "title": "Groups of Viruses 2",
+    "type": "dcq",
+    "author": "ayobami",
+    "course": "microbiology",
+    "date": "2024-07-11 14:55",
+    "description": "Examine yourself on questions about various exmaples of viruses in various groups...",
+    "difficulty": "medium",
+    "questions": [
+        {
+            "text": "Herpes Simplex Virus <A>, Norovirus <B>, Hepatitis B <C>, Poxvirus <D>, Varicella Zoster <E>, Human Immunodeficiency Virus <F>, Poliovirus <G>, Rhinovirus <H>, Ebola Virus<I>",
+            "question": "<A> is a Group I virus",
+            "answer": "true"
+        },
+        {
+            "text": "Herpes Simplex Virus <A>, Norovirus <B>, Hepatitis B <C>, Poxvirus <D>, Varicella Zoster <E>, Human Immunodeficiency Virus <F>, Poliovirus <G>, Rhinovirus <H>, Ebola Virus<I>",
+            "question": "<C> is a double stranded DNA virus",
+            "answer": "true"
+        },
+        {
+            "text": "Herpes Simplex Virus <A>, Norovirus <B>, Hepatitis B <C>, Poxvirus <D>, Varicella Zoster <E>, Human Immunodeficiency Virus <F>, Poliovirus <G>, Rhinovirus <H>, Ebola Virus<I>",
+            "question": "<D> is a double stranded RNA virus",
+            "answer": "false"
+        },
+        {
+            "text": "Herpes Simplex Virus <A>, Norovirus <B>, Hepatitis B <C>, Poxvirus <D>, Varicella Zoster <E>, Human Immunodeficiency Virus <F>, Poliovirus <G>, Rhinovirus <H>, Ebola Virus<I>",
+            "question": "<E> is a virus that causes shingles on first exposure",
+            "answer": "false"
+        },
+        {
+            "text": "Herpes Simplex Virus <A>, Norovirus <B>, Hepatitis B <C>, Poxvirus <D>, Varicella Zoster <E>, Human Immunodeficiency Virus <F>, Poliovirus <G>, Rhinovirus <H>, Ebola Virus<I>",
+            "question": "<B> is a Group IV virus",
+            "answer": "true"
+        },
+        {
+            "text": "Herpes Simplex Virus <A>, Norovirus <B>, Hepatitis B <C>, Poxvirus <D>, Varicella Zoster <E>, Human Immunodeficiency Virus <F>, Poliovirus <G>, Rhinovirus <H>, Ebola Virus<I>",
+            "question": "<G> is an enveloped, icosahedral virus",
+            "answer": "false"
+        },
+        {
+            "text": "Herpes Simplex Virus <A>, Norovirus <B>, Hepatitis B <C>, Poxvirus <D>, Varicella Zoster <E>, Human Immunodeficiency Virus <F>, Poliovirus <G>, Rhinovirus <H>, Ebola Virus<I>",
+            "question": "<I> is a Group V virus",
+            "answer": "true"
+        },
+        {
+            "text": "Herpes Simplex Virus <A>, Norovirus <B>, Hepatitis B <C>, Poxvirus <D>, Varicella Zoster <E>, Human Immunodeficiency Virus <F>, Poliovirus <G>, Rhinovirus <H>, Ebola Virus<I>",
+            "question": "only 2 of the aforementioned are examples of Group I viruses",
+            "answer": "true"
+        },
+        {
+            "question": "Herpes Simplex Virus type 2 tends to have clinical manifestations mainly below the waist",
+            "answer": "true"
+        },
+        {
+            "question": "Respiratory Syncytial Virus, a single stranded RNA virus, uses reverse transcriptase to create it's mRNA",
+            "answer": "false"
+        },
+        {
+            "text": "Order, Family, Subfamily, Genus",
+            "question": "Virale, Viridae, Virinae, Virus",
+            "answer": "true"
+        },
+        {
+            "text": "Order, Family, Subfamily, Genus",
+            "question": "Virale, Virinae, Viridae, Virus",
+            "answer": "false"
+        }
+    ]
+}

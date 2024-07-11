@@ -6,9 +6,9 @@
     };
 
     const showImageModal = () => {
-        const image = $gameData.questions[$randomQuestionIndex]?.image ?? ""
-        addNewImage(image ?? "") 
-        showImage.set(true)
+        const image = $gameData.questions[$randomQuestionIndex]?.image ?? "";
+        addNewImage(image ?? "");
+        showImage.set(true);
     };
 </script>
 
@@ -19,9 +19,16 @@
                 {#if $gameData.questions[$randomQuestionIndex]?.image > ""}
                     <!-- svelte-ignore a11y-click-events-have-key-events -->
                     <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-                    <img on:click={showImageModal} src={$gameData.questions[$randomQuestionIndex]?.image} alt="" class="dcq-image" />
+                    <img
+                        on:click={showImageModal}
+                        src={$gameData.questions[$randomQuestionIndex]?.image}
+                        alt=""
+                        class="dcq-image"
+                    />
                 {/if}
-                {#if $gameData.questions[$randomQuestionIndex]?.text > ""}<figcaption class="dcq-text">
+                {#if $gameData.questions[$randomQuestionIndex]?.text > ""}<figcaption
+                        class="dcq-text"
+                    >
                         {$gameData.questions[$randomQuestionIndex]?.text}
                     </figcaption>
                 {/if}
@@ -65,11 +72,10 @@
             max-height: min(400px, 50vh);
             object-fit: contain;
             border-radius: 0.4rem;
-            outline: 5px solid hsl(var(--shadow-color-dark) / 50%); 
+            outline: 5px solid hsl(var(--shadow-color-dark) / 50%);
             background: var(--clr-white);
             box-shadow: 0 1px 5px -4px hsl(var(--shadow-color) 40% / 70%);
             z-index: var(--z-home);
-
         }
 
         &-text {
@@ -78,10 +84,9 @@
 
             background: var(--clr-white);
             outline: 1px solid hsl(var(--shadow-color-dark) / 20%);
-            padding: 0.5rem 0.75rem 0.75rem;
+            padding: 0.65rem 0.75rem 0.8rem;
             border-radius: 0.5rem;
-            line-height: 1.25;    
- 
+            line-height: 1.35;
         }
 
         &-image + &-text {
@@ -100,7 +105,7 @@
             outline: 1px solid hsl(var(--shadow-color-dark) / 20%);
             padding: 0.5rem 0.75rem 0.75rem;
             border-radius: 0.5rem;
-            line-height: 1.25;    
+            line-height: 1.35;
         }
 
         &-figure + &-question-text {
