@@ -1,0 +1,95 @@
+{
+    "title": "Cell Injury",
+    "author": "ayobami",
+    "course": "chem-path",
+    "date": "2024-07-11 21:38",
+    "description": "A quiz to define some of the terms used in cell adaptation and injury",
+    "difficulty": "medium",
+    "questions": [
+        {
+            "text": "match `t(terminology)` to its meaning",
+            "question": "t(cell injury)",
+            "answer": "what occurs when a cell gets stressed beyond than its adaptive capabilities"
+        },
+        {
+            "text": "match `t(terminology)` to its meaning",
+            "question": "t(hypertrophy)",
+            "answer": "process in which the cell gets larger to increase its function"
+        },
+        {
+            "text": "match `t(terminology)` to its meaning",
+            "question": "t(hyperplasia)",
+            "answer": "when the number of a cell-type increases to increase the tissue function"
+        },
+        {
+            "text": "match `t(terminology)` to its meaning",
+            "question": "t(atrophy)",
+            "answer": "reduction in the number of cells in a tissue"
+        },
+        {
+            "text": "match `t(terminology)` to its meaning",
+            "question": "t(karyolysis)",
+            "answer": "breakdown of the cell nucleus"
+        },
+        {
+            "text": "match `t(terminology)` to its meaning",
+            "question": "t(apoptosis)",
+            "answer": "programmed destruction of the cell"
+        },
+        {
+            "text": "match `t(terminology)` to its meaning",
+            "question": "t(necrosis)",
+            "answer": "passive, premature death of a cell caused by external factors"
+        },
+        {
+            "text": "match `t(terminology)` to its meaning",
+            "question": "t(pyknosis)",
+            "answer": "shrinking of nucleus of a cell"
+        },
+        {
+            "text": "match `t(terminology)` to its meaning",
+            "question": "t(blebbing)",
+            "answer": "formation of outgrowths on the cell membrane due to cytoskeleton damage"
+        },
+        {
+            "text": "match `t(terminology)` to its meaning",
+            "question": "t(free radicals)",
+            "answer": "a molecule with an unpaired electron in its outermost shell"
+        },
+        {
+            "text": "match `t(terminology)` to its meaning",
+            "question": "t(hypoxia)",
+            "answer": "a state of lower than normal oxygen in a cell or tissue"
+        },
+        {
+            "text": "match `t(terminology)` to its meaning",
+            "question": "t(ischemia)",
+            "answer": "lack of adequate blood supply to an area, usually due to mechanical blokage"
+        },
+        {
+            "text": "match `t(terminology)` to its meaning",
+            "question": "t(ischemic reperfusion injury)",
+            "answer": "worsening of injury caused by restoration of blood to ischemic tissue"
+        },
+        {
+            "text": "match `t(terminology)` to its meaning",
+            "question": "t(metaplasia)",
+            "answer": "replacement of a differentiated cell type by another cell type to withstand adverse conditions"
+        },
+        {
+            "text": "match `f(free radical)` to the enzyme that reduces/stabilizes it",
+            "question": "f(superoxide)",
+            "answer": "superoxide dismutase"
+        },
+        {
+            "text": "match `f(free radical)` to the enzyme that reduces/stabilizes it",
+            "question": "f(hydrogen peroxide)",
+            "answer": "catalase"
+        },
+        {
+            "text": "match `f(free radical)` to the enzyme that reduces/stabilizes it",
+            "question": "f(hydroxyl radical)",
+            "answer": "glutathione peroxidase"
+        }
+    ]
+}
