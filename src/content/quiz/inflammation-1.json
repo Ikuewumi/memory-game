@@ -1,0 +1,88 @@
+{
+    "title": "Inflammation",
+    "type": "dcq",
+    "author": "ayobami",
+    "course": "chem-path",
+    "date": "2024-07-23 22:40",
+    "description": "Some questions on the body's response to tissue injury; inflammation!",
+    "difficulty": "medium",
+    "questions": [
+        {
+            "question": "In the acute inflammatory response, there is a prolonged vasoconstriction",
+            "answer": "false"
+        },
+        {
+            "question": "L-selectin, on the leukocyte surfaces help them bind to the endothelial wall",
+            "answer": "true"
+        },
+        {
+            "question": "neutrophils are the first responders at an inflammatory site",
+            "answer": "true"
+        },
+        {
+            "question": "degranulation is the major way a neutrophil kills pathogens",
+            "answer": "false"
+        },
+        {
+            "question": "diapedesis is the movement of lymphocytes from the blood vessel into the extravascular space",
+            "answer": "false"
+        },
+        {
+            "question": "Margination of leucocytes is initiated by chemokines including C5a",
+            "answer": "true"
+        },
+        {
+            "question": "Chronic Granulomatous Inflammation occurs when the body can destroy an injurious agent",
+            "answer": "false"
+        },
+        {
+            "question": "Tuberculosis causes granulomas with central caseous necrosis",
+            "answer": "true"
+        },
+        {
+            "question": "Collagen type III is the type involved in the initial stage of wound healing",
+            "answer": "true"
+        },
+        {
+            "text": "The following is a classic sign of inflammation",
+            "question": "Pallor",
+            "answer": "false"
+        },
+        {
+            "text": "The following is a classic sign of inflammation",
+            "question": "Tumor",
+            "answer": "true"
+        },
+        {
+            "text": "The following is a classic sign of inflammation",
+            "question": "Stupor",
+            "answer": "false"
+        },
+        {
+            "text": "The following is a classic sign of inflammation",
+            "question": "Dolor",
+            "answer": "true"
+        },
+        {
+            "text": "The following is a classic sign of inflammation",
+            "question": "Rubor",
+            "answer": "true"
+        },
+        {
+            "question": "C-Reactive protein is a negative acute-phase reactant that can indicate ongoing inflammation",
+            "answer": "false"
+        },
+        {
+            "question": "The final phase of wound healing after cell-injury is epithelialization",
+            "answer": "false"
+        },
+        {
+            "question": "The final phase of wound healing after cell-injury is remodelling",
+            "answer": "true"
+        },
+        {
+            "question": "The platelets are the cells responsible for initial response to endothelial injury",
+            "answer": "true"
+        }
+    ]
+}

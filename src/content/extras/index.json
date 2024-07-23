@@ -1,8 +1,8 @@
 {
     "message": "This website is in beta, bugs may occur",
     "featuredQuizzes": [
+        "inflammation-1",
         "cell-injury-1",
-        "virus-groups-2",
-        "virus-groups-1"
+        "virus-groups-2"
     ]
 }
