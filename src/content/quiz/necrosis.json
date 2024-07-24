@@ -1,0 +1,51 @@
+{
+    "title": "Necrosis",
+    "author": "ayobami",
+    "type": "dcq",
+    "course": "chem-path",
+    "date": "2024-07-24 20:30",
+    "description": "Reviewing your knowledge about one of the ways a cell goes to die; necrosis",
+    "difficulty": "medium",
+    "questions": [
+        {
+            "question": "Necrosis is an active process of cell destruction",
+            "answer": "false"
+        },
+        {
+            "question": "The affected cell swells in necrosis due to influx of solute and water",
+            "answer": "true"
+        },
+        {
+            "question": "In liquefactive necrosis, the organ maintains its integrity / architecture",
+            "answer": "false"
+        },
+        {
+            "question": "In the brain, necrosis usually takes the form of Liquefactive Necrosis due to high levels of microglia",
+            "answer": "true"
+        },
+        {
+            "question": "In the limbs, tissue death is usually termed Gangrenous Necrosis",
+            "answer": "true"
+        },
+        {
+            "question": "When a dry gangrene becomes infected, it becomes a type of liquefactive necrosis",
+            "answer": "true"
+        },
+        {
+            "question": "Caseous Necrosis is a specialized type of necrosis that happens in the legs during a Tuberculosis infection, with a 'cheese-like consistency'",
+            "answer": "false"
+        },
+        {
+            "question": "Enzymatic Digestion is the dominant force in coagulative necrosis",
+            "answer": "false"
+        },
+        {
+            "question": "Protein Denaturation is the dominant force in coagulative necrosis",
+            "answer": "true"
+        },
+        {
+            "question": "When severe ischemia occurs to most organs, liquefactive necrosis occurs",
+            "answer": "false"
+        }
+    ]
+}

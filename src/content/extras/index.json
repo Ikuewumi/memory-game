@@ -1,8 +1,8 @@
 {
     "message": "This website is in beta, bugs may occur",
     "featuredQuizzes": [
+        "necrosis",
         "inflammation-1",
-        "cell-injury-1",
-        "virus-groups-2"
+        "cell-injury-1"
     ]
 }
