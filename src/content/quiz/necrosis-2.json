@@ -1,0 +1,50 @@
+{
+    "title": "Necrosis 2",
+    "author": "ayobami",
+    "course": "chem-path",
+    "date": "2024-07-24 21:00",
+    "description": "Definition of Terms relating to cell death",
+    "difficulty": "medium",
+    "questions": [
+        {
+            "text": "match `t(terminology)` to its meaning",
+            "question": "t(necrosis)",
+            "answer": "a passive process in which cells are destoyed"
+        },
+        {
+            "text": "match `t(terminology)` to its meaning",
+            "question": "t(coagulative necrosis)",
+            "answer": "a type of necrosis where the architecture of the necrotic tissue is preserved. Caused mainly by protein denaturation."
+        },
+        {
+            "text": "match `t(terminology)` to its meaning",
+            "question": "t(liquefactive necrosis)",
+            "answer": "a type of necrosis where the tissue gets liquefied due to enzymatic digestion forming pus."
+        },
+        {
+            "text": "match `t(terminology)` to its meaning",
+            "question": "t(fat necrosis)",
+            "answer": "specialized fat tissue destruction mainly caused by unregulated release of pancreatic lipases as in acute pancreatitis"
+        },
+        {
+            "text": "match `t(terminology)` to its meaning",
+            "question": "t(gangrenous necrosis)",
+            "answer": "a specialized type of coagulative necrosis that occurs in the extremeties"
+        },
+        {
+            "text": "match `t(terminology)` to its meaning",
+            "question": "t(dystrophic calcification)",
+            "answer": "This occurs when Calcium gets deposited into tissue. It is one of the outcomes of necrosis"
+        },
+        {
+            "text": "match `t(terminology)` to its meaning",
+            "question": "t(enzymatic digestion)",
+            "answer": "Degradation of tissue due to enzymes usually from leukocytes. It is another outcome of necrosis"
+        },
+        {
+            "text": "match `t(terminology)` to its meaning",
+            "question": "t(pyknosis)",
+            "answer": "Shrinkage of the cell nucleus"
+        }
+    ]
+}
