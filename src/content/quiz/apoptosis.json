@@ -1,0 +1,94 @@
+{
+    "title": "Apoptosis",
+    "author": "ayobami",
+    "type": "dcq",
+    "course": "chem-path",
+    "date": "2024-07-26 04:44",
+    "description": "Reviewing your knowledge about one of the ways a cell goes to die; apoptosis",
+    "difficulty": "medium",
+    "questions": [
+        {
+            "question": "Caspases contain aspartate in their active site and cleave cysteine residues",
+            "answer": "false"
+        },
+        {
+            "question": "In apoptosis, there is shrinkage of the cell due to the destruction of the cytoskeleton",
+            "answer": "true"
+        },
+        {
+            "question": "BAX and BAK, the pro-apoptotic proteins work in the apoptotic extrinsic pathway to increase the permeability of the outer mitochondrial membrane",
+            "answer": "false"
+        },
+        {
+            "question": "In the mitochondrial pathway, when cytochrome C is released, it immediately binds to and cleaves pro-caspase 9",
+            "answer": "false"
+        },
+        {
+            "question": "In the mitochondrial pathway, when cytochrome C is released, it binds to Apoptosis activating factor-1 (APAF-1) to create an apoptosome",
+            "answer": "true"
+        },
+        {
+            "question": "An apoptosome's function is to cleave procaspase-9 into caspase-9",
+            "answer": "true"
+        },
+        {
+            "question": "Caspase 9, 3, and 10 are all initiation caspases",
+            "answer": "false"
+        },
+        {
+            "question": "Caspase 6, 9, and 10 are all initiation caspases",
+            "answer": "false"
+        },
+        {
+            "question": "Caspase 9, 8, and 10 are all initiation caspases",
+            "answer": "true"
+        },
+        {
+            "question": "Apoptotic cell fragments express phosphatidylserine on their membranes that mediate their phagocytosis",
+            "answer": "true"
+        },
+        {
+            "question": "Apoptosis in a particular site typically does not stimulate release of pro-inflammatory cytokines",
+            "answer": "true"
+        },
+        {
+            "question": "Efferocytosis is the process of apoptotic cell component enzymatic digestion by caspases",
+            "answer": "false"
+        },
+        {
+            "question": "The execution caspases, 3 and 8, help cleave cell components",
+            "answer": "false"
+        },
+        {
+            "question": "In the extrinsic pathway, apoptosis is mediated by death receptors",
+            "answer": "true"
+        },
+        {
+            "text": "TNF-1 (A), FAS-Ligand (B), FAS (C), DISC (D), TNFR-1 (E)",
+            "question": "A and C are substances that can bind to death receptors",
+            "answer": "false"
+        },
+        {
+            "text": "TNF-1 (A), FAS-Ligand (B), FAS (C), DISC (D), TNFR-1 (E)",
+            "question": "A and B are substances that can bind to death receptors",
+            "answer": "true"
+        },
+        {
+            "text": "TNF-1 (A), FAS-Ligand (B), FAS (C), DISC (D), TNFR-1 (E)",
+            "question": "C and E are death receptors",
+            "answer": "true"
+        },
+        {
+            "question": "When a death domain is activated, there is cleavage of caspase-7 or 9",
+            "answer": "false"
+        },
+        {
+            "question": "When a death domain is activated, there is cleavage of caspase-8 or 10",
+            "answer": "true"
+        },
+        {
+            "question": "When apoptosis is followed by release of Interleukin-1 (IL-1), it is called pyroptosis",
+            "answer": "true"
+        }
+    ]
+}
