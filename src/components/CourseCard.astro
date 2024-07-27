@@ -1,97 +1,76 @@
 ---
-import type {CourseCardProps} from "@/types"
-
+import type { CourseCardProps } from "@/types";
 
 interface Props {
-    data: CourseCardProps
+    data: CourseCardProps;
 }
 
-
-const { data } = Astro.props 
-const svgLink = `#${data.icon}`
-const svgViewBox = `0 0 ${data.iconSize} ${data.iconSize}`
-const courseLink = `/courses/${data.courseLink}`
-
+const { data } = Astro.props;
+const svgLink = `#${data.icon}`;
+const svgViewBox = `0 0 ${data.iconSize} ${data.iconSize}`;
+const courseLink = `/courses/${data.courseLink}`;
 ---
 
-
 <div class="course-card">
-    
     <svg class="course-card-icon" viewBox={svgViewBox}>
         <use href={svgLink}></use>
     </svg>
 
-        <a href={courseLink} class="course-card-title-link">
-            <h2 class="course-card-title">{data.title}</h2>
-        </a>
-        <p class="course-card-description">{data.description}</p>
-
-
-
-
+    <a href={courseLink} class="course-card-title-link">
+        <h2 class="course-card-title">{data.title}</h2>
+    </a>
+    <p class="course-card-description">{data.description}</p>
 </div>
 
-
-
 <style lang="scss">
+    .course-card {
+        display: grid;
+        gap: 0.2rem;
+        justify-content: start;
+        place-items: center;
+        background: var(--clr-white);
+        padding: 0.5rem 1rem 1.25rem;
+        border: var(--border);
+        border-radius: 0.75rem;
+        position: relative;
+        height: fit-content;
+        overflow: hidden;
 
-.course-card {
+        @media (min-width: 800px) {
+            padding: 0.6rem 1rem 1.15rem;
+        }
 
-    display: grid;
-    gap: 0.2rem;
-    justify-content: start;
-    place-items: center;
-    background: var(--clr-white);
-    padding: 0.5rem 1rem 1.25rem;
-    border: var(--border);
-    border-radius: 0.75rem;
-    position: relative;
-    height: fit-content;
-    overflow: hidden;
+        &-icon {
+            --icon-size: 100px;
+            color: var(--text-gradient-fallback);
+            filter: opacity(0.15);
+            position: absolute;
+            inset: 0 0 auto auto;
+            pointer-events: none;
+        }
 
+        &-title-link {
+            display: flex;
+            justify-self: start;
+            text-decoration: none;
 
-    @media (min-width: 800px) {
-        padding: 0.6rem 1rem 1.15rem;
-    }
+            &:hover,
+            &:focus-visible {
+                text-decoration: 3px underline var(--clr-black);
+            }
+        }
 
+        &-title {
+            text-transform: capitalize;
+            font-size: var(--step-3);
+            font-weight: 600;
+            line-height: 1;
+        }
 
-
-    &-icon {
-        --icon-size: 100px;
-        color: var(--text-gradient-fallback);
-        filter: opacity(0.15);
-        position: absolute;
-        inset: 0 0 auto auto;
-        pointer-events: none;
-    }
-
-    &-title-link {
-        display: flex;
-        justify-self: start;
-        text-decoration: none;
-
-        &:hover, &:focus-visible {
-            text-decoration: 3px underline var(--clr-black);
+        &-description {
+            margin-top: 0;
+            font-size: var(--step-n0);
+            line-height: 1.4;
         }
     }
-
-
-    &-title {
-        text-transform: capitalize;
-        font-size: var(--step-3);
-        font-weight: 600;
-        line-height: 1.1;
-    }
-
-    &-description {
-        margin-top: 0;
-        font-size: var(--step-n0);
-        line-height: 1.4;
-    }
-
-
-}
-
-
-
 </style>

@@ -1,8 +1,8 @@
 {
     "message": "This website is in beta, bugs may occur",
     "featuredQuizzes": [
+        "bone-marrow",
         "apoptosis",
-        "necrosis",
-        "inflammation-1"
+        "necrosis"
     ]
 }

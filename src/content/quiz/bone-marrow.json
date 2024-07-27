@@ -1,0 +1,82 @@
+{
+    "title": "Bone Marrow",
+    "author": "ayobami",
+    "type": "dcq",
+    "course": "hematology",
+    "date": "2024-07-27 22:11",
+    "description": "Let's go into the bone and review facts about the bone marrow",
+    "difficulty": "medium",
+    "questions": [
+        {
+            "question": "Bone marrow is found the cortical part of bone",
+            "answer": "false"
+        },
+        {
+            "question": "The bone marrow is about 4% of the body weight",
+            "answer": "true"
+        },
+        {
+            "question": "Yellow marrow is characterized by containing more hematopoietic cells than adipocytes",
+            "answer": "false"
+        },
+        {
+            "question": "Yellow marrow is characterized by containing less hematopoietic cells than adipocytes",
+            "answer": "true"
+        },
+        {
+            "question": "Red marrow is characterized by containing more hematopoietic cells than adipocytes",
+            "answer": "true"
+        },
+        {
+            "question": "A newborns' bone marrow is 100% red marrow",
+            "answer": "true"
+        },
+        {
+            "question": "In adulthood, the bone marrow is 75% red, and 25% yellow marrow",
+            "answer": "false"
+        },
+        {
+            "question": "Yellow marrow, once formed, is permanent.",
+            "answer": "false"
+        },
+        {
+            "question": "During fetal life, the liver is the major organ for hematopoiesis",
+            "answer": "true"
+        },
+        {
+            "question": "In the bone marrow, stromal cells act as main cells in hematopoieisis",
+            "answer": "false"
+        },
+        {
+            "question": "In bone marrow, hemapoiesis takes place in the avascular portion",
+            "answer": "true"
+        },
+        {
+            "question": "Parenchymal cells in the bone marrow create a microenviroment for hematopoiesis to take place",
+            "answer": "false"
+        },
+        {
+            "question": "The bone marrow barrier helps to prevent immature red cells from flooding the blood",
+            "answer": "true"
+        },
+        {
+            "question": "Bone marrow is an organ of the reticuloendothelial system",
+            "answer": "true"
+        },
+        {
+            "text": "cranium(I), clavicle(II), scapula(III), ribs(IV), vertebrae(V), ulna(VI), phalanges(VII), iliac bone(VIII), tibia(IX), femur(X)",
+            "question": "I, II and V are bones where hematopoiesis typically takes place",
+            "answer": "false"
+        },
+        {
+            "text": "cranium(I), clavicle(II), scapula(III), ribs(IV), vertebrae(V), ulna(VI), phalanges(VII), iliac bone(VIII), tibia(IX), femur(X)",
+            "question": "I, III, V, and VIII are the only bones here that typically contain red marrow",
+            "answer": "false"
+        },
+        {
+            "text": "cranium(I), clavicle(II), scapula(III), ribs(IV), vertebrae(V), ulna(VI), phalanges(VII), iliac bone(VIII), tibia(IX), femur(X)",
+            "question": "I, III, IV, V, VIII, IX and X are the only bones here that typically contain red marrow",
+            "answer": "true"
+        }
+    ]
+}
