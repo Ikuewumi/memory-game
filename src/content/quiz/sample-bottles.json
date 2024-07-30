@@ -1,0 +1,51 @@
+{
+    "title": "Sample Bottles",
+    "author": "ayobami",
+    "type": "dcq",
+    "course": "chem-path",
+    "date": "2024-07-30 19:37",
+    "description": "Test your knowledge of sample bottles in this quiz",
+    "difficulty": "medium",
+    "questions": [
+        {
+            "question": "Sodium Oxalate is majorly used as the additive for coagulation tests",
+            "answer": "true"
+        },
+        {
+            "question": "Plain bottles can be used to measure glucose levels",
+            "answer": "false"
+        },
+        {
+            "question": "Fluoride can inhibit hexokinase so it is used as the additive for plasma glucose test",
+            "answer": "false"
+        },
+        {
+            "question": "Fluoride can inhibit enolase so it is used as the additive for plasma glucose test",
+            "answer": "true"
+        },
+        {
+            "question": "In venipuncture, the torniquet should be tied for less than 2 minuites",
+            "answer": "false"
+        },
+        {
+            "question": "The plain bottle is the recommended sample bottle for measuring lipid profile",
+            "answer": "true"
+        },
+        {
+            "question": "While using the EDTA sample bottle, the blood should ideally be made to fill the bottle",
+            "answer": "false"
+        },
+        {
+            "question": "For complete blood count, the EDTA sample bottle is the best choice because it preserves the cells for counting",
+            "answer": "true"
+        },
+        {
+            "question": "Fasting blood glucose test cannot be done in a plain bottle because the red cells use up the glucose",
+            "answer": "true"
+        },
+        {
+            "question": "Fluoride oxalate is the correct choice for a plasma glucose test",
+            "answer": "true"
+        }
+    ]
+}

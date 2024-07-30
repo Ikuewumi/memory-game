@@ -1,0 +1,50 @@
+{
+    "title": "Sample Bottles 2",
+    "author": "ayobami",
+    "course": "chem-path",
+    "date": "2024-07-30 19:39",
+    "description": "part 2",
+    "difficulty": "medium",
+    "questions": [
+        {
+            "question": "A",
+            "answer": "Lithium Heparin Bottle",
+            "image": "https://i.postimg.cc/ydSjNnYL/Vacutainers-Labels-2-2.jpg"
+        },
+        {
+            "question": "D",
+            "answer": "Sodium Citrate Bottle",
+            "image": "https://i.postimg.cc/ydSjNnYL/Vacutainers-Labels-2-2.jpg"
+        },
+        {
+            "question": "C",
+            "answer": "Flouride Oxalate Bottle",
+            "image": "https://i.postimg.cc/ydSjNnYL/Vacutainers-Labels-2-2.jpg"
+        },
+        {
+            "question": "E",
+            "answer": "EDTA Bottle",
+            "image": "https://i.postimg.cc/ydSjNnYL/Vacutainers-Labels-2-2.jpg"
+        },
+        {
+            "question": "F",
+            "answer": "Plain Bottle",
+            "image": "https://i.postimg.cc/ydSjNnYL/Vacutainers-Labels-2-2.jpg"
+        },
+        {
+            "text": "Match `f(additive)` to its mechanism of action",
+            "question": "f(EDTA, Pottasium Oxalate)",
+            "answer": "Chelation of Calcium to prevent coagulation"
+        },
+        {
+            "text": "Match `f(additive)` to its mechanism of action",
+            "question": "f(Sodium Flouride)",
+            "answer": "Inhibition of Enolase"
+        },
+        {
+            "text": "Match `f(additive)` to its mechanism of action",
+            "question": "f(Lithium Heparin)",
+            "answer": "Synergistic activation of antithrombin III to prevent coagulation"
+        }
+    ]
+}

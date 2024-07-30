@@ -1,0 +1,10 @@
+{
+    "title": "Sample Bottles",
+    "description": "Review the sample bottles used in blood collection in this ultra-mini-series",
+    "author": "ayobami",
+    "course": "chem-path",
+    "quizzes": [
+        "sample-bottles",
+        "sample-bottles-2"
+    ]
+}
