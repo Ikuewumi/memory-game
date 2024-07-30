@@ -89,7 +89,7 @@
         width: 100%;
         overflow-x: auto;
         padding: 0 0 0.5rem;
-        overscroll-behavior: contain;
+        overscroll-behavior-x: contain;
         
 	--bg: var(--clr-white);
         --clr: var(--clr-black);
