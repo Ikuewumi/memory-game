@@ -1,0 +1,60 @@
+{
+    "title": "Red Cell Membrane 2",
+    "author": "ayobami",
+    "type": "dcq",
+    "course": "hematology",
+    "date": "2024-08-04 09:33",
+    "description": "Part 2",
+    "difficulty": "medium",
+    "questions": [
+        {
+            "text": "Phosphatidylinositol (PI), phosphatidylcholine (PC), phosphatidylserine (PS), phosphatidylethanolamine (PE), sphingomyelin (SM)",
+            "question": "PI and SM are the predominant phospholipids at the outer monolayer",
+            "answer": "false"
+        },
+        {
+            "text": "Phosphatidylinositol (PI), phosphatidylcholine (PC), phosphatidylserine (PS), phosphatidylethanolamine (PE), sphingomyelin (SM)",
+            "question": "PC and SM are the predominant phospholipids at the outer monolayer",
+            "answer": "true"
+        },
+        {
+            "text": "Phosphatidylinositol (PI), phosphatidylcholine (PC), phosphatidylserine (PS), phosphatidylethanolamine (PE), sphingomyelin (SM)",
+            "question": "PE, PI, and SM are the predominant phospholipids at the inner monolayer",
+            "answer": "false"
+        },
+        {
+            "text": "Phosphatidylinositol (PI), phosphatidylcholine (PC), phosphatidylserine (PS), phosphatidylethanolamine (PE), sphingomyelin (SM)",
+            "question": "PI, PC and PE  are the predominant phospholipids at the inner monolayer",
+            "answer": "false"
+        },
+        {
+            "text": "Phosphatidylinositol (PI), phosphatidylcholine (PC), phosphatidylserine (PS), phosphatidylethanolamine (PE), sphingomyelin (SM)",
+            "question": "PI, PE and PS are the predominant phospholipids at the outer monolayer",
+            "answer": "true"
+        },
+        {
+            "question": "The Red Cell undergoes lipogenesis to renew it's phospholipids",
+            "answer": "false"
+        },
+        {
+            "question": "Glycophprins give the red cell's membrane a negative charge called the zeta potential",
+            "answer": "true"
+        },
+        {
+            "question": "Red Cells renew their lipids through exchange with the plasma",
+            "answer": "true"
+        },
+        {
+            "question": "Macrophages phagocytose red cells that express phosphatidylserine on the outer leaflet of the cell membrane",
+            "answer": "true"
+        },
+        {
+            "question": "Integral Proteins form more of the membrane proteins than Peripheral Proteins",
+            "answer": "true"
+        },
+        {
+            "question": "The zeta potential of a red cell's membrane is responsible for attachment of the red cell to the vascular endothelium",
+            "answer": "false"
+        }
+    ]
+}

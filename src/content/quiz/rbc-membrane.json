@@ -1,0 +1,118 @@
+{
+    "title": "Red Cell Membrane",
+    "author": "ayobami",
+    "course": "hematology",
+    "date": "2024-08-04 08:41",
+    "description": "A quiz to review your knowledge on the membrane of Red Blood Cell",
+    "difficulty": "hard",
+    "questions": [
+        {
+            "question": "B",
+            "answer": "6-8µm",
+            "image": "https://i.postimg.cc/XNgQXq40/Red-Cell-Morphology.jpg"
+        },
+        {
+            "question": "A",
+            "answer": "~2.5µm",
+            "image": "https://i.postimg.cc/XNgQXq40/Red-Cell-Morphology.jpg"
+        },
+        {
+            "question": "C",
+            "answer": "~1µm",
+            "image": "https://i.postimg.cc/XNgQXq40/Red-Cell-Morphology.jpg"
+        },
+        {
+            "question": "Hb molecule count",
+            "answer": "about 270E6"
+        },
+        {
+            "question": "Average RBC Surface Area in µ^2",
+            "answer": "140"
+        },
+        {
+            "question": "Mean Corpuscular Volume in fL",
+            "answer": "76 to 96"
+        },
+        {
+            "question": "RBC Life Span in days",
+            "answer": "90 to 150"
+        },
+        {
+            "question": "Male absolute red cell count per liter",
+            "answer": "(4.5 to 6.5)E12"
+        },
+        {
+            "question": "Female absolute red cell count per liter",
+            "answer": "(3.5 to 5.8)E12"
+        },
+        {
+            "question": "The RBC membrane's lipid percentage",
+            "answer": "40%"
+        },
+        {
+            "question": "The RBC membrane's carbohydrates percentage",
+            "answer": "10%"
+        },
+        {
+            "question": "The RBC membrane's protein percentage",
+            "answer": "50%"
+        },
+        {
+            "question": "Peripheral Proteins",
+            "answer": "Horizontal Interactions"
+        },
+        {
+            "question": "Integral Proteins",
+            "answer": "Vertical Interactions"
+        },
+        {
+            "question": "Outer layer of RBC membrane",
+            "answer": "glycocalyx"
+        },
+        {
+            "question": "Middle layer of RBC membrane",
+            "answer": "lipid-bilayer"
+        },
+        {
+            "question": "Inner layer of RBC membrane",
+            "answer": "proteins"
+        },
+        {
+            "question": "Enzymes that intercalate phospholipids from outside to inside with energy",
+            "answer": "flippases"
+        },
+        {
+            "question": "Enzymes that intercalate phospholipids from inside to outside with energy",
+            "answer": "floppases"
+        },
+        {
+            "question": "Enzymes that intercalate phospholipids in both directions without energy",
+            "answer": "scramblases"
+        },
+        {
+            "text": "match a phospholipid to its percentage in the bilayer",
+            "question": "phosphatidylcholine",
+            "answer": "30%"
+        },
+        {
+            "text": "match a phospholipid to its percentage in the bilayer",
+            "question": "sphingomyelin",
+            "answer": "25%"
+        },
+        {
+            "text": "match a phospholipid to its percentage in the bilayer",
+            "question": "phosphatidylethanolamine",
+            "answer": "28%"
+        },
+        {
+            "text": "match a phospholipid to its percentage in the bilayer",
+            "question": "phosphatidylserine",
+            "answer": "14%"
+        },
+        {
+            "text": "match a phospholipid to its percentage in the bilayer",
+            "question": "phosphatidylinositol",
+            "answer": "3%"
+        }
+    ]
+}
