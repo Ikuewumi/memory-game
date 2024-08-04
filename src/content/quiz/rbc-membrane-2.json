@@ -29,7 +29,7 @@
         },
         {
             "text": "Phosphatidylinositol (PI), phosphatidylcholine (PC), phosphatidylserine (PS), phosphatidylethanolamine (PE), sphingomyelin (SM)",
-            "question": "PI, PE and PS are the predominant phospholipids at the outer monolayer",
+            "question": "PI, PE and PS are the predominant phospholipids at the inner monolayer",
             "answer": "true"
         },
         {
