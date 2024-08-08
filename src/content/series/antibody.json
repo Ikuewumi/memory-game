@@ -1,0 +1,10 @@
+{
+    "title": "The Antibody",
+    "description": "Let's examine ourselves on immunoglobulins in this ultra-mini-series",
+    "author": "ayobami",
+    "course": "chem-path",
+    "quizzes": [
+        "antibody",
+        "antibody-2"
+    ]
+}

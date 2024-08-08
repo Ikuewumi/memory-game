@@ -1,8 +1,8 @@
 {
     "message": "This website is in beta, bugs may occur",
     "featuredQuizzes": [
+        "antibody",
         "rbc-membrane",
-        "sample-bottles",
-        "bone-marrow"
+        "sample-bottles"
     ]
 }
