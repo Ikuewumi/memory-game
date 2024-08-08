@@ -1,0 +1,55 @@
+{
+    "title": "Antibody 2",
+    "author": "ayobami",
+    "course": "chem-path",
+    "date": "2024-08-07 16:04",
+    "description": "Part two",
+    "difficulty": "medium",
+    "questions": [
+        {
+            "image": "https://i.postimg.cc/nV1q47TF/Antibody-1.jpg",
+            "question": "N",
+            "answer": "antigen-binding site"
+        },
+        {
+            "image": "https://i.postimg.cc/nV1q47TF/Antibody-1.jpg",
+            "question": "J and M",
+            "answer": "light chain"
+        },
+        {
+            "image": "https://i.postimg.cc/nV1q47TF/Antibody-1.jpg",
+            "question": "L",
+            "answer": "hinge region"
+        },
+        {
+            "image": "https://i.postimg.cc/nV1q47TF/Antibody-1.jpg",
+            "question": "F, A, C and E",
+            "answer": "heavy chain"
+        },
+        {
+            "image": "https://i.postimg.cc/nV1q47TF/Antibody-1.jpg",
+            "question": "K",
+            "answer": "Fab"
+        },
+        {
+            "image": "https://i.postimg.cc/nV1q47TF/Antibody-1.jpg",
+            "question": "O",
+            "answer": "Fc"
+        },
+        {
+            "text": "match the `v(immunoglobulin)` to its valence",
+            "question": "v(Secretory IgA)",
+            "answer": "4"
+        },
+        {
+            "text": "match the `v(immunoglobulin)` to its valence",
+            "question": "v(Receptor IgM)",
+            "answer": "2"
+        },
+        {
+            "text": "match the `v(immunoglobulin)` to its valence",
+            "question": "v(Serum IgM)",
+            "answer": "10"
+        }
+    ]
+}

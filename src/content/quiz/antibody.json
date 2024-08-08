@@ -1,0 +1,101 @@
+{
+    "title": "Antibody",
+    "type": "dcq",
+    "author": "ayobami",
+    "course": "chem-path",
+    "date": "2024-08-07 16:04",
+    "description": "Reviewing the tiny antibody",
+    "difficulty": "medium",
+    "questions": [
+        {
+            "question": "Immunoglobulins are specialized glycoproteins",
+            "answer": "true"
+        },
+        {
+            "question": "The part of the antibody that makes contact with an antigen is the epitope",
+            "answer": "false"
+        },
+        {
+            "question": "IgG4 cannot activate the classical complement pathway",
+            "answer": "true"
+        },
+        {
+            "text": "From the best to the worst at activating the classical complement pathway, these are the IgG subclasses",
+            "question": "3 > 2 > 1 > 4",
+            "answer": "true"
+        },
+        {
+            "text": "From the best to the worst at activating the classical complement pathway, these are the IgG subclasses",
+            "question": "2 > 1 > 3 > 4",
+            "answer": "false"
+        },
+        {
+            "text": "From the best to the worst at activating the classical complement pathway, these are the IgG subclasses",
+            "question": "1 > 2 > 3 > 4",
+            "answer": "false"
+        },
+        {
+            "question": "When IgM is secreted, it is pentameric in nature",
+            "answer": "true"
+        },
+        {
+            "question": "Secretory IgA is predominantly in monomeric from",
+            "answer": "false"
+        },
+        {
+            "question": "IgG2 has the best ability to cross the placenta barrier",
+            "answer": "false"
+        },
+        {
+            "question": "IgM has 5 isotypes",
+            "answer": "false"
+        },
+        {
+            "question": "An antigen cannot have multiple epitopes",
+            "answer": "false"
+        },
+        {
+            "question": "IgE has the highest carbohydrate content among the immunoglobulins",
+            "answer": "false"
+        },
+        {
+            "question": "IgD has the highest carbohydrate content among the immunoglobulins",
+            "answer": "true"
+        },
+        {
+            "image": "https://i.postimg.cc/nV1q47TF/Antibody-1.jpg",
+            "question": "E, C, A and F make up the heavy chain",
+            "answer": "true"
+        },
+        {
+            "image": "https://i.postimg.cc/nV1q47TF/Antibody-1.jpg",
+            "question": "E, C, A and F make up the constant portion",
+            "answer": "false"
+        },
+        {
+            "image": "https://i.postimg.cc/nV1q47TF/Antibody-1.jpg",
+            "question": "J and H make up the light chain",
+            "answer": "false"
+        },
+        {
+            "question": "IgA has 1 subtype",
+            "answer": "false"
+        },
+        {
+            "question": "IgM has 5 subtypes",
+            "answer": "false"
+        },
+        {
+            "question": "IgM has 1 subtype",
+            "answer": "true"
+        },
+        {
+            "question": "IgA has 2 subtypes",
+            "answer": "true"
+        },
+        {
+            "question": "IgG has 4 subtypes",
+            "answer": "true"
+        }
+    ]
+}
