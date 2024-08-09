@@ -1,0 +1,59 @@
+{
+  "title": "Lymphocytes Development, Types and Function",
+  "author": "zealina",
+  "course": "chem-path",
+  "date": "2024-08-09 21:00",
+  "description": "Test your understanding of lymphocytes types, development and functions",
+  "difficulty": "easy",
+  "type": "dcq",
+  "questions": [
+    {
+      "question": "Small lymphocytes typically measure 10-12 μm in diameter",
+      "answer": "true"
+    },
+    {
+      "question": "The light and heavy chains of the immunoglobulins are coded on Chromosome 8 and 14 respectively",
+      "answer": "false"
+    },
+    {
+      "question": "Natural Killer T cells express both TCR and NK receptors",
+      "answer": "true"
+    },
+    {
+      "question": "The cytoplasm of lymphocytes often stains red in fixed preparations",
+      "answer": "false"
+    },
+    {
+      "question": "Prothymocytes undergo positive selection in the bone marrow and negative selection in the thymus",
+      "answer": "false"
+    },
+    {
+      "question": "Lymphocytes have high cytoplasm to nuclear ratio",
+      "answer": "false"
+    },
+    {
+      "question": "Secondary lymphoid organs are sites where lymphocytes encounter antigens",
+      "answer": "true"
+    },
+    {
+      "question": "Large lymphocytes have cytoplasmic granules",
+      "answer": "true"
+    },
+    {
+      "question": "10-15% of prothymocytes survive thymic selection",
+      "answer": "false"
+    },
+    {
+      "question": "The pre-B cell is the earliest recognizable precursor of a B cell",
+      "answer": "false"
+    },
+    {
+      "question": "The spleen, Peyer's patch and thymus are secondary lymphoid organs",
+      "answer": "false"
+    },
+    {
+      "question": "Lymphatic channels moves the prothymocyte to the Thymus",
+      "answer": "false"
+    }
+  ]
+}
