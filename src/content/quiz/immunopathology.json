@@ -1,0 +1,75 @@
+{
+  "title": "Immunopathology, Act I",
+  "author": "ayobami",
+  "course": "morbid",
+  "date": "2024-08-10 12:16",
+  "description": "Review your knowledge of the various components of the immune system",
+  "difficulty": "medium",
+  "type": "dcq",
+  "questions": [
+    {
+      "question": "Toll-like receptors are pattern recognition receptors for cell damage and necrotic products",
+      "answer": "false"
+    },
+    {
+      "question": "Innate immunity has antigenic speficity, but not immunological memory",
+      "answer": "false"
+    },
+    {
+      "question": "The classical complement pathway is not a part of the innate immune system",
+      "answer": "true"
+    },
+    {
+      "question": "The humoral branch of adaptive immunity is protective mainly against extracellular microbes and toxins",
+      "answer": "true"
+    },
+    {
+      "question": "Cellular immunity is mediated by B lymphocytes",
+      "answer": "false"
+    },
+    {
+      "question": "Interdigitating Dendritic Cells are located all over the body tissues",
+      "answer": "true"
+    },
+    {
+      "question": "Immature dendritic cells in the liver are called Langerhans cells",
+      "answer": "false"
+    },
+    {
+      "question": "Immature dendritic cells in the skin are called Langerhans cells",
+      "answer": "true"
+    },
+    {
+      "question": "Dendritic Cells are non-phagocytic",
+      "answer": "true"
+    },
+    {
+      "question": "The portions of α-chain of MHC-I molecules are coded for by the HLA-A, HLA-B, and HLA-DR genes",
+      "answer": "false"
+    },
+    {
+      "question": "The portions of α-chain of MHC-I molecules are coded for by the HLA-A, HLA-B, and HLA-C genes",
+      "answer": "true"
+    },
+    {
+      "question": "The portions of α-chain of MHC-II molecules are coded for by the HLA-DP, HLA-DQ, and HLA-DR genes",
+      "answer": "true"
+    },
+    {
+      "question": "The portions of α-chain of MHC-II molecules are coded for by the HLA-DQ, HLA-DR, and HLA-DS genes",
+      "answer": "false"
+    },
+    {
+      "question": "CD-4+ T cells are MHC-II restricted",
+      "answer": "true"
+    },
+    {
+      "question": "CD-8+ T cells are MHC-II restricted",
+      "answer": "false"
+    },
+    {
+      "question": "The MHC-II receptor is located on all cells in the body, while the MHC-I receptor is located on dendritic cells, macrophages, and B cells",
+      "answer": "false"
+    }
+  ]
+}

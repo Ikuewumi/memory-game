@@ -1,8 +1,8 @@
 {
     "message": "This website is in beta, bugs may occur",
     "featuredQuizzes": [
-	"lymphocyte-structure-and-function",
-        "antibody",
-        "rbc-membrane"
+        "immunopathology",
+        "lymphocyte-structure-and-function",
+        "antibody"
     ]
 }
