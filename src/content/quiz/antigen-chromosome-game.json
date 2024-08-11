@@ -1,0 +1,91 @@
+{
+  "title": "Antigens and Chromosomes",
+  "author": "zealina",
+  "course": "chem-path",
+  "date": "2024-08-10 21:00",
+  "description": "Which chromosome holds the genes...",
+  "difficulty": "medium",
+  "type": "dcq",
+  "questions": [
+    {
+      "question": "The ABO blood group antigen located on chromosome 9?",
+      "answer": "true"
+    },
+    {
+      "question": "The ABO blood group antigen located on chromosome 1?",
+      "answer": "false"
+    },
+    {
+      "question": "The Rh blood group antigen located on chromosome 1?",
+      "answer": "true"
+    },
+    {
+      "question": "The Rh blood group antigen located on chromosome 9?",
+      "answer": "false"
+    },
+    {
+      "question": "The MNS blood group antigen located on chromosome 4?",
+      "answer": "true"
+    },
+    {
+      "question": "The MNS blood group antigen located on chromosome 9?",
+      "answer": "false"
+    },
+    {
+      "question": "The P blood group antigen located on chromosome 22?",
+      "answer": "false"
+    },
+    {
+      "question": "The P blood group antigen located on chromosome 3?",
+      "answer": "true"
+    },
+    {
+      "question": "The Lutheran blood group antigen located on chromosome 19?",
+      "answer": "true"
+    },
+    {
+      "question": "The Lutheran blood group antigen located on chromosome 7?",
+      "answer": "false"
+    },
+    {
+      "question": "The Kell blood group antigen located on chromosome 7?",
+      "answer": "true"
+    },
+    {
+      "question": "The Kell blood group antigen located on chromosome 2?",
+      "answer": "false"
+    },
+    {
+      "question": "The Lewis blood group antigen located on chromosome 19?",
+      "answer": "true"
+    },
+    {
+      "question": "The Lewis blood group antigen located on chromosome 9?",
+      "answer": "false"
+    },
+    {
+      "question": "The Duffy blood group antigen located on chromosome 1?",
+      "answer": "true"
+    },
+    {
+      "question": "The Duffy blood group antigen located on chromosome 4?",
+      "answer": "false"
+    },
+    {
+      "question": "The Kidd blood group antigen located on chromosome 18?",
+      "answer": "true"
+    },
+    {
+      "question": "The Kidd blood group antigen located on chromosome 12?",
+      "answer": "false"
+    },
+    {
+      "question": "The Diego blood group antigen located on chromosome 17?",
+      "answer": "true"
+    },
+    {
+      "question": "The Diego blood group antigen located on chromosome 22?",
+      "answer": "false"
+    }
+  ]
+}

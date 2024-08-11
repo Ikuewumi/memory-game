@@ -2,7 +2,7 @@
     "message": "This website is in beta, bugs may occur",
     "featuredQuizzes": [
         "immunopathology",
-	"antigen-chromosome-game.json",
+	"antigen-chromosome-game",
         "lymphocyte-structure-and-function"
     ]
 }
