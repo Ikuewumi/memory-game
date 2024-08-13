@@ -1,0 +1,10 @@
+{
+    "title": "Immunopathology",
+    "description": "Reviewing the immune system in this series",
+    "author": "ayobami",
+    "course": "morbid",
+    "quizzes": [
+        "immunopathology",
+        "immunopathology-2"
+    ]
+}

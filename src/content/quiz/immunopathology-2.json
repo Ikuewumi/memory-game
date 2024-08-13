@@ -1,0 +1,131 @@
+{
+  "title": "Immuno-pathology, Act II",
+  "author": "ayobami",
+  "course": "morbid",
+  "date": "2024-08-13 17:36",
+  "description": "Review your knowledge of the various processes of the immune system",
+  "difficulty": "medium",
+  "type": "dcq",
+  "questions": [
+    {
+      "question": "Genes encoding HLA molecules are located on chromosome 9",
+      "answer": "false"
+    },
+    {
+      "question": "Genes encoding HLA molecules are located on chromosome 6",
+      "answer": "true"
+    },
+    {
+      "question": "The first step in immune response is antigen recognition",
+      "answer": "true"
+    },
+    {
+      "question": "The first step in immune response is activation of specific lymphocytes",
+      "answer": "false"
+    },
+    {
+      "question": "After antigen recognition, the next step in the immune response is specific lymphocytes' activation",
+      "answer": "true"
+    },
+    {
+      "question": "Immediately following lymphocytes' activation, the activated lymphocytes eliminate the antigen",
+      "answer": "false"
+    },
+    {
+      "question": "The next step following lymphocyte activation is proliferation into memory, and effector cells",
+      "answer": "true"
+    },
+    {
+      "question": "60% of mature T cells are CD8+, and 30% are CD4+",
+      "answer": "false"
+    },
+    {
+      "question": "60% of mature T cells are CD4+, and 30% are CD8+",
+      "answer": "true"
+    },
+    {
+      "question": "Activation of naive T cells leads to autocrine stimulation with IL-3",
+      "answer": "false"
+    },
+    {
+      "question": "Activation of naive T cells leads to autocrine stimulation with IL-7",
+      "answer": "false"
+    },
+    {
+      "question": "Activation of naive T cells leads to autocrine stimulation with IL-2",
+      "answer": "true"
+    },
+    {
+      "question": "Th2 CD4+ T cells secrete gamma-interferon",
+      "answer": "false"
+    },
+    {
+      "question": "Th1 CD4+ T cells secrete gamma-interferon",
+      "answer": "true"
+    },
+    {
+      "question": "Th1 CD4+ T cells secrete eotaxin",
+      "answer": "false"
+    },
+    {
+      "question": "Th2 CD4+ T cells secrete IL-4 and IL-5",
+      "answer": "true"
+    },
+    {
+      "question": "Th17 CD4+ T cells secrete IL-7 and IL-10",
+      "answer": "false"
+    },
+    {
+      "question": "Th17 CD4+ T cells secrete IL-17",
+      "answer": "true"
+    },
+    {
+      "question": "Th2 CD4+ T cells secrete eotaxin",
+      "answer": "true"
+    },
+    {
+      "question": "IFN-γ's function is to recruit monocytes and neutrophils",
+      "answer": "false"
+    },
+    {
+      "question": "IL-4's function is to recruit monocytes and neutrophils",
+      "answer": "false"
+    },
+    {
+      "question": "IFN-γ's function is to recruit eosinophils",
+      "answer": "false"
+    },
+    {
+      "question": "IFN-γ's function is to activate macrophages",
+      "answer": "true"
+    },
+    {
+      "question": "IL-5's function is to recruit monocytes and neutrophils",
+      "answer": "false"
+    },
+    {
+      "question": "IL-4's function is to stimulate differentiation of B cells into Ig-E secreting plasma cells",
+      "answer": "true"
+    },
+    {
+      "question": "IL-17's function is to recruit monocytes and neutrophils",
+      "answer": "true"
+    },
+    {
+      "question": "IL-2's function is to stimulate proliferation of newly-activated T cells",
+      "answer": "true"
+    },
+    {
+      "question": "T-dependent B lymphocytes can only get activated when their CD-40 ligand binds to a CD-40 receptor on a CD4+ T cell",
+      "answer": "false"
+    },
+    {
+      "question": "T-dependent B lymphocytes can only get activated when their CD-40 receptor is bound to by a CD-40 ligand on a CD4+ T cell",
+      "answer": "true"
+    },
+    {
+      "question": "T-dependent B lymphocytes can only get activated when their CD-40 receptor is bound to by a CD-40 ligand on a CD8+ T cell",
+      "answer": "false"
+    }
+  ]
+}
