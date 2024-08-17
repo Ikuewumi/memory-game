@@ -1,0 +1,87 @@
+{
+  "title": "Iron Metabolism",
+  "author": "ayobami",
+  "course": "hematology",
+  "date": "2024-08-15 21:07",
+  "description": "Iron Metabolism Here",
+  "difficulty": "medium",
+  "type": "dcq",
+  "questions": [
+    {
+      "question": "The iron content in a physiologic adult female is 40mg/kg",
+      "answer": "true"
+    },
+    {
+      "question": "The iron content in a physiologic adult male is 40mg/kg",
+      "answer": "false"
+    },
+    {
+      "question": "Transferrin is a 465kDa glycoprotein that stores iron",
+      "answer": "false"
+    },
+    {
+      "question": "Transferrin is a 76kDa protein that transports iron",
+      "answer": "false"
+    },
+    {
+      "question": "Transferrin is a 76kDa glycoprotein that transports iron",
+      "answer": "true"
+    },
+    {
+      "question": "Ferritin is a 465kDa protein that transports iron in the blood",
+      "answer": "false"
+    },
+    {
+      "question": "Ferritin is a 465kDa protein that stores iron in the tissue",
+      "answer": "true"
+    },
+    {
+      "question": "Hemosiderrin is water-soluble, while Ferritin is water-insoluble",
+      "answer": "false"
+    },
+    {
+      "question": "Hemosiderrin is water-insoluble, while Ferritin is water-soluble",
+      "answer": "true"
+    },
+    {
+      "question": "Serum Transferrin Receptors are decreased in Iron Deficiency",
+      "answer": "false"
+    },
+    {
+      "question": "Serum Transferrin Receptors are increased in Iron Deficiency",
+      "answer": "true"
+    },
+    {
+      "question": "Ceruloplasmin catalyzes the reduction of iron from ferrous to ferric state",
+      "answer": "false"
+    },
+    {
+      "question": "Hepcidin is the major hormonal regulator of Iron metabolism",
+      "answer": "true"
+    },
+    {
+      "question": "Hepcidin reduces iron absorption by accelerating the decay of ferritin",
+      "answer": "false"
+    },
+    {
+      "question": "The major route of excreting iron in the human body is through enterocytes shedding",
+      "answer": "true"
+    },
+    {
+      "question": "Iron overload causes decreased synthesis of ferritin and ALA-S with increased TFR1 and DMT-1",
+      "answer": "false"
+    },
+    {
+      "question": "Iron overload causes increased synthesis of ferritin and ALA-S with decreased TFR1 and DMT-1",
+      "answer": "true"
+    },
+    {
+      "question": "In Iron Deficiency Anemia, the iron stores in the bone marrow are reduced",
+      "answer": "false"
+    },
+    {
+      "question": "In Iron Overload, the Total Iron Binding Capacity is reduced",
+      "answer": "true"
+    }
+  ]
+}

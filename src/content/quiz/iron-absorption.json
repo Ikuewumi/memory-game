@@ -1,0 +1,43 @@
+{
+  "title": "Iron Absorption",
+  "author": "ayobami",
+  "course": "hematology",
+  "date": "2024-08-17 16:36",
+  "description": "Here's a schematic of iron absorption...Let's piece it together",
+  "difficulty": "easy",
+  "image": "https://i.postimg.cc/Pf0v0TDx/iron-absorption-1.jpg",
+  "questions": [
+    {
+      "question": "H",
+      "answer": "Ferric (Fe3+) Iron"
+    },
+    {
+      "question": "G",
+      "answer": "Ferrous (Fe2+) Iron"
+    },
+    {
+      "question": "F",
+      "answer": "Duodenal Cytochrome B or Ferrireductase"
+    },
+    {
+      "question": "E",
+      "answer": "Divalent Metal Transporter I"
+    },
+    {
+      "question": "A",
+      "answer": "Ferritin"
+    },
+    {
+      "question": "B",
+      "answer": "Transferrin"
+    },
+    {
+      "question": "D",
+      "answer": "Ferroportin"
+    },
+    {
+      "question": "C",
+      "answer": "Ferroxidase or Hephaestin"
+    }
+  ]
+}

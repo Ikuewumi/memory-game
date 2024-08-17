@@ -1,0 +1,106 @@
+{
+  "title": "Iron Absorption 2",
+  "author": "ayobami",
+  "course": "hematology",
+  "date": "2024-08-17 16:43",
+  "description": "Test yourself on the various factors that can affect iron absorption",
+  "difficulty": "medium",
+  "type": "dcq",
+  "questions": [
+    {
+      "image": "https://i.postimg.cc/NFZsVsPw/iron-absorption-factors-2.jpg",
+      "question": "A1 increases iron absorption",
+      "answer": "false"
+    },
+    {
+      "image": "https://i.postimg.cc/NFZsVsPw/iron-absorption-factors-2.jpg",
+      "question": "A1 decreases iron absorption",
+      "answer": "true"
+    },
+    {
+      "image": "https://i.postimg.cc/NFZsVsPw/iron-absorption-factors-2.jpg",
+      "question": "A2 increases iron absorption",
+      "answer": "true"
+    },
+    {
+      "image": "https://i.postimg.cc/NFZsVsPw/iron-absorption-factors-2.jpg",
+      "question": "A3 decreases iron absorption",
+      "answer": "false"
+    },
+    {
+      "image": "https://i.postimg.cc/NFZsVsPw/iron-absorption-factors-2.jpg",
+      "question": "A3 increases iron absorption",
+      "answer": "true"
+    },
+    {
+      "image": "https://i.postimg.cc/NFZsVsPw/iron-absorption-factors-2.jpg",
+      "question": "A4 increases iron absorption",
+      "answer": "true"
+    },
+    {
+      "image": "https://i.postimg.cc/NFZsVsPw/iron-absorption-factors-2.jpg",
+      "question": "A4 decreases iron absorption",
+      "answer": "false"
+    },
+    {
+      "image": "https://i.postimg.cc/NFZsVsPw/iron-absorption-factors-2.jpg",
+      "question": "A5 increases iron absorption",
+      "answer": "false"
+    },
+    {
+      "image": "https://i.postimg.cc/NFZsVsPw/iron-absorption-factors-2.jpg",
+      "question": "B1 decreases iron absorption",
+      "answer": "true"
+    },
+    {
+      "image": "https://i.postimg.cc/NFZsVsPw/iron-absorption-factors-2.jpg",
+      "question": "B2 increases iron absorption",
+      "answer": "false"
+    },
+    {
+      "image": "https://i.postimg.cc/NFZsVsPw/iron-absorption-factors-2.jpg",
+      "question": "B4 increases iron absorption",
+      "answer": "false"
+    },
+    {
+      "image": "https://i.postimg.cc/NFZsVsPw/iron-absorption-factors-2.jpg",
+      "question": "B5 decreases iron absorption",
+      "answer": "true"
+    },
+    {
+      "image": "https://i.postimg.cc/NFZsVsPw/iron-absorption-factors-2.jpg",
+      "question": "C1 increases iron absorption",
+      "answer": "false"
+    },
+    {
+      "image": "https://i.postimg.cc/NFZsVsPw/iron-absorption-factors-2.jpg",
+      "question": "C2 increases iron absorption",
+      "answer": "true"
+    },
+    {
+      "image": "https://i.postimg.cc/NFZsVsPw/iron-absorption-factors-2.jpg",
+      "question": "C3 decreases iron absorption",
+      "answer": "false"
+    },
+    {
+      "image": "https://i.postimg.cc/NFZsVsPw/iron-absorption-factors-2.jpg",
+      "question": "C3 increases iron absorption",
+      "answer": "true"
+    },
+    {
+      "image": "https://i.postimg.cc/NFZsVsPw/iron-absorption-factors-2.jpg",
+      "question": "C4 increases iron absorption",
+      "answer": "true"
+    },
+    {
+      "image": "https://i.postimg.cc/NFZsVsPw/iron-absorption-factors-2.jpg",
+      "question": "C5 increases iron absorption",
+      "answer": "false"
+    },
+    {
+      "image": "https://i.postimg.cc/NFZsVsPw/iron-absorption-factors-2.jpg",
+      "question": "C5 decreases iron absorption",
+      "answer": "true"
+    }
+  ]
+}

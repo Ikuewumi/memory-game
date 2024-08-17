@@ -1,12 +1,12 @@
 <script lang="ts">
     import { showImage, imageData } from "@/stores/image";
 
-    const closeModal = () => showImage.set(false)
+    const closeModal = () => showImage.set(false);
 </script>
 
 <div role="dialog" aria-hidden={!$showImage} on:click|self={closeModal}>
     <button title="Close Image Modal" on:click={closeModal}>
-        <svg viewBox="0 0 24 24"><use href="#close"/></svg>
+        <svg viewBox="0 0 24 24"><use href="#close" /></svg>
     </button>
     <figure>
         <img src={$imageData[0]} alt={$imageData[1]} />
@@ -25,14 +25,15 @@
         color: var(--clr-white);
         z-index: var(--z-dialog);
         overflow-y: auto;
-        
+
         &[aria-hidden="false"] {
             display: grid;
         }
     }
 
     button {
-        --width: 40px;
+        --width: 55px;
+        --icon-size: 40px;
         position: fixed;
         inset: var(--space-2xs) var(--space-2xs) auto auto;
         background: var(--clr-gray-300);
@@ -55,7 +56,7 @@
         margin-inline: auto;
         height: fit-content;
         gap: var(--space-xs);
-        //max-height: min(700px, 70vh); 
+        //max-height: min(700px, 70vh);
         text-align: center;
     }
 
@@ -64,7 +65,7 @@
     }
 
     img {
-        // max-height: min(400px, 70vh); 
+        // max-height: min(400px, 70vh);
         max-width: min(800px, 90vw);
         max-height: 80vh;
     }
