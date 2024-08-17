@@ -58,14 +58,11 @@
         background: var(--clr-gray-200);
         padding: 0.5rem;
         border-radius: 0.5rem;
+        opacity: 0.35;
         --icon-size: 50px;
 
         @media (min-width: 800px) {
             --icon-size: 50px;
-        }
-
-        @media (hover) {
-            opacity: 0.5;
         }
     }
 

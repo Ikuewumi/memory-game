@@ -32,8 +32,7 @@
     }
 
     button {
-        --width: 55px;
-        --icon-size: 40px;
+        --width: 60px;
         position: fixed;
         inset: var(--space-2xs) var(--space-2xs) auto auto;
         background: var(--clr-gray-300);
