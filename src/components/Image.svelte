@@ -58,6 +58,7 @@
         background: var(--clr-gray-200);
         padding: 0.5rem;
         border-radius: 0.5rem;
+        box-shadow: 0 0 5px -1px hsl(var(--shadow-color) 10% / 70%);
         opacity: 0.35;
         --icon-size: 50px;
 
