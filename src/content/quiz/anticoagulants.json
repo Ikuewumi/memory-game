@@ -1,0 +1,67 @@
+{
+  "title": "Anticoagulants",
+  "author": "ayobami",
+  "course": "chem-path",
+  "date": "2024-08-22 12:34",
+  "description": "Learning a table that summarizes the various anticoagulants in chemical pathology",
+  "image": "https://i.postimg.cc/7YV4pZXz/anticoagulants-table-1.jpg",
+  "difficulty": "easy",
+  "questions": [
+    {
+      "question": "M",
+      "answer": "Blue"
+    },
+    {
+      "question": "A",
+      "answer": "Grey or Yellow"
+    },
+    {
+      "question": "G",
+      "answer": "Green or Orange"
+    },
+    {
+      "question": "D",
+      "answer": "Lavender"
+    },
+    {
+      "question": "J",
+      "answer": "Red or White"
+    },
+    {
+      "question": "N",
+      "answer": "Reversible Chelation of Calcium"
+    },
+    {
+      "question": "B",
+      "answer": "Glycolytic Inhibiton (Enolase) and Chelation of Calcium"
+    },
+    {
+      "question": "H",
+      "answer": "Synergistic action with antithrombin III to prevent coagulation"
+    },
+    {
+      "question": "E",
+      "answer": "Chelation of Calcium"
+    },
+    {
+      "question": "O",
+      "answer": "Coagulation Studies"
+    },
+    {
+      "question": "C",
+      "answer": "CSF Glucose, Random Blood Glucose"
+    },
+    {
+      "question": "I",
+      "answer": "Electrolytes, Urea and Creatinine Test (EUCR), Liver Function Tests"
+    },
+    {
+      "question": "F",
+      "answer": "Glycated Hemogloin, Packed Cell Volume, Complete Blood Count"
+    },
+    {
+      "question": "L",
+      "answer": "Lipid Profile, Immunological Tests"
+    }
+  ]
+}

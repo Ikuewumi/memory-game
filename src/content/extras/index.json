@@ -1,8 +1,8 @@
 {
     "message": "This website is in beta, bugs may occur",
     "featuredQuizzes": [
+        "anticoagulants",
         "immunopathology-2",
-        "antigen-chromosome-game",
-        "lymphocyte-structure-and-function"
+        "antigen-chromosome-game"
     ]
 }
