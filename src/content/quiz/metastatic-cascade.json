@@ -1,0 +1,39 @@
+{
+  "title": "Metastatic Cascade",
+  "author": "ayobami",
+  "course": "morbid",
+  "date": "2024-08-22 13:26",
+  "description": "Mini-quiz to know the sequence of events of invasion and a typical successful metastasis",
+  "image": "https://i.postimg.cc/g2gg9ff4/metastatic-cascade.jpg",
+  "difficulty": "easy",
+  "questions": [
+    {
+      "question": "A",
+      "answer": "Clonal expansion, growth, diversification, and angiogenesis"
+    },
+    {
+      "question": "B",
+      "answer": "Metastatic Subclone"
+    },
+    {
+      "question": "C",
+      "answer": "Adhesion to and invasion of the basement membrane"
+    },
+    {
+      "question": "D",
+      "answer": "Intravasation"
+    },
+    {
+      "question": "E",
+      "answer": "Tumour Cell Embolus"
+    },
+    {
+      "question": "F",
+      "answer": "Extravasation"
+    },
+    {
+      "question": "G",
+      "answer": "Angiogenesis"
+    }
+  ]
+}
