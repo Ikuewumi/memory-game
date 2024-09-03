@@ -1,8 +1,8 @@
 {
     "message": "This website is in beta, bugs may occur",
     "featuredQuizzes": [
+        "drug-receptor",
         "metastatic-cascade",
-        "anticoagulants",
-        "immunopathology-2"
+        "anticoagulants"
     ]
 }

@@ -1,0 +1,10 @@
+{
+    "title": "Drug-Receptor Interactions",
+    "description": "A series about the various ways drugs and receptors function",
+    "author": "ayobami",
+    "course": "pharmacology",
+    "quizzes": [
+        "drug-receptor",
+        "drug-receptor-2"
+    ]
+}

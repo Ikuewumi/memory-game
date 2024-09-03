@@ -1,0 +1,86 @@
+{
+    "title": "Drug-Receptor Interactions 2",
+    "author": "ayobami",
+    "course": "pharmacology",
+    "date": "2024-09-03 09:16",
+    "description": "definitions of various terms",
+    "difficulty": "medium",
+    "questions": [
+        {
+            "question": "Receptor",
+            "answer": "A component of a biologic system to which a drug binds to bring about a change in function of the system"
+        },
+        {
+            "question": "Inert binding site",
+            "answer": "A component of a biologic system to which a drug binds without changing any function"
+        },
+        {
+            "question": "Receptor site",
+            "answer": "A specific region of a receptor molecule at which the drug binds"
+        },
+        {
+            "question": "Agonist",
+            "answer": "A drug that binds and activates its receptor"
+        },
+        {
+            "question": "Partial agonist",
+            "answer": "A drug that binds to its receptor but produces a smaller effect than a full agonist"
+        },
+        {
+            "question": "Effector",
+            "answer": "A component of a biologic system that brings about the biologic effect after being activated by a receptor; often an ion channel or enzyme"
+        },
+        {
+            "question": "Pharmacological antagonist",
+            "answer": "A drug that binds to its receptor without activating it"
+        },
+        {
+            "question": "Competitive antagonist",
+            "answer": "A pharmacologic antagonist whose effect can be overcome by increasing the dose of agonist"
+        },
+        {
+            "question": "Physiologic antagonist",
+            "answer": "A drug that counters the effects of another by binding to a different receptor and causing opposing effects"
+        },
+        {
+            "question": "Chemical antagonist",
+            "answer": "A drug that counters the effects of another by binding the drug and preventing its action"
+        },
+        {
+            "question": "Graded dose-response curve",
+            "answer": "A graph of the increasing responses to increasing doses of a drug"
+        },
+        {
+            "question": "Quantal dose-response curve",
+            "answer": "A graph of the fraction of a population that shows a specified response to increasing doses of a drug"
+        },
+        {
+            "question": "Efficacy",
+            "answer": "The maximum effect of drug can bring about, regardless of dose"
+        },
+        {
+            "question": "Potency",
+            "answer": "The dose or concentration require to bring about 50% of a drug’s maximum effect"
+        },
+        {
+            "text": "Match `o(intracellular ligand)` to a drug that targets it",
+            "question": "o(tubulin)",
+            "answer": "paclitaxel"
+        },
+        {
+            "text": "Match `o(intracellular ligand)` to a drug that targets it",
+            "question": "o(dihydrofolate reductase)",
+            "answer": "trimethoprin"
+        },
+        {
+            "text": "Match `o(intracellular ligand)` to a drug that targets it",
+            "question": "o(50S subunit of ribosome)",
+            "answer": "erythromycin"
+        },
+        {
+            "text": "Match e(enzyme) and the drug that inhibits it",
+            "question": "o(Na/K ATPase)",
+            "answer": "digoxin"
+        }
+    ]
+}

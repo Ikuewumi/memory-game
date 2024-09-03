@@ -1,0 +1,166 @@
+{
+    "title": "Drug-Receptor Interactions",
+    "type": "dcq",
+    "author": "ayobami",
+    "course": "pharmacology",
+    "date": "2024-09-03 09:00",
+    "description": "examining the pharmacokinetics of how drugs target receptors to mediate their effects",
+    "difficulty": "medium",
+    "questions": [
+        {
+            "question": "Binding of agonists causes the equilibrium to shift from active(R*) to inactive(R) form to produce a biologic effect",
+            "answer": "false"
+        },
+        {
+            "question": "Binding of antagonists causes the equilibrium to shift from inactive(R) to active(R*) form to produce a biologic effect",
+            "answer": "true"
+        },
+        {
+            "question": "Binding of agonists causes the equilibrium to shift from inactive (R*) to active(R) form to produce a biologic effect",
+            "answer": "false"
+        },
+        {
+            "question": "Binding of antagonists to a receptor stabilize the active (R*) form",
+            "answer": "false"
+        },
+        {
+            "question": "Binding of antagonists to a receptor stabilize the inactive (R*) form",
+            "answer": "false"
+        },
+        {
+            "question": "Binding of antagonists to a receptor stabilize the inactive (R) form",
+            "answer": "true"
+        },
+        {
+            "question": "The 𝛃-adrenegic receptor uses cAMP as its second-messanger",
+            "answer": "true"
+        },
+        {
+            "question": "The 𝛂1-adrenegic receptor uses phosphatinositides as its second messangers",
+            "answer": "true"
+        },
+        {
+            "question": "The GABA A- receptor uses cAMP as its second-messanger",
+            "answer": "false"
+        },
+        {
+            "question": "The GABA A- is a ligand-gated channel that increases chloride influx, resulting in depolarization of neurons, and more chance of generating an action potential",
+            "answer": "false"
+        },
+        {
+            "question": "The GABA A- is a ligand-gated channel that increases chloride influx, resulting in hyperpolarization of neurons, and less chance of generating an action potential",
+            "answer": "true"
+        },
+        {
+            "question": "A system in which only a fraction of the total receptors have to be occupied to produce a maximal response is said to have spare receptors",
+            "answer": "true"
+        },
+        {
+            "question": "The 𝛃-adrenoceptors in the heart have a large functional reserve because they have 5-10% of spare receptors",
+            "answer": "false"
+        },
+        {
+            "text": "Na/K ATPase (A), Monoamine Oxidase A (B), Cyclooxygenase (C), Monoamine Oxidase B (D)",
+            "question": "(A) is inhibited by digoxin",
+            "answer": "true"
+        },
+        {
+            "text": "Na/K ATPase (A), Monoamine Oxidase A (B), Cyclooxygenase (C), Monoamine Oxidase B (D)",
+            "question": "(A) is inhibited by digoxin",
+            "answer": "true"
+        },
+        {
+            "text": "Na/K ATPase (A), Monoamine Oxidase A (B), Cyclooxygenase (C), Monoamine Oxidase B (D)",
+            "question": "(A) is inhibited by digoxin",
+            "answer": "true"
+        },
+        {
+            "text": "Na/K ATPase (A), Monoamine Oxidase A (B), Cyclooxygenase (C), Monoamine Oxidase B (D)",
+            "question": "(A) is inhibited by paclitaxel",
+            "answer": "false"
+        },
+        {
+            "text": "Na/K ATPase (A), Monoamine Oxidase A (B), Cyclooxygenase (C), Monoamine Oxidase B (D)",
+            "question": "(A) is inhibited by aspirin",
+            "answer": "false"
+        },
+        {
+            "text": "Na/K ATPase (A), Monoamine Oxidase A (B), Cyclooxygenase (C), Monoamine Oxidase B (D)",
+            "question": "(C) is inhibited by NSAIDs",
+            "answer": "true"
+        },
+        {
+            "text": "Na/K ATPase (A), Monoamine Oxidase A (B), Cyclooxygenase (C), Monoamine Oxidase B (D)",
+            "question": "(C) is inhibited by aspirin",
+            "answer": "true"
+        },
+        {
+            "text": "Na/K ATPase (A), Monoamine Oxidase A (B), Cyclooxygenase (C), Monoamine Oxidase B (D)",
+            "question": "(D) is inhibited by anti-parkinson's drugs",
+            "answer": "true"
+        },
+        {
+            "text": "Na/K ATPase (A), Monoamine Oxidase A (B), Cyclooxygenase (C), Monoamine Oxidase B (D)",
+            "question": "(D) is inhibited by antidepressants",
+            "answer": "false"
+        },
+        {
+            "question": "In drug tolerance, repeated exposure of a receptor to an agonist, results in upregulation of receptors",
+            "answer": "false"
+        },
+        {
+            "question": "In drug tolerance, repeated exposure of a receptor to an antagonist, results in upregulation of receptors",
+            "answer": "true"
+        },
+        {
+            "text": "Ligand-gated channels (A), Voltage-gated channels (B), G-Protein Coupled Receptors (C), Nuclear Receptors (D)",
+            "question": "Nicotinic receptor is an example of (A)",
+            "answer": "true"
+        },
+        {
+            "text": "Ligand-gated channels (A), Voltage-gated channels (B), G-Protein Coupled Receptors (C), Nuclear Receptors (D)",
+            "question": "Insulin receptor is an example of (B)",
+            "answer": "false"
+        },
+        {
+            "text": "Ligand-gated channels (A), Voltage-gated channels (B), G-Protein Coupled Receptors (C), Nuclear Receptors (D)",
+            "question": "Insulin receptor is an example of (D)",
+            "answer": "true"
+        },
+        {
+            "text": "Ligand-gated channels (A), Voltage-gated channels (B), G-Protein Coupled Receptors (C), Nuclear Receptors (D)",
+            "question": "A- subtype of 𝛄-aminobutyric acid receptor is an example of (A)",
+            "answer": "true"
+        },
+        {
+            "text": "Ligand-gated channels (A), Voltage-gated channels (B), G-Protein Coupled Receptors (C), Nuclear Receptors (D)",
+            "question": "𝛃-adrenegic receptor is an example of (C) that uses cAMP",
+            "answer": "false"
+        },
+        {
+            "text": "Ligand-gated channels (A), Voltage-gated channels (B), G-Protein Coupled Receptors (C), Nuclear Receptors (D)",
+            "question": "𝛃-adrenegic receptor is an example of (C) that uses phosphoinositides",
+            "answer": "true"
+        },
+        {
+            "text": "Ligand-gated channels (A), Voltage-gated channels (B), G-Protein Coupled Receptors (C), Nuclear Receptors (D)",
+            "question": "𝛂1-adrenegic receptor is an example of (C) that uses cAMP",
+            "answer": "true"
+        },
+        {
+            "text": "Ligand-gated channels (A), Voltage-gated channels (B), G-Protein Coupled Receptors (C), Nuclear Receptors (D)",
+            "question": "Sodium channel is an example of (B)",
+            "answer": "true"
+        },
+        {
+            "text": "Ligand-gated channels (A), Voltage-gated channels (B), G-Protein Coupled Receptors (C), Nuclear Receptors (D)",
+            "question": "Epidermal Growth Factor Receptor is an example of (C)",
+            "answer": "false"
+        },
+        {
+            "text": "Ligand-gated channels (A), Voltage-gated channels (B), G-Protein Coupled Receptors (C), Nuclear Receptors (D)",
+            "question": "Epidermal Growth Factor Receptor is an example of (C)",
+            "answer": "false"
+        }
+    ]
+}
