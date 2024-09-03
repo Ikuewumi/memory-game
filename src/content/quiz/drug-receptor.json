@@ -13,7 +13,7 @@
         },
         {
             "question": "Binding of antagonists causes the equilibrium to shift from inactive(R) to active(R*) form to produce a biologic effect",
-            "answer": "true"
+            "answer": "false"
         },
         {
             "question": "Binding of agonists causes the equilibrium to shift from inactive (R*) to active(R) form to produce a biologic effect",
@@ -145,7 +145,7 @@
         {
             "text": "Ligand-gated channels (A), Voltage-gated channels (B), G-Protein Coupled Receptors (C), Nuclear Receptors (D)",
             "question": "𝛂1-adrenegic receptor is an example of (C) that uses cAMP",
-            "answer": "true"
+            "answer": "false"
         },
         {
             "text": "Ligand-gated channels (A), Voltage-gated channels (B), G-Protein Coupled Receptors (C), Nuclear Receptors (D)",
