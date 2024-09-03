@@ -135,12 +135,12 @@
         {
             "text": "Ligand-gated channels (A), Voltage-gated channels (B), G-Protein Coupled Receptors (C), Nuclear Receptors (D)",
             "question": "𝛃-adrenegic receptor is an example of (C) that uses cAMP",
-            "answer": "false"
+            "answer": "true"
         },
         {
             "text": "Ligand-gated channels (A), Voltage-gated channels (B), G-Protein Coupled Receptors (C), Nuclear Receptors (D)",
             "question": "𝛃-adrenegic receptor is an example of (C) that uses phosphoinositides",
-            "answer": "true"
+            "answer": "false"
         },
         {
             "text": "Ligand-gated channels (A), Voltage-gated channels (B), G-Protein Coupled Receptors (C), Nuclear Receptors (D)",
