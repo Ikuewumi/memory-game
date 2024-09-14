@@ -1,0 +1,51 @@
+{
+    "title": "Opioid Receptors",
+    "author": "ayobami",
+    "course": "pharmacology",
+    "date": "2024-09-14 23:51",
+    "description": "reviewing the properties of various opioid receptors",
+    "difficulty": "medium",
+    "image": "https://i.postimg.cc/Pr95PtCd/opioid-receptor-table.jpg",
+    "questions": [
+        {
+            "question": "A",
+            "answer": "Proopiomelanocortin"
+        },
+        {
+            "question": "D",
+            "answer": "Pro-enkephalin"
+        },
+        {
+            "question": "G",
+            "answer": "Pro-dynorphin"
+        },
+        {
+            "question": "J",
+            "answer": "Pre-pro-nociceptin"
+        },
+        {
+            "question": "B",
+            "answer": "𝛃-endorphin, Endomorphin 1 and 2"
+        },
+        {
+            "question": "E",
+            "answer": "[Leu]-enkephalin, [Met]-enkephalin"
+        },
+        {
+            "question": "H",
+            "answer": "Dynorphin A and B"
+        },
+        {
+            "question": "C",
+            "answer": "agonists at 𝛍, 𝛋 and 𝛅 receptors"
+        },
+        {
+            "question": "F",
+            "answer": "agonist at 𝛅 receptor, antagonist at 𝛍 receptor"
+        },
+        {
+            "question": "I",
+            "answer": "agonist at 𝛋 receptor, weak agonist at the 𝛍 and 𝛅 receptors"
+        }
+    ]
+}

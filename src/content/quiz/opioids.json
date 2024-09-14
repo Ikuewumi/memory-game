@@ -1,0 +1,95 @@
+{
+    "title": "Opioid Analgesics",
+    "type": "dcq",
+    "author": "ayobami",
+    "course": "pharmacology",
+    "date": "2024-09-14 23:21",
+    "description": "reviewing the strongest available painkillers - opioids",
+    "difficulty": "medium",
+    "questions": [
+        {
+            "question": "In opium poppy, morphine (2.5%) is less than codeine (10%)",
+            "answer": "false"
+        },
+        {
+            "question": "In opium poppy, morphine (10%) is greater than codeine (2.5%)",
+            "answer": "true"
+        },
+        {
+            "question": "Codeine is a semisynthetic opioid",
+            "answer": "false"
+        },
+        {
+            "question": "Lidocaine is morphinan opioid",
+            "answer": "false"
+        },
+        {
+            "question": "Levophanol is not an alkaloid opioid",
+            "answer": "true"
+        },
+        {
+            "question": "Fentanyl is a benzomorphan",
+            "answer": "false"
+        },
+        {
+            "question": "Codeine and Morphine are phenanthrene compounds",
+            "answer": "true"
+        },
+        {
+            "question": "Pentazocine, Fentanyl and Meperidine are phenylpiperidine compounds",
+            "answer": "false"
+        },
+        {
+            "question": "Loperamide, Fentanyl and Meperidine are phenylpiperidine compounds",
+            "answer": "true"
+        },
+        {
+            "question": "Buprenorphine is an antagonist at the 𝛍 receptor and a partial agonist at the 𝛋 receptor",
+            "answer": "false"
+        },
+        {
+            "question": "Butorphanol is an antagonist at the 𝛍 receptor and an agonist at the 𝛋 receptor",
+            "answer": "true"
+        },
+        {
+            "question": "Buprenorphine is an antagonist at the 𝛋 receptor and a partial agonist at the 𝛍 receptor",
+            "answer": "true"
+        },
+        {
+            "question": "Methadone is a short-acting opioid analgesic",
+            "answer": "false"
+        },
+        {
+            "question": "Thebaine is used to supress withdrawal symtoms in opioid physically-dependent patients",
+            "answer": "false"
+        },
+        {
+            "question": "Methadone is used to supress withdrawal symtoms in opioid physically-dependent patients",
+            "answer": "true"
+        },
+        {
+            "question": "Naloxone is a longer-acting opioid antagonist than Nalmefene",
+            "answer": "false"
+        },
+        {
+            "question": "Opioids are stimulants that can cause cardiovascular depression",
+            "answer": "false"
+        },
+        {
+            "question": "Opioids are CNS depressants that can cause respiratory depression",
+            "answer": "true"
+        },
+        {
+            "question": "The opioid receptor OP2 causes inhibition of ADH release",
+            "answer": "true"
+        },
+        {
+            "question": "The opioid receptor KOP causes inhibition of ADH release",
+            "answer": "true"
+        },
+        {
+            "question": "The delta opioid receptor is more important opioid receptor in the central nervous system",
+            "answer": "true"
+        }
+    ]
+}

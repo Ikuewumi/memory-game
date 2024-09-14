@@ -1,8 +1,8 @@
 {
     "message": "This website is in beta, bugs may occur",
     "featuredQuizzes": [
+        "opioids",
         "drug-receptor",
-        "metastatic-cascade",
-        "anticoagulants"
+        "metastatic-cascade"
     ]
 }
