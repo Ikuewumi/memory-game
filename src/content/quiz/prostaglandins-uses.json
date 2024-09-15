@@ -1,0 +1,43 @@
+{
+    "title": "Clinical Uses of Prostaglandins",
+    "author": "ayobami",
+    "course": "pharmacology",
+    "date": "2024-09-15 19:19",
+    "description": "let's check out the uses of various prostaglandin analogues in healthcare with this mini-quiz",
+    "difficulty": "easy",
+    "image": "https://i.postimg.cc/mrtV3wrC/prostaglandin-analogs-table.jpg",
+    "questions": [
+        {
+            "question": "H, I",
+            "answer": "PG1 analogue"
+        },
+        {
+            "question": "F, G",
+            "answer": "PF2𝝰 analogue"
+        },
+        {
+            "question": "J",
+            "answer": "PI2 analogue"
+        },
+        {
+            "question": "A",
+            "answer": "reduction of intra-orbital pressure in glaucoma"
+        },
+        {
+            "question": "B",
+            "answer": "expulsion of uterine contents, treatment of postpartum hemmorage"
+        },
+        {
+            "question": "C",
+            "answer": "erectile dysfunction, maintainance of a patent ductus arteriosus"
+        },
+        {
+            "question": "D",
+            "answer": "mainly for gastroproctection from NSAID-induced gastric ulcers, also for expulsion of uterine contents"
+        },
+        {
+            "question": "E",
+            "answer": "treatment of pulmonary arterial hypertension by vasodilation"
+        }
+    ]
+}
