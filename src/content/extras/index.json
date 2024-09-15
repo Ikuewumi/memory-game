@@ -1,8 +1,8 @@
 {
     "message": "This website is in beta, bugs may occur",
     "featuredQuizzes": [
+        "prostaglandins-uses",
         "opioids",
-        "drug-receptor",
-        "metastatic-cascade"
+        "drug-receptor"
     ]
 }
